@@ -1,0 +1,32 @@
+.dropzone-file {
+    background-color: #f1f1f1;
+    outline: 1px dashed #d6d6d6;
+    outline-offset: -10px;
+    &.is-dragover {
+        background-color: #ffffff;
+    }
+    &__content {
+        padding: 40px;
+        text-align: center;
+    }
+
+    &__label{
+        cursor: pointer;
+    }
+    &__label-title {
+        font-size: 16px;
+        color: #4162a9;
+        font-weight: bold;
+    }
+
+    &__input {
+        z-index: -1;
+        opacity: 0;
+        position: absolute;
+    }
+
+    &__text {
+        font-size: 11px;
+        color: #969595;
+    }
+}

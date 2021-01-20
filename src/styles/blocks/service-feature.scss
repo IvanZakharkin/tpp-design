@@ -1,0 +1,25 @@
+.service-feature {
+	position: relative;
+	padding-left: 65px;
+
+	&__icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50px;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		color: #000001;
+		font-weight: bold;
+		font-size: 18px;
+		margin-bottom: 15px;
+	}
+	&__desk {
+		color: #696f8d;
+		font-size: 16px;
+	}
+
+
+}

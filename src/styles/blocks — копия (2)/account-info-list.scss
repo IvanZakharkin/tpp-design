@@ -1,0 +1,60 @@
+.account-info-list {
+    &__item {
+        position: relative;
+    }
+    &__item-title {
+        font-size: 14px;
+        color: #81869e;
+    }
+    &__item-value {
+        font-size: 18px;
+        color: #000000;
+
+        &_file {
+            &.form-control {
+                display: inline-block;
+                width: auto;
+            }
+            .btn {
+                font-size: 20px;
+                padding: 0;
+                color: #abadb4;
+            }
+        }
+    }
+
+    &__btn.btn {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        top:50%;
+        left: 101%;
+        transform: translateY(-50%);
+        border: 1px solid #ced4da;
+        color: #507dbb;
+    }
+
+    &__btn_text.btn {
+        width: auto;
+        height: auto;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .account-info-list__btn.btn {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      margin-top: 10px;
+    }
+}

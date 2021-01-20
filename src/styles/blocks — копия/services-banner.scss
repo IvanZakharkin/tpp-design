@@ -1,0 +1,97 @@
+.services-banner {
+	
+
+	&__container {
+		background: #fff url('./images/services/banner-background.png') left bottom / contain no-repeat;
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			background: center / contain no-repeat url('./images/caduceus-black.svg');
+			left: 0%;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 21.875rem;
+			height: 80%;
+		}
+		
+	}
+
+	&__content {
+		width: 40%;
+		padding: 100px 0 40px 0;
+		
+
+
+	}
+
+	&__features-item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 35px;
+	}
+
+	&__features-item-icon {
+		width: 80px;
+		height: 80px;
+		margin-right: 40px;
+	}
+	&__features-item-img {
+		object-fit: contain;
+	}
+
+	&__features-item-title {
+		font-size: 28px;
+		font-family: 'Roboto Condensed';
+		font-weight: bold;
+		color: #044ea4;
+		margin-bottom: 10px;
+	}
+	&__features-item-desk {
+		font-size: 18px;
+		font-weight: 300;
+		color: #618aaa;
+	}
+
+	&__title {
+		color: #bed1e7;
+		font-size: 71px;
+		font-weight: bold;
+		font-family: 'Roboto Condensed';
+		position: relative;
+		line-height: 0.9;
+		margin-bottom: 40px;
+		&:before {
+			position: absolute;
+			top: 0;
+			left: -90px;
+			display: block;
+			width: 60px;
+			height: 60px;
+			content: '';
+			background: url('./images/expertises/banner-checkbox.png') no-repeat center center / contain;
+		}
+	}
+
+	&__subtitle {
+		padding-left: 40px;
+		color: #1c4593;
+		font-size: 51px;
+		font-weight: bold;
+		font-family: 'Roboto Condensed';
+	}
+
+	&__text {
+		font-size: 18px;
+		font-weight: 300px;
+		color: #618aaa;
+		margin-bottom: 50px;
+	}
+	&__notice {
+		font-size: 14px;
+		color: #81869e;
+	}
+}

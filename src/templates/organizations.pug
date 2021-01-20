@@ -1,0 +1,842 @@
+section.organizations.py-3.py-lg-5
+	.container
+		.row.mb-4
+			.col.d-flex
+				h2.title Организации
+			.col.text-right
+				a.btn.btn-outline-blue.text-uppercase.d-none.d-sm-inline-block(href="#") Инфографика
+				a.btn.btn-outline-blue.text-uppercase.ml-3(href="#") Подробнее
+		.organizations__filter.mb-4
+			button.filter-btn(data-toggle="collapse" data-target="#organizations-maps-filter")
+				.filter-btn__text Фильтр
+				i.fas.fa-chevron-down
+		.organizations__maps
+			#organizations-maps-filter.organizations__maps-filter.collapse
+				.filter
+					.filter__body
+						.filter__title При участии
+						.row.mb-3
+							.col-12.col-md-3
+								.dropdown.mb-3 <!-- выпадающее меню с тпп-->
+									button.btn.btn-sm.btn-outline-blue.dropdown-toggle.w-100(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownMenuButton")
+										| Торгово-промышленные палаты
+									.dropdown-menu.dropdown-menu-tpp(aria-labelledby="dropdownMenuButton")
+
+										a.dropdown-item.tpp-link(href="#" coodinates="83.804246-53.329117")
+
+
+											| Алтайская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="103.919174-52.511127")
+
+
+											| Ангарская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="92.864286-56.011042")
+
+
+											| Ассоциация ТПП Северо-Запада
+
+										a.dropdown-item.tpp-link(href="#" coodinates="44.495056-48.694521")
+
+
+											| Волгоградская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.598007-51.282027")
+
+
+											| Губкинская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="135.066042-48.480623")
+
+
+											| Дальневосточная ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="38.112589-55.598441")
+
+
+											| Жуковская торгово-промышленная палата
+
+										a.dropdown-item.tpp-link(href="#" coodinates="52.0303-113.5274")
+
+
+											| Забайкальская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="20.446321-54.716097")
+
+
+											| Калининградская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.347961-55.814598")
+
+
+											| Красногорская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="30.272576-59.947934")
+
+
+											| Ленинградская областная ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="39.578208-52.603045")
+
+
+											| Липецкая ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.476025-56.012184")
+
+
+											| Лобненская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.893364-55.676072")
+
+
+											| Люберецкая ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="150.813078-59.55632")
+
+
+											| Магаданская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="82.9267-55.0278")
+
+
+											| Новосибирская городская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="36.604803-55.088352")
+
+
+											| Обнинская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="36.050722-52.979394")
+
+
+											| Орловская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="39.792717-46.138779")
+												| Павловская районная торгово-промышленная
+												| палата
+
+										a.dropdown-item.tpp-link(href="#" coodinates="43.065801-44.039199")
+
+
+											| Пятигорская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.859462-55.759152")
+
+
+											| Реутовская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="36.192323-55.70282")
+
+
+											| Рузская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="39.755769-54.61779")
+
+
+											| Рязанская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="142.749288-46.95996")
+
+
+											| Сахалинская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="33.521896-44.605971")
+
+
+											| Севастопольская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="32.039115-54.787349")
+
+
+											| Смоленская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="36.956978-56.196852")
+
+
+											| Солнечногорская ТПП
+
+										a.dropdown-item.tpp-link(href="#" coodinates="39.059045-55.36927")
+
+
+											| Союз "Егорьевская торгово-промышленная палата"
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.544737-55.431177")
+
+
+											| Союз "Подольская торгово-промышленная палата"
+
+										a.dropdown-item.tpp-link(href="#" coodinates="131.886293-43.118622")
+											| Союз "Приморская ТПП"
+
+										a.dropdown-item.tpp-link(href="#" coodinates="38.971819-45.014645")
+
+												| Союз "Торгово-промышленная палата Краснодарского
+												| края"
+
+										a.dropdown-item.tpp-link(href="#" coodinates="40.099824-44.601325")
+
+
+												| Союз "Торгово-промышленная палата Республики
+												| Адыгея"
+
+										a.dropdown-item.tpp-link(href="#" coodinates="91.436189-53.719701")
+
+
+												| Союз "Торгово-промышленная палата Республики
+												| Хакасия"
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.408193-55.902914")
+
+
+											| Союз "Химкинская ТПП"
+
+										a.dropdown-item.tpp-link(href="#" coodinates="38.152798-44.866499")
+
+
+											| Союз «Абинская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.304312-44.896044")
+
+
+											| Союз «Анапская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="39.746544-44.458222")
+
+
+											| Союз «Апшеронская ТПП Краснодарского края»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="41.079626-44.920647")
+
+
+											| Союз «Армавирская межрайонная ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="48.038353-46.359488")
+
+
+											| Союз «Астраханская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="55.796707-37.936727")
+
+
+												| Союз «Балашихинская торгово-промышленная
+												| палата»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="36.584968-50.603281")
+
+
+												| Союз «Белгородская торгово-промышленная
+												| палата»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="39.876916-44.769857")
+
+
+											| Союз «Белореченская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="56.79902-59.419941")
+
+
+											| Союз «Верхнекамская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="44.747941-48.784453")
+
+
+											| Союз «Волжская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="35.927645-56.063715")
+
+
+											| Союз «Волоколамская ТПП Московской области»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="38.729597-55.288701")
+
+
+											| Союз «Воскресенская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="38.65209-55.780016")
+
+
+											| Союз «Восточная ТПП Московской области»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="39.653397-45.581364")
+
+
+											| Союз «Выселковская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="49.681848-58.615089")
+
+
+											| Союз «Вятская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="40.697596-45.35806")
+
+
+											| Союз «Гулькевичская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.517752-56.348118")
+
+
+											| Союз «Дмитровская муниципальная ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="38.279029-46.713433")
+
+
+											| Союз «Ейская межрайонная ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="36.861056-55.908414")
+
+
+											| Союз «Истринская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="38.940665-46.086399")
+
+
+											| Союз «Каневская межрайонная ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="38.76155-55.090449")
+
+
+											| Союз «Коломенская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="39.454295-45.462084")
+
+
+											| Союз «Кореновская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="40.54476-45.419733")
+
+
+											| Союз «Кропоткинская межрайонная ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.988837-44.934961")
+
+
+											| Союз «Крымская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="86.120462-55.388814")
+
+
+											| Союз «Кузбасская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="40.584124-44.88683")
+
+
+											| Союз «Курганинская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="65.323412-55.452431")
+
+
+											| Союз «Курганская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="36.187401-51.741176")
+
+
+											| Союз «Курская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="39.620097-46.572297")
+
+
+											| Союз «Кущевская районная ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="40.723147-44.641346")
+
+
+											| Союз «Лабинская межрайонная ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="59.052201-53.410738")
+
+
+											| Союз «Магнитогорская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="91.674737-53.6914")
+
+
+											| Союз «Минусинская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.616629-55.763554")
+
+
+											| Союз «Московская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.738701-55.912102")
+
+
+											| Союз «Мытищинская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="76.572332-60.936836")
+
+
+											| Союз «Нижневартовская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="31.261057-58.526156")
+
+
+											| Союз «Новгородская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.775811-44.721811")
+
+
+											| Союз «Новороссийская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="82.895951-54.983768")
+
+
+											| Союз «Новосибирская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="38.469178-55.876938")
+
+
+											| Союз «Ногинская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="65.428111-62.145343")
+
+
+											| Союз «Няганская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.260187-55.673783")
+
+
+											| Союз «Одинцовская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="73.372695-54.998597")
+
+
+											| Союз «Омская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="53.208219-45.015908")
+
+
+											| Союз «Пензенская областная ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="56.2459-58.01712")
+
+
+											| Союз «Пермская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="61.798621-34.367414")
+
+
+											| Союз «Петрозаводская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="30.361763-59.946554")
+
+
+											| Союз «Санкт-Петербургская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="38.681339-44.851785")
+
+
+											| Союз «Северская районная ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="38.125435-45.237589")
+
+
+											| Союз «Славянская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.835189-51.301262")
+
+
+											| Союз «Старооскольская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="73.421965-61.252197")
+
+
+											| Союз «Сургутская ТПП»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="127.555578-50.25058")
+
+
+											| Союз «ТПП Амурской области»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="40.523254-64.535491")
+
+
+											| Союз «ТПП Архангельской области»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="39.192175-51.661842")
+
+
+											| Союз «ТПП Воронежской области»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="104.285367-52.283533")
+
+
+											| Союз «ТПП Восточной Сибири»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="43.625936-43.492649")
+
+
+											| Союз «ТПП Кабардино-Балкарской Республики»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="158.669698-53.037782")
+
+
+											| Союз «ТПП Камчатского края»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="42.058825-44.219841")
+
+
+											| Союз «ТПП Карачаево-Черкесской Республики»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="38.200399-45.3633")
+												| Союз «ТПП Красноармейского района Краснодарского
+												| края»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="34.074123-44.928752")
+
+
+											| Союз «ТПП Крыма»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="39.020292-54.949492")
+												| Союз «ТПП Луховицкого муниципального района
+												| Московской области»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="60.113838-55.059274")
+
+
+											| Союз «ТПП Миасского городского округа»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="44.009059-56.323053")
+
+
+											| Союз «ТПП Нижегородской области»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="60.086315-57.244922")
+
+
+											| Союз «ТПП Новоуральского городского округа»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="55.092652-51.771571")
+
+
+											| Союз «ТПП Оренбургской области»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="28.33325-57.815846")
+
+
+											| Союз «ТПП Псковской области»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="55.93723-54.719191")
+
+
+											| Союз «ТПП Республики Башкортостан»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="47.490417-42.98339")
+
+
+											| Союз «ТПП Республики Дагестан»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="34.379263-61.790227")
+
+
+											| Союз «ТПП Республики Карелия»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="50.828466-61.671329")
+
+
+											| Союз «ТПП Республики Коми»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="47.862292-56.618165")
+
+
+											| Союз «ТПП Республики Марий Эл»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="45.186355-54.177321")
+
+
+											| Союз «ТПП Республики Мордовия»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="129.728127-62.029449")
+
+
+											| Союз «ТПП Республики Саха (Якутия)»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="44.680172-43.018678")
+
+
+											| Союз «ТПП Республики Северная Осетия-Алания»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="39.730311-47.226472")
+
+
+											| Союз «ТПП Ростовской области»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="50.077241-53.178126")
+
+
+											| Союз «ТПП Самарской области»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="45.969317-51.5415")
+
+
+											| Союз «ТПП Саратовской области»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="38.134768-56.311741")
+
+
+											| Союз «ТПП Сергиево-Посадского района»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="65.56682-57.144875")
+
+
+											| Союз «ТПП Тюменской области»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="69.031573-60.987158")
+
+
+											| Союз «ТПП ХМАО-Югры»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="45.679878-43.328481")
+
+
+											| Союз «ТПП Чеченской Республики»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.983474-55.921849")
+												| Союз «ТПП Щелковского муниципального района
+												| МO»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="39.854647-57.627595")
+
+
+											| Союз «ТПП Ярославской области»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="52.285228-54.909157")
+
+												| Союз «ТПП г. Альметьевск и Альметьевского
+												| района»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="39.112396-44.630301")
+
+
+											| Союз «ТПП г. Горячий Ключ»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="43.460233-56.238022")
+
+
+											| Союз «ТПП г. Дзержинска Нижегородской области»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="49.427901-53.524548")
+
+
+											| Союз «ТПП г. Тольятти»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="40.231328-47.73952")
+
+
+											| Союз «ТПП г. Шахты»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="40.219632-48.268166")
+												| Союз «ТПП г.Каменск-Шахтинский Ростовской
+												| области»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.820044-55.924144")
+
+
+											| Союз «ТПП г.Королева МО»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="40.129379-47.448164")
+
+
+											| Союз «ТПП г.Новочеркасска»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="39.730239-43.579164")
+
+
+											| Союз «ТПП г.Сочи»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="38.050911-55.957988")
+
+
+											| Союз «ТПП г.Фрязино»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="37.92194-59.125586")
+											| Союз «ТПП г.Череповца»
+										a.dropdown-item.tpp-link(href="#" coodinates="38.443825-55.779793")
+
+											| Союз «ТПП г.Электросталь МО»
+										a.dropdown-item.tpp-link(href="#" coodinates="52.426417-55.766192")
+											| Союз «ТПП города Набережные Челны Республики
+											| Татарстан»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="38.07954-44.561706")
+											| Союз «ТПП города-курорта Геленджик»
+										a.dropdown-item.tpp-link(href="#" coodinates="38.376685-56.013517")
+											| Союз «ТПП муниципального образования «Городской округ
+											| Черноголовка»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="38.915638-47.213638")
+											| Союз «Таганрогская межрайонная ТПП»
+										a.dropdown-item.tpp-link(href="#" coodinates="41.450774-52.724192")
+											| Союз «Тамбовская областная торгово-промышленная палата»
+										a.dropdown-item.tpp-link(href="#" coodinates="37.37182-45.277376")
+											| Союз «Темрюкская ТПП»
+										a.dropdown-item.tpp-link(href="#" coodinates="38.959817-45.602523")
+											| Союз «Тимашевская ТПП»
+										a.dropdown-item.tpp-link(href="#" coodinates="34.30552-53.309376")
+											| Союз «Торгово-промышленная палата Брянской
+											| области»
+
+										a.dropdown-item.tpp-link(href="#" coodinates="39.2263-45.2161")
+											| Союз «Торгово-промышленная палата Динского района
+											| Краснодарского края»
+										a.dropdown-item.tpp-link(href="#" coodinates="60.003383-57.925403")
+											| Союз «Торгово-промышленная палата город Нижний
+											| Тагил»
+										a.dropdown-item.tpp-link(href="#" coodinates="39.08347-44.101836")
+											| Союз «Туапсинская ТПП»
+										a.dropdown-item.tpp-link(href="#" coodinates="53.275639-56.850782")
+											| Союз «Удмуртская ТПП»
+										a.dropdown-item.tpp-link(href="#" coodinates="48.392155-54.316791")
+											| Союз «Ульяновская ТПП»
+										a.dropdown-item.tpp-link(href="#" coodinates="39.692196-45.220298")
+											| Союз «Усть-Лабинская ТПП»
+										a.dropdown-item.tpp-link(href="#" coodinates="61.371993-55.157634")
+											| Союз «Южно-Уральская ТПП»
+										a.dropdown-item.tpp-link(href="#" coodinates="39.893032-59.221422")
+											| Союз Вологодская торгово-промышленная палата
+										a.dropdown-item.tpp-link(href="#" coodinates="37.411723-54.917645")
+											| Союз Серпуховская ТПП
+										a.dropdown-item.tpp-link(href="#" coodinates="40.385138-56.123262")
+											| ТПП Владимирской области
+										a.dropdown-item.tpp-link(href="#" coodinates="132.913382-48.798158")
+											| ТПП Еврейской автономной области
+										a.dropdown-item.tpp-link(href="#" coodinates="40.978116-56.980115")
+											| ТПП Ивановской области
+										a.dropdown-item.tpp-link(href="#" coodinates="36.237041-54.533832")
+											| ТПП Калужской области
+										a.dropdown-item.tpp-link(href="#" coodinates="40.916258-57.771691")
+											| ТПП Костромской области
+										a.dropdown-item.tpp-link(href="#" coodinates="39.390883-46.319134")
+											| ТПП Ленинградского района Краснодарского края
+										a.dropdown-item.tpp-link(href="#" coodinates="36.014538-55.509151")
+											| ТПП Можайского района МО
+										a.dropdown-item.tpp-link(href="#" coodinates="33.066842-68.960033")
+											| ТПП Мурманской области
+										a.dropdown-item.tpp-link(href="#" coodinates="36.4336-55.22578")
+											| ТПП Наро-Фоминского городского округа Московской области
+										a.dropdown-item.tpp-link(href="#" coodinates="37.626304-55.754716")
+											| ТПП РФ
+										a.dropdown-item.tpp-link(href="#" coodinates="44.811991-43.166287")
+											| ТПП Республики Ингушетия
+										a.dropdown-item.tpp-link(href="#" coodinates="44.262833-46.33079")
+											| ТПП Республики Калмыкия
+										a.dropdown-item.tpp-link(href="#" coodinates="49.124838-55.789856")
+											| ТПП Республики Татарстан
+										a.dropdown-item.tpp-link(href="#" coodinates="94.440775-51.723264")
+											| ТПП Республики Тыва
+										a.dropdown-item.tpp-link(href="#" coodinates="41.927177-45.008075")
+											| ТПП Ставропольского края
+										a.dropdown-item.tpp-link(href="#" coodinates="47.265766-56.098708")
+											| ТПП Чувашской Республики
+										a.dropdown-item.tpp-link(href="#" coodinates="66.627391-66.526688")
+											| ТПП Ямало-Ненецкого автономного округа (Союз)
+										a.dropdown-item.tpp-link(href="#" coodinates="47.5128177-42.1717606")
+											| ТПП г. Волгодонска
+										a.dropdown-item.tpp-link(href="#" coodinates="55.45435-65.321877")
+											| ТПП г. Кургана
+										a.dropdown-item.tpp-link(href="#" coodinates="140.295243-48.967741")
+											| ТПП г. Советская Гавань
+										a.dropdown-item.tpp-link(href="#" coodinates="53.690706-63.556254")
+											| ТПП г. Ухты
+										a.dropdown-item.tpp-link(href="#" coodinates="37.771483-55.444448")
+											| ТПП г. о. Домодедово
+										a.dropdown-item.tpp-link(href="#" coodinates="101.619026-56.147861")
+											| ТПП г.Братска
+										a.dropdown-item.tpp-link(href="#" coodinates="37.863926-55.624154")
+											| ТПП г.Дзержинский МО
+										a.dropdown-item.tpp-link(href="#" coodinates="37.149173-56.73085")
+											| ТПП г.Дубны
+										a.dropdown-item.tpp-link(href="#" coodinates="39.36599-56.302533")
+											| ТПП г.Кольчугино и Кольчугинского района Владимирской
+											| области
+										a.dropdown-item.tpp-link(href="#" coodinates="35.92519-56.855681")
+											| Тверская ТПП
+										a.dropdown-item.tpp-link(href="#" coodinates="40.110343-45.855552")
+											| Тихорецкая ТПП
+										a.dropdown-item.tpp-link(href="#" coodinates="84.964968-56.470109")
+											| Томская ТПП
+										a.dropdown-item.tpp-link(href="#" coodinates="55.814513-37.384991")
+											| Торгово-промышленная палата Московской области
+										a.dropdown-item.tpp-link(href="#" coodinates="85.950564-51.956413")
+											| Торгово-промышленная палата Республики Алтай
+										a.dropdown-item.tpp-link(href="#" coodinates="107.584197-51.826922")
+											| Торгово-промышленная палата Республики Бурятия
+										a.dropdown-item.tpp-link(href="#" coodinates="37.615398-54.174496")
+											| Тульская ТПП
+										a.dropdown-item.tpp-link(href="#" coodinates="60.591016-56.82373")
+											| Уральская ТПП
+										a.dropdown-item.tpp-link(href="#" coodinates="92.864286-56.011042")
+											| Центрально-Сибирская ТПП
+										a.dropdown-item.tpp-link(href="#" coodinates="38.075255-54.883416")
+											| Южная ТПП МО
+								.filter__option#menu-tpps-non-municipal(mapcode="CHAMBERS_NOT_MUNICIPAL")
+									label.checkbox
+										input.checkbox__input(type='checkbox')
+										.checkbox__title ТПП субъектов РФ
+								.filter__option#menu-tpps-municipal(mapcode="CHAMBERS_MUNICIPAL")
+									label.checkbox
+										input.checkbox__input(type='checkbox')
+										.checkbox__title Муниципальные ТПП
+							.col-12.col-md-3
+								.filter__option#menu-showall
+									label.checkbox
+										input.checkbox__input(type='checkbox')
+										.checkbox__title Включить все слои
+								.filter__option#menu-deloviesovety(mapcode="BUSINESS_COUNCILS")
+									label.checkbox.color01
+										input.checkbox__input(type='checkbox')
+										.checkbox__title Деловые советы
+								.filter__option#menu-deivistcompl(mapcode="RU_EXH_CENTERS")
+									label.checkbox.color02
+										input.checkbox__input(type='checkbox')
+										.checkbox__title Действующие выставочные комплексы России
+							.col-12.col-md-3
+								.filter__option#menu-subcontracting-centers(mapcode="SUBCONTRACTING_CENTERS")
+									label.checkbox.color03
+										input.checkbox__input(type='checkbox')
+										.checkbox__title Центры субконтрактации
+								.filter__option#menu-soiuzexpertiza(mapcode="SOEX")
+									label.checkbox.color04
+										input.checkbox__input(type='checkbox')
+										.checkbox__title Союзэкспертиза ТПП РФ
+								.filter__option#menu-treteiskiesudi(mapcode="COURTS")
+									label.checkbox.color05
+										input.checkbox__input(type='checkbox')
+										.checkbox__title Третейские суды
+							.col-12.col-md-3
+								.filter__option#menu-zagranpredstva(mapcode="MISSIONS")
+									label.checkbox.color06
+										input.checkbox__input(type='checkbox')
+										.checkbox__title Заграничные представительства
+								.filter__option#menu-mediation(mapcode="MEDIATION")
+									label.checkbox.color07
+										input.checkbox__input(type='checkbox')
+										.checkbox__title Коллегии посредников
+				form(action="#")
+					fieldset.row
+
+							// Правая колонка
+							.span-5
+								// Правая Колонка: основной контент
+								// Все слои
+								//- .row
+								//- 	label#menu-showall.checkbox-holder
+								//- 		input.checkbox(type="checkbox" style="position: absolute; width: 0px; height: 0px; display: block; margin: 0px -2px; z-index: -10; opacity: 0.01;")
+								//- 		.checkboxArea
+								//- 		-holder
+								//- 			img(src="/local/templates/tpprf_main/icons/icon-off.png" width="34" height="24" alt="image description")
+								//- 		span.checkbox-text
+								//- 			em 
+								//- // Деловые советы
+								//- .row(style="" mapcode="BUSINESS_COUNCILS")
+								//- 	label.checkbox-holder.color01
+								//- 		input.checkbox(type="checkbox" style="position: absolute; width: 0px; height: 0px; display: block; margin: 0px -2px; z-index: -10; opacity: 0.01;")
+								//- 		.checkboxArea
+								//- 		-holder
+								//- 			img(src="/local/templates/tpprf_main/icons/icon-01.png" width="34" height="24" alt="image description")
+								//- 		span.checkbox-text
+								//- 			em Деловые советы
+								// Выстовочные комплексы
+			.organizations__maps-container
+				#YaMap
+

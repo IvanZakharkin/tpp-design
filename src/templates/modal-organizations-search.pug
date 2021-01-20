@@ -1,0 +1,30 @@
+#modal-organizations-search.modal-organizations-search.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+  .modal-dialog.modal-lg.modal-organizations-search__dialog(role='document')
+    .modal-content.modal-organizations-search__content
+        form.modal-organizations-search__form
+            .modal-organizations-search__text.mb-2 Выбранная организация соответствует Вашему местоположению
+            .modal-organizations-search__place.mb-4 Тула
+            ul.modal-organizations-search__organizations.mb-4
+                li.modal-organizations-search__organizations-item
+                    a.modal-organizations-search__link(href="#")
+                        +icon('map','modal-organizations-search__icon mr-2')
+                        span Центр субконтрактации при Тульской ТПП
+                li.modal-organizations-search__organizations-item
+                    a.modal-organizations-search__link(href="#")
+                        +icon('map','modal-organizations-search__icon  mr-2')
+                        span Третейский суд при ТПП Тульской области
+                li.modal-organizations-search__organizations-item
+                    a.modal-organizations-search__link(href="#")
+                        +icon('map','modal-organizations-search__icon mr-2')
+                        span Тульская ТПП
+            a.modal-organizations-search__link.mb-4(href="#")
+                +icon('maps','modal-organizations-search__icon mr-2')
+                span посмотреть на карте
+            .modal-organizations-search__stroke-search.mb-4
+                input.modal-organizations-search__input
+                button.btn.search-icon(type="submit")
+                    svg.search-icon__pic
+                        use(xlink:href='./images/icons/symbol/sprite.svg#search')
+            a.modal-organizations-search__link(href="#") Определять местоположение автоматически
+
+

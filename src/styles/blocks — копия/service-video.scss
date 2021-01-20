@@ -1,0 +1,27 @@
+.service-videos {
+  overflow: hidden;
+  &__list-container {
+    flex-wrap: nowrap;
+    // width: 1875px;
+ 		padding-bottom: 20px;
+  }
+
+  &__item {
+    height: 350px;
+    margin-bottom: 15px;
+  }
+  &__item-title {
+    font-size: 15px;
+    color: #81869e;
+  }
+
+  &__container {
+		height: 480px;
+		overflow-y: hidden;
+	}
+	&__list{
+		width: 100%;
+		overflow-x: scroll;
+		padding: 25px 0;
+	}
+}

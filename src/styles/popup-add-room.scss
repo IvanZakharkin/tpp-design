@@ -1,0 +1,239 @@
+.popup-add-room {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 50px;
+    background-color: #fff;
+    z-index: 100;
+    padding-right: 25%;
+    &__header {
+        display: flex;
+        padding: 10px 0;
+        align-items: center;
+        border-bottom: 2px solid #2164b1;
+        margin-bottom: 25px;
+    }
+
+    &__btn-close {
+        margin-right: 15px;
+    }
+    &__name {
+        flex: 1;
+        color: black;
+        font-size: 22px;
+        padding: 0 10px;
+        margin-right: 20px;
+        border: none;
+    }
+    &__btn-save {
+        color: #fff;
+        text-transform: uppercase;
+        background-color: #2164b1;
+        font-size: 13px;
+        padding: 7px 15px;
+    }
+
+    &__options {
+        padding: 0 0% 0 2%;
+    }
+
+    &__location {
+        
+    }
+    &__location-title {
+        font-size: 14px;
+        color: #a5a9b9;
+    }
+    &__location-options {
+        display: flex;
+        align-items: center;
+    }
+    &__location-color {
+        background: #f0efef;
+        padding: 4px 5px;
+        margin-right: 10px;
+    }
+    &__location-color-input {
+        border: none;
+    }
+    &__location-address {
+        font-size: 14px;
+        flex: 1;
+        // border: 1px solid #d1d1d1;
+    }
+    &__location-map {
+        font-size: 14px;
+        
+        span {
+            color: #2164b1;
+            margin-left: 5px;
+        }
+        .fa-map-marker-alt {
+            color: #abaebe;
+        }
+    }
+
+    &__location-timezone {
+        input {
+            background-color: #f0efef;
+            font-size: 14px;
+            color: #656875;
+            width: 120px;
+            border: none;
+            height: 100%;
+            padding: 0 5px;
+        }
+    }
+
+    &__info-title {
+        font-size: 17px;
+        color: #2164b1;
+        padding: 5px 0;
+        border-bottom: 1px solid #aaaaaa;
+        margin-bottom: 30px;
+    }
+
+    &__option {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+        &_vertical {
+            flex-direction: column;
+            align-items: flex-start;
+            .popup-add-room__option-title {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__option-title {
+        font-size: 14px;
+        color: #a5a9b9;
+        margin-right: 10px;
+    }
+    &__option-input {
+        border: none;
+        border-bottom: 1px solid #d6d6d6;
+        padding: 5px;
+        color: black;
+        font-size: 14px;
+    }
+
+    &__option-file {
+        position: relative;
+        margin: 0;
+    }
+    &__option-file-title {
+        font-size: 14px;
+        color: #2164b1;
+    }
+    &__option-file-hidden {
+        opacity: 0;
+        z-index: -10;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__option-services {
+        width: 100%;
+    }
+    &__option-service {
+        display: flex;
+        align-items: center;
+        color: #343333;
+        font-size: 14px;
+        padding: 10px 15px;
+        &:nth-child(2n + 1) {
+            background-color: #f5f5f5;
+        }
+        
+        &:hover {
+            .popup-add-room__option-service-delete {
+                display: block;
+            }
+        }
+    }
+
+    &__option-service-num {
+        text-transform: uppercase;
+    }
+
+    &__option-service-delete {
+        margin-left: auto;
+        color: #9fa1a9;
+        font-size: 10px;
+        display: none;
+        padding: 0;
+        
+    }
+    &__option-service-num {
+        padding: 5px;
+        width: 15%;
+
+    }
+	&__option-service-title {
+        padding: 5px;
+        width: 50%;
+    }   
+	&__option-service-value {
+        padding: 5px;
+        width: 15%;
+    }
+	&__option-service-price {
+        padding: 5px;
+        width: 15%;
+    }
+
+    &__option-services-add {
+        font-size: 14px;
+        color: #2164b1;
+    }
+
+    &__room-images {
+        display: flex;
+    }
+
+    &__pics {
+        display: flex;
+
+    }
+    &__pic {
+        width: 80px;
+        height: 60px;
+        margin-right: 10px;
+        border: 1px solid #d1d1d1;
+    }
+    &__img {
+        object-fit: contain;
+    }
+    &__file-img {
+        width: 80px;
+        height: 60px;
+        border: 1px solid #d1d1d1;
+        position: relative;
+        cursor: pointer;
+    }
+    &__file-img-icon {
+        font-size: 24px;
+        border-radius: 50%;
+        color: #507dbb;
+        padding: 2px 5px;
+        border: 2px solid #e0e0e6;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+    }
+
+    
+
+}

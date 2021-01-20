@@ -1,0 +1,51 @@
+section.team.py-4.py-lg-5
+	.container
+		.row.mb-4
+				.col
+					h2.title.team__title Персоны
+				.col.text-right
+					a.btn.btn-outline-white.text-uppercase(href="#") Подробнее
+		- 
+			var members = [
+				["avatar.jpg", "Уткин Эдуард Григорьевич", "Директор департамента", "Торгово-промышленная палата участвовала в создании концепции законопроекта, разработанного в рамках реализации механизма «регуляторной гильотины», и концептуально его поддерживает"],
+				["avatar2.jpg","Уткин Эдуард Григорьевич", "Директор департамента", "Торгово-промышленная палата участвовала в создании концепции законопроекта, разработанного в рамках реализации механизма «регуляторной гильотины», и концептуально его поддерживает"],
+				["avatar.jpg","Уткин Эдуард Григорьевич", "Директор департамента", "Торгово-промышленная палата участвовала в создании концепции законопроекта, разработанного в рамках реализации механизма «регуляторной гильотины», и концептуально его поддерживает"],
+			];
+	.team__container
+		.team__list.container
+			.row.team__list-container
+				each member in members
+					.col-12.col-sm-4
+						.member-team
+							.member-team__container
+								.member-team__avatar
+									+image(`team/${member[0]}`, "member-team__avatar-img")
+								.member-team__name #{member[1]}
+								.member-team__date 
+									.ribbon.small 21.12.2020
+								//- .member-team__post #{member[2]}
+								.member-team__info 
+									.member-team__info-title Заголовок
+									.member-team__info-text #{member[3]}
+								.member-team__tags
+									ul.tags
+										li.tags__item
+											a.tags__link(href="#") Ссылка 113123
+										li.tags__item
+											a.tags__link(href="#") Сылка побольше
+										li.tags__item
+											a.tags__link(href="#") Сылка побольше123123
+										li.tags__item
+											a.tags__link(href="#") Ссылка 1
+										li.tags__item
+											a.tags__link(href="#") Сылка побольше
+										li.tags__item
+											a.tags__link(href="#") Сылка побольше
+										li.tags__item
+											a.tags__link(href="#") Ссылка 1
+										li.tags__item
+											a.tags__link(href="#") Сылка побольше
+										li.tags__item
+											a.tags__link(href="#") Сылка побольше
+
+								

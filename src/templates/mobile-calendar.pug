@@ -1,0 +1,40 @@
+.mobile-calendar.d-block.d-md-none
+	.mobile-calendar__row-select.mobile-calendar__row-select_top-menu
+		.mobile-calendar__top-menu-left
+			button.mobile-calendar__btn Сегодня
+		.mobile-calendar__glued-btns
+			button.mobile-calendar__btn День
+			button.mobile-calendar__btn.mobile-calendar__btn_active Месяц
+		.mobile-calendar__top-menu-right
+			button.mobile-calendar__btn.mobile-calendar__btn_icon
+				+icon('plus','mobile-calendar__icon mobile-calendar__icon_blue')
+			button.mobile-calendar__btn.mobile-calendar__btn_icon
+				+icon('direction-arrow','mobile-calendar__icon mobile-calendar__icon_blue')
+	.mobile-calendar__row-select
+		.mobile-calendar__selected-date декабрь 2020
+		.mobile-calendar__glued-btns
+			button.mobile-calendar__btn.mobile-calendar__btn_icon
+				+icon('arrow-left','mobile-calendar__icon')
+			button.mobile-calendar__btn.mobile-calendar__btn_icon
+				+icon('arrow-right','mobile-calendar__icon')
+	ul.mobile-calendar__days-week
+		each daysItem in ['пн', 'вт','ср','чт','пт','сб','вс']
+			li.mobile-calendar__day-week=daysItem
+	ul.mobile-calendar__days
+		- var n = 1;
+		while n < 43
+			if n == '24'
+				li.mobile-calendar__day.mobile-calendar__day_current= n++
+			else 
+				li.mobile-calendar__day= n++
+	.mobile-calendar__row-select
+		.mobile-calendar__selected-date Сегодня
+		.mobile-calendar__glued-btns
+			button.mobile-calendar__btn.mobile-calendar__btn_icon
+				+icon('arrow-left','mobile-calendar__icon')
+			button.mobile-calendar__btn.mobile-calendar__btn_icon
+				+icon('arrow-right','mobile-calendar__icon')
+	.mobile-calendar__events Не запланировано ни одного мероприятия
+		
+
+

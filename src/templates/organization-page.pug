@@ -1,0 +1,77 @@
+section.organizations-page.py-5
+	.container
+		h2.title.organizations-page__title Организации
+		.organizations-page__desk 
+			| Торгово-промышленная палата России (ТПП России) — добровольное негосударственное объединение предпринимателей, действующее в соответствии с особым
+			| федеральным законом. Объединяет более нескольких сотен территориальных торгово-промышленных палат и прочих объединений и ассоциаций российских
+			| предпринимателей, также её непосредственными членами являются отдельные коммерческие и некоммерческие организации. В структуру палаты входят 20
+			| комитетов, а также при палате действует Международный коммерческий арбитражный суд, Третейский суд для разрешения экономических споров, Морская
+			| арбитражная комиссия, Спортивный арбитраж, Коллегия посредников. В структуру палаты также входят зарубежные представительства, несколько десятков
+			| международных деловых советов (образованных для взаимодействия с предпринимателями отдельных стран и регионов), различные экспертные и координационные
+			| советы.Кроме того, в структуру палаты входят такие организации, как «Центр международной торговли», «Экспоцентр», «Союзэкспертиза», «Союзпатент» и
+			| другие, в которых палата является учредителем или владеет контрольным пакетом.
+		.organizations-page__filter
+			.filter.filter_active
+				button.filter__btn-detail.w-100
+					.filter__btn-detail-icon
+						i.fas.fa-chevron-down
+					.filter__btn-detail-text развернуть фильтр
+				.filter__body
+					.filter__title Цель
+					.row.mb-3
+						.col-12.col-md-4
+							each opt1 in ['Взаимодействие с властью','Международные отношения', 'Межрегиональное сотрудничество','Проведение экспертизы','Импорт/Экспорт','Сертификация',]
+								.filter__option
+									label.checkbox
+										input.checkbox__input(type='checkbox')
+										.checkbox__title=opt1
+						.col-12.col-md-4
+							each opt2 in ['Образование','Информационно-консультационные услуги', 'Консалтинг','Маркетинг и реклама','Безопасность ведения бизнеса','Переводы',]
+								.filter__option
+									label.checkbox
+										input.checkbox__input(type='checkbox')
+										.checkbox__title=opt2
+						.col-12.col-md-4
+							each opt3 in ['Закупки','Юридические услуги', 'Оценка','Инвестиции','Интелектуальная собсвтенность','Выставочная деятельность',]
+								.filter__option
+									label.checkbox
+										input.checkbox__input(type='checkbox')
+										.checkbox__title=opt3
+					.filter__title В регионе
+					.filter__row.mb-3
+						.filter__row-item
+							input.filter__input.filter__input_region(placeholder="Введите название страны города или региона")
+						.filter__row-item
+							button.filter__option-btn В мире
+						.filter__row-item
+							button.filter__option-btn.filter__option-btn_active В моем регионе
+						.filter__row-item
+							button.filter__option-btn В России
+					.filter__title При участии
+					.row
+						.col-12.col-md-4
+							each opt4 in ['Торгово-промышленные палаты','Комитеты', 'Советы']
+								.filter__option
+									label.checkbox
+										input.checkbox__input(type='checkbox')
+										.checkbox__title=opt4
+						.col-12.col-md-4
+							each opt5 in ['Зарубежные правительства','Международные организации', 'Судебные органы']
+								.filter__option
+									label.checkbox
+										input.checkbox__input(type='checkbox')
+										.checkbox__title=opt5
+						.col-12.col-md-4
+							each opt6 in ['Дочерние организации','Выставочные комплексы']
+								.filter__option
+									label.checkbox
+										input.checkbox__input(type='checkbox')
+										.checkbox__title=opt6
+		.organizations-page__list
+			.organizations-page__list-view.mb-3.text-right
+				a.btn-direcion.btn-direction_active.mr-1(href="#")
+					+icon('maps', 'btn-direction-icon')
+				a.btn-direcion(href="#")
+					+icon('gorizontal-display', 'btn-direction-icon')
+			.organizations-page__map
+				#yandex-map

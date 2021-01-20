@@ -1,0 +1,14 @@
+.regions-list {
+	.dropdown-toggle.regions-list__item {
+		&:after {
+			height: .4375rem;
+			width: .4375rem;
+			transform: rotate(45deg);
+			border: .125rem solid $yellow;
+			border-top: none;
+			border-left: none;
+			margin-left: .9375rem;
+		}
+	}
+
+}

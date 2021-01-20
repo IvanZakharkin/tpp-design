@@ -1,0 +1,191 @@
+header.header
+	.header__top.bg-indigo
+		.container
+			.row.py-3
+				.col-12.col-md-6
+					.logo
+						a.logo__link(href="#")
+							.logo__img
+								+icon('logo-tpp', 'logo-icon logo-icon_header')
+							.logo__text
+								.logo__title Торгово-промышленная палата Российский Федерации
+								.logo__subtitle В интересах бизнеса, во благо России
+				.col-12.col-md-6.d-flex.justify-content-start.justify-content-sm-end.align-items-center
+					.header__btn
+						.header__location
+							a.header__location-flag.flag(href="#")
+								+image(`flags/Israel.svg`, "flag__img")
+							a.header__location-flag.flag(href="#")
+								+image(`flags/India.svg`, "flag__img")
+							button.btn.header__location-title(type="button" data-toggle="collapse" data-target="#header-search-tpp")
+								+icon('map','header__location-icon')
+								span Тульская область
+					.header__btn.btn-visually-impaired.d-none.d-sm-block
+						a.btn-visually-impaired__link(href="#")
+							+icon('invisible','btn-visually-impaired__icon')
+					.header__btn.text-uppercase.text-white.d-none.d-sm-block
+						a(href="") EN
+					//- .header__btn.btn.btn-sm.bg-white.text-blue.d-none.d-sm-block Войти
+					.header__user
+						.user
+							.dropdown.user__dropdown
+								button.user__avatar(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+									//- +image("persons/avatar1.jpg", "user__avatar-img")
+									i.far.fa-user
+								.dropdown-menu.user__dropdown-menu(aria-labelledby='dropdownMenuButton')
+									.dropdown-item.user__dropdown-item.user__dropdown-item_name <div class="text-uppercase">Захаркин</div> Иван Сергеевич
+									a.dropdown-item.user__dropdown-item(href='#') Профиль
+									a.dropdown-item.user__dropdown-item(href='#') Мои организации
+									a.dropdown-item.user__dropdown-item(href='#') Мои обращения
+									a.dropdown-item.user__dropdown-item(href='#') Настройки
+									a.dropdown-item.user__dropdown-item(href='#') Выход
+							.user__avatar
+								i.far.fa-user
+	.header__bottom.bg-lightgray
+		.container.d-flex.align-items-start.position-relative
+			
+			nav.menu
+				a.menu__btn-home(href="#")
+					i.fas.fa-home
+				a.menu-burger(href='javascript:void(0);')
+					i.fa.fa-bars
+					i.fa.fa-times
+				-
+					navList = [
+						['Новости', 'news'],
+						['Календарь', 'calendar'],
+						['Инициативы', 'initiatives'],
+						['Персоны','team'],
+						['Услуги','services'],
+						['Проекты','projects'],
+						['Видео','video'],
+						['Арбитраж','arbitration'],
+						['Организации','organization'],
+						['Издания','publications'],
+						['Контакты','contacts'],
+						['Проекты','projects'],
+						['Видео','video'],
+						['Арбитраж','arbitration'],
+						['Организации','organization'],
+						['Издания','publications'],
+						['Контакты','contacts'],
+					];	
+				ul.nav.menu__list.menu__list_hover.flex-column.flex-md-row
+					each navItem in navList
+						li.nav-item.menu__item
+							.menu__item-btns
+								a.nav-link.menu__link(href=`#${navItem[1]}`)= navItem[0]
+								button.btn.menu__item-show-hover
+									<i class="fas fa-angle-down"></i>
+							ul.menu__item-hover
+								li.menu__item
+									.menu__item-btns
+										a.nav-link.menu__link(href=`#`) Тестовый пункт меню
+										button.btn.menu__item-show-hover
+											<i class="fas fa-angle-down"></i>
+									ul.menu__item-hover
+										li.menu__item
+											.menu__item-btns
+												a.nav-link.menu__link(href=`#`) Тестовый пункт меню
+										li.menu__item
+											.menu__item-btns
+												a.nav-link.menu__link(href=`#`) Длинный текстовый пункт меню
+										li.menu__item
+											.menu__item-btns
+												a.nav-link.menu__link(href=`#`) Еще более Длинный текстовый пункт меню
+										li.menu__item
+											.menu__item-btns
+												a.nav-link.menu__link(href=`#`) И коротенький
+								
+
+			.search
+				button.btn.search__btn#search-header-btn(data-toggle="collapse" type="button")
+					.search-icon(href="#")
+						+icon('search', 'search-icon__pic')
+			.header-search.header-search_tpp.collapse(id=`header-search-tpp`)
+				form.header-search__form.mb-4
+					.header-search__input-box
+						input.form-control.header-search__input(type="text")
+						button.btn(type='submit')
+							.search-icon(href="#")
+								+icon('search', 'search-icon__pic')
+				.header-search__container
+					-
+						var search = [
+							['Информационные сервисы', ['Реестр надежных партнеров', 'Реестр надежных франшиз', 'Реестр членских организаций', 'Инвестиционные предложения', 'Агро за качество', 'ЭТО бизнес']],
+							['Торгово-промышленные палаты', ['Реестр надежных партнеров', 'Реестр надежных франшиз', 'Реестр членских организаций', 'Инвестиционные предложения', 'Агро за качество', 'ЭТО бизнес']],
+							['Общесвтенные формирования', ['Реестр надежных партнеров', 'Реестр надежных франшиз', 'Реестр членских организаций', 'Инвестиционные предложения', 'Агро за качество', 'ЭТО бизнес']],
+							['Зарубежные представительства', ['Реестр надежных партнеров', 'Реестр надежных франшиз', 'Реестр членских организаций', 'Инвестиционные предложения', 'Агро за качество', 'ЭТО бизнес']],
+							['Информационные сервисы', ['Реестр надежных партнеров', 'Реестр надежных франшиз', 'Реестр членских организаций', 'Инвестиционные предложения', 'Агро за качество', 'ЭТО бизнес']],
+							['Торгово-промышленные палаты', ['Реестр надежных партнеров', 'Реестр надежных франшиз', 'Реестр членских организаций', 'Инвестиционные предложения', 'Агро за качество', 'ЭТО бизнес']],
+							['Общесвтенные формирования', ['Реестр надежных партнеров', 'Реестр надежных франшиз', 'Реестр членских организаций', 'Инвестиционные предложения', 'Агро за качество', 'ЭТО бизнес']],
+						]
+					.header-search__text-content
+						.header-search__result-list
+							each s,index in search
+								.header-search__result-item
+									a.header-search__result-item-title.collapsed(href="#" data-toggle="collapse" data-target=`#collapseExample${index}`)= s[0]
+										<i class="fas fa-angle-down ml-2"></i>
+										<i class="fas fa-angle-up ml-2"></i>
+									.header-search__result-item-content.collapse(id=`collapseExample${index}`)
+										each link in s[1]
+											a.header-search__link.d-block(href='#')= link
+			//- .header-search.collapse(id=`header-search`)
+			//- 	form.header-search__form.mb-4
+			//- 			.header-search__input-box
+			//- 				input.form-control.header-search__input(type="text")
+			//- 				button.btn(type='submit')
+			//- 					.search-icon(href="#")
+			//- 						+icon('search', 'search-icon__pic')
+			//- 	.header-search__container
+			//- 		-
+			//- 			var search = [
+			//- 				['Информационные сервисы', ['Реестр надежных партнеров', 'Реестр надежных франшиз', 'Реестр членских организаций', 'Инвестиционные предложения', 'Агро за качество', 'ЭТО бизнес']],
+			//- 				['Торгово-промышленные палаты', ['Реестр надежных партнеров', 'Реестр надежных франшиз', 'Реестр членских организаций', 'Инвестиционные предложения', 'Агро за качество', 'ЭТО бизнес']],
+			//- 				['Общесвтенные формирования', ['Реестр надежных партнеров', 'Реестр надежных франшиз', 'Реестр членских организаций', 'Инвестиционные предложения', 'Агро за качество', 'ЭТО бизнес']],
+			//- 				['Зарубежные представительства', ['Реестр надежных партнеров', 'Реестр надежных франшиз', 'Реестр членских организаций', 'Инвестиционные предложения', 'Агро за качество', 'ЭТО бизнес']],
+			//- 				['Информационные сервисы', ['Реестр надежных партнеров', 'Реестр надежных франшиз', 'Реестр членских организаций', 'Инвестиционные предложения', 'Агро за качество', 'ЭТО бизнес']],
+			//- 				['Торгово-промышленные палаты', ['Реестр надежных партнеров', 'Реестр надежных франшиз', 'Реестр членских организаций', 'Инвестиционные предложения', 'Агро за качество', 'ЭТО бизнес']],
+			//- 				['Общесвтенные формирования', ['Реестр надежных партнеров', 'Реестр надежных франшиз', 'Реестр членских организаций', 'Инвестиционные предложения', 'Агро за качество', 'ЭТО бизнес']],
+			//- 			]
+			//- 		-
+			//- 			var flags = [
+			//- 				['LV','Латвия', 'Latvia'], 
+			//- 				['MC','Княжество Монако', 'Monako'], 
+			//- 				['LT','Литва', 'Litva'], 
+			//- 				['BY','Белоруссия', 'Belorussia'], 
+			//- 				['GF','Франция', 'France'], 
+			//- 				['GB','Великобритания', 'Great Britain'], 
+			//- 				['IA','Индия', 'India'], 
+			//- 				['CZ','Чехия', 'Czech'], 
+			//- 				['GM','Германия', 'Germany'], 
+			//- 				['JP','Япония', 'Япония'], 
+							
+			//- 			]
+			//- 		.row.h-100
+			//- 			.col-12.col-sm-6.header-search__left-col
+			//- 				.header-search__text-content
+			//- 					.header-search__result-list
+			//- 						each s,index in search
+			//- 							.header-search__result-item
+			//- 								a.header-search__result-item-title.collapsed(href="#")(data-toggle="collapse" data-target=`#collapseExample${index}`)= s[0]
+			//- 									<i class="fas fa-angle-down ml-2"></i>
+			//- 									<i class="fas fa-angle-up ml-2"></i>
+			//- 								.header-search__result-item-content.collapse(id=`collapseExample${index}`)
+			//- 									each link in s[1]
+			//- 										a.header-search__link(href='#')= link
+			//- 			.col-12.col-md-6.header-search__right-col
+			//- 					.header-search__flags
+			//- 						.row.header-search__flags-row
+			//- 							each flag in flags
+			//- 								.col-3.mb-5.header-search__flags-item
+			//- 									a.header-search__flag-btn(href="#")
+			//- 										.flag
+			//- 											.flag__pic
+			//- 												+image(`flags/${flag[2]}.svg`, "flag__img")
+			//- 												.flag__abbreviation= flag[0]
+			//- 											.flag__title= flag[1]
+				//- .search__popup
+				//- 	form.d-flex.w-100
+				//- 		input.form-control.mr-sm-2(type='search' placeholder='Поиск' aria-label='Search')
+				//- 		button.btn.btn-outline-blue.my-2.my-sm-0(type='submit') Искать

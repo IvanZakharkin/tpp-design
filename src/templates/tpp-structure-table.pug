@@ -1,0 +1,143 @@
+
+-
+    var structure = [
+        [   
+            'Президент ТПП РФ (Катырин С.Н.)',
+            ['Агропромышленный комплекс', 'Бренды', 'Культура', 'Антикоррупция', 'Административные правонарушения'],
+            [
+                ['Валютно-финансовый департамент',
+                ['Агропромышленный комплекс', 'Бренды', 'Культура', 'Антикоррупция', 'Административные правонарушения']],
+                ['Департамент бухгалтерского учета',
+                ['Агропромышленный комплекс', 'Бренды', 'Культура', 'Антикоррупция', 'Административные правонарушения']],
+                ['Информационно-аналитический департамент',
+                ['Агропромышленный комплекс', 'Бренды', 'Культура', 'Антикоррупция', 'Административные правонарушения']],
+                ['Отдел кадров',
+                ['Агропромышленный комплекс', 'Бренды', 'Культура', 'Антикоррупция', 'Административные правонарушения']],
+                ['Отдел технической эксплуатации, ремонта и управления объектами недвижимости ТПП РФ',
+                ['Агропромышленный комплекс', 'Бренды', 'Культура', 'Антикоррупция', 'Административные правонарушения']],
+                ['Управление делами',
+                ['Агропромышленный комплекс', 'Бренды', 'Культура', 'Антикоррупция', 'Административные правонарушения']],
+                ['Центр по связям с общественностью и СМИ',
+                ['Агропромышленный комплекс', 'Бренды', 'Культура', 'Антикоррупция', 'Административные правонарушения']],
+            ]
+        ],
+        [   
+            'Вице-президент ТПП РФ (Дмитриев В.А.) (Дмитриев В.А.)',
+            ['Агропромышленный комплекс', 'Бренды', 'Культура', 'Антикоррупция', 'Административные правонарушения'],
+            [
+                ['Департамент выставочной, ярмарочной и конгрессной деятельности',
+                ['Агропромышленный комплекс', 'Бренды', 'Культура', 'Антикоррупция', 'Административные правонарушения']],
+                ['Департамент содействия инвестициям и инновациям',
+                ['Агропромышленный комплекс', 'Бренды', 'Культура', 'Антикоррупция', 'Административные правонарушения']],
+                ['Информационно-аналитический департамент',
+                ['Агропромышленный комплекс', 'Бренды', 'Культура', 'Антикоррупция', 'Административные правонарушения']],
+                ['Отдел кадров',
+                ['Агропромышленный комплекс', 'Бренды', 'Культура', 'Антикоррупция', 'Административные правонарушения']],
+                ['Отдел технической эксплуатации, ремонта и управления объектами недвижимости ТПП РФ',
+                ['Агропромышленный комплекс', 'Бренды', 'Культура', 'Антикоррупция', 'Административные правонарушения']],
+                ['Управление делами',
+                ['Агропромышленный комплекс', 'Бренды', 'Культура', 'Антикоррупция', 'Административные правонарушения']],
+                ['Центр по связям с общественностью и СМИ',
+                ['Агропромышленный комплекс', 'Бренды', 'Культура', 'Антикоррупция', 'Административные правонарушения']],
+            ]
+        ],
+    ]
+.container.py-5
+    .tpp-structure
+        .tpp-structure__container
+            .tpp-structure__header.bg-light
+                .tpp-structure__item-col.tpp-structure__item-col_left
+                    .tpp-structure__header-title Подразделения
+                .tpp-structure__item-col.tpp-structure__item-col_right
+                    .tpp-structure__header-title Тематики
+            ul.list-unstyled.tpp-structure__list
+                each strItem in structure
+                    li.tpp-structure__item
+                        .tpp-structure__item-content
+                            .tpp-structure__item-col.tpp-structure__item-col_left
+                                .tpp-structure__division
+                                    .tpp-structure__division-content
+                                        a.tpp-structure__division-name(href="#")= strItem[0]
+                                        button.btn.tpp-structure__division-button(type="button")
+                                            i.fas.fa-play
+                            .tpp-structure__item-col.tpp-structure__item-col_right
+                                .tpp-structure__item-tags
+                                    ul.tags
+                                        each tag in strItem[1]
+                                            li.tags__item
+                                                a.tags__link(href="#")= tag
+                        ul.list-unstyled.tpp-structure__list.tpp-structure__list_level
+                            each subStr, index in strItem[2]
+                                li.tpp-structure__item
+                                    .tpp-structure__item-content
+                                        .tpp-structure__item-col.tpp-structure__item-col_left
+                                            .tpp-structure__division
+                                                .tpp-structure__division-content
+                                                    .tpp-structure__division-title
+                                                        a.tpp-structure__division-title-link(href="#")= subStr[0]
+                                                        if index == 0
+                                                            .person-popup.show
+                                                                a(href="javascript:void(0);").person-popup__btn-close
+                                                                    i.fa.fa-times
+                                                                .person-popup__title Департамент выставочной, ярмарочной и конгрессионной деятельности
+                                                                .person-popup__content
+                                                                    .person-popup__person
+                                                                        .person-popup__person-avatar
+                                                                            +image(`team/avatar.jpg`, "person-popup__person-avatar-img")
+                                                                        .person-popup__person-info
+                                                                            .person-popup__person-name Селиванов Сергей Викторович
+                                                                            .person-popup__person-post директор департамента
+                                                                            ul.person-popup__person-contacts
+                                                                                li.person-popup__person-contact
+                                                                                    +icon('phone','person-popup__icon')
+                                                                                    .person-popup__text +7(495)620-0009
+                                                                                li.person-popup__person-contact
+                                                                                    +icon('mail','person-popup__icon')
+                                                                                    .person-popup__text tpprf@tpprf.ru
+                                                                                        button.btn.tpp-structure__division-button(type="button")
+                                                                                            i.fas.fa-play
+                                        .tpp-structure__item-col.tpp-structure__item-col_right
+                                            .tpp-structure__item-tags.mb-2
+                                                ul.tags
+                                                    each tag in subStr[1]
+                                                        li.tags__item
+                                                            a.tags__link(href="#")= tag
+                                            .card.tpp-structure__card-info.tpp-structure__card-info_popup.mb-3
+                                                .card-body.tpp-structure__card-info-body
+                                                    .tpp-structure__card-info-title Предпринимательство   
+                                                    .tpp-structure__card-info-text Выработка механизмов и практических инструментов, направленных на развитие предпринимательской деятельности, защиту законных интересов субъектов предпринимательской деятельности, в том числе посредством формирования проектов, подлежащих тиражированию (распространению) в целях последующего внедрения в системе торгово-промышленных палат Российской Федерации;
+                                            .card.tpp-structure__card-info
+                                                .card-body.tpp-structure__card-info-body
+                                                    .tpp-structure__card-info-title Предпринимательство   
+                                                    .tpp-structure__card-info-text Выработка механизмов и практических инструментов, направленных на развитие предпринимательской деятельности, защиту законных интересов субъектов предпринимательской деятельности, в том числе посредством формирования проектов, подлежащих тиражированию (распространению) в целях последующего внедрения в системе торгово-промышленных палат Российской Федерации;
+
+ 
+
+//- .container
+//-     table.table.table-bordered.tpp-structure-table
+//-         colgroup
+//-             col(width="33.333%")
+//-             col(width="66.666%")
+//-         thead.bg-light
+//-             tr
+//-                 th
+//-                     .tpp-structure-table__col-title Подразделения
+//-                 th
+//-                     .tpp-structure-table__col-title Тематики
+//-         each strItem in structure
+//-             tbody
+//-                 tr
+//-                     td
+//-                         .tpp-structure-table__division
+//-                             .tpp-structure-table__division
+//-                                 .tpp-structure-table__division-name= strItem[0]
+//-                                 button.tpp-structure-table__division-button(type="button")
+//-                                     i.fas.fa-play
+//-                     td
+//-                         .tpp-structure__item-col.tpp-structure__item-col_right
+//-                             .tpp-structure__item-tags
+//-                                 ul.tags
+//-                                     each tag in subStr[1]
+//-                                         li.tags__item
+//-                                             a.tags__link(href="#")= tag
+                

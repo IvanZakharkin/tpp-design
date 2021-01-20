@@ -1,0 +1,123 @@
+section.news.py-3.py-lg-5
+	.container
+		.row
+			.col-12.col-lg-6.mb-5.mb-lg-0
+				.main-news
+					.main-news__theme-day 
+						.ribbon Тема дня
+					.main-news__title Президент подписал закон о подррежке самозанятых
+					a.main-news__pic(href="#")
+						+image('news/main-news.jpg', 'main-news__img')
+			.col-12.col-lg-6.d-flex.flex-column
+				.news__container-category
+					.news__category-list
+						ul.news__category-list-container
+							each item in ["Новости", "Регионы", "Мнения", "Анонсы", "Сми"]
+								li.news__category-item
+									a.news__category-link(href="#")= item
+				.news__container-news-list
+					ul.news-list
+						- 
+							var newsList = [
+								['4 ноября 2019', 'ТПП России готовит предложения по реализации Национального проекта «Экология» в части развития экологического машиностроения', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tenetur. Nisi sit quis nostrum, maxime rerum consequuntur veniam minima consectetur vero a non asperiores in enim sint natus ea mollitia.'],
+								['5 ноября 2019', 'ТПП РФ приняла участие в открытии международной выставки «Мебель-2019»', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tenetur. Nisi sit quis nostrum, maxime rerum consequuntur veniam minima consectetur vero a non asperiores in enim sint natus ea mollitia.'],
+								['7 ноября 2019', 'ВОИС и Роспатент поддержали проведение ежегодного Форума ТПП РФ по ИС 20-24 апреля 2020 года в ТПП РФ', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tenetur. Nisi sit quis nostrum, maxime rerum consequuntur veniam minima consectetur vero a non asperiores in enim sint natus ea mollitia.'],
+								['8 ноября 2019', 'Совместное заседание Совета ТПП РФ по таможенной политике и Комитета по таможне и транспорту Совместное заседание Совета ТПП РФ по таможенной политике и Комитета по ', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tenetur. Nisi sit quis nostrum, maxime rerum consequuntur veniam minima consectetur vero a non asperiores in enim sint natus ea mollitia.'],
+								['8 ноября 2019', 'Совместное заседание Совета ТПП РФ по таможенной политике и Комитета по таможне и транспорту Совместное заседание Совета ТПП РФ по таможенной политике и Комитета по ', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tenetur. Nisi sit quis nostrum, maxime rerum consequuntur veniam minima consectetur vero a non asperiores in enim sint natus ea mollitia.'],
+								['8 ноября 2019', 'Совместное заседание Совета ТПП РФ по таможенной политике и Комитета по таможне и транспорту Совместное заседание Совета ТПП РФ по таможенной политике и Комитета по ', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tenetur. Nisi sit quis nostrum, maxime rerum consequuntur veniam minima consectetur vero a non asperiores in enim sint natus ea mollitia.'],
+								['8 ноября 2019', 'Совместное заседание Совета ТПП РФ по таможенной политике и Комитета по таможне и транспорту Совместное заседание Совета ТПП РФ по таможенной политике и Комитета по ', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tenetur. Nisi sit quis nostrum, maxime rerum consequuntur veniam minima consectetur vero a non asperiores in enim sint natus ea mollitia.'],
+								['8 ноября 2019', 'Совместное заседание Совета ТПП РФ по таможенной политике и Комитета по таможне и транспорту Совместное заседание Совета ТПП РФ по таможенной политике и Комитета по ', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, tenetur. Nisi sit quis nostrum, maxime rerum consequuntur veniam minima consectetur vero a non asperiores in enim sint natus ea mollitia.'],
+							];
+						each newsItem, index in newsList	
+							if index == 2
+								li.news-list__item.news-list__item_no-tags
+									a.news-list__item-link(href="#")
+										.news-list__item-date=newsItem[0]
+										.news-list__item-title=newsItem[1]
+										.news-list__item-desc=newsItem[2]
+							else 
+								li.news-list__item
+									a.news-list__item-link(href="#")
+										.news-list__item-date=newsItem[0]
+										.news-list__item-title=newsItem[1]
+										.news-list__item-desc=newsItem[2]
+									ul.tags.news-list__item-tags
+										li.tags__item
+											a.tags__link(href='https://new.tpprf.ru/ru/news/regional/?TAGS=%D0%A2%D0%9F%D0%9F+%D0%A1%D1%82%D0%B0%D0%B2%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B3%D0%BE+%D0%BA%D1%80%D0%B0%D1%8F')
+												| ТПП Ставропольского края
+					
+					a.news__link-all(href="#") Все новости
+		- 
+			var news = [
+				[
+					"news1.jpg", 
+					"14.11.2019", 
+					"История", 
+					"К 75-летию Победы. ТПП КБР перечислила средства на строительство мемориала советскому солдату под Ржевом", 
+					"Правительство подготовило один из самых впечатляющих и масштабных законов о стимулировании инвестиций в России. Но его эффективность будет зависеть от ряда деталей.", 
+				],
+				[
+					"news1.jpg", 
+					"14.11.2019", 
+					"История", 
+					"К 75-летию Победы. ТПП КБР перечислила средства на строительство мемориала советскому солдату под Ржевом", 
+					"Правительство подготовило один из самых впечатляющих и масштабных законов о стимулировании инвестиций в России. Но его эффективность будет зависеть от ряда деталей.", 
+				],
+				[
+					"news1.jpg", 
+					"14.11.2019", 
+					"История", 
+					"К 75-летию Победы. ТПП КБР перечислила средства на строительство мемориала советскому солдату под Ржевом", 
+					"Правительство подготовило один из самых впечатляющих и масштабных законов о стимулировании инвестиций в России. Но его эффективность будет зависеть от ряда деталей.", 
+				],
+				[
+					"news2.jpg", 
+					"01.06.2020",
+					"История", 
+					"ТПП РФ: национальный проект по МСП нуждается в серьезной доработке экологичес кого машиностроения", 
+					"3 декабря 2019 г. Департаментом содействия инвестициям и инновациям ТПП РФ совместно АО «Российский экспортный центр» был проведен семинар «Как защитить свои права на результаты интеллектуальной деятельности и оспорить патенты конкурентов»", 
+				],
+				[
+					"news3.jpg", 
+					"02.04.2020",
+					"Женщины", 
+					"На заседании Женского клуба в Госдуме представлена позиция Палаты по развитию женского и семейного предпринимательства на селе", 
+					"27 ноября эксперты Департамента содействия инвестициям и инновациям приняли участие в IX Всероссийской научно-практической конференции «Принципы и механизмы формирования национальной инновационной системы».", 
+				]		
+			];
+	
+	.slider.news__slider
+		button.slider__btn.slider__btn_rect.slider__btn_prev
+			+icon('arrow', 'slider__btn-icon')
+		button.slider__btn.slider__btn_rect.slider__btn_next
+			+icon('arrow', 'slider__btn-icon')
+		.container.my-3
+			.row.slider__container
+				each newsItem in news
+					.col
+						.new.new_main-slider.card
+								.new__pic
+									+image(`news/${newsItem[0]}`, "new__img")
+									.new__video-sign
+										+icon('play', 'new__video-sign-icon')
+								.card-body.new__content
+									.new__date
+										.ribbon= newsItem[1]
+									a.new__category(href="#")=newsItem[2]
+									a.new__link(href="#")
+										h3.new__title=newsItem[3]
+										.new__text=newsItem[4]
+									.new__tags
+										ul.tags.justify-content-center
+											li.tags__item
+												a.tags__link(href='#') Тэг1
+											li.tags__item
+												a.tags__link(href='#') Тэг подлинее
+											li.tags__item
+												a.tags__link(href='#') Еще более длинный тэг
+											li.tags__item
+												a.tags__link(href='#') Тэг1
+											li.tags__item
+												a.tags__link(href='#') Тэг подлинее
+											li.tags__item
+												a.tags__link(href='#') Еще более длинный тэг

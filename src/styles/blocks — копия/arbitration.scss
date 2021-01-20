@@ -1,0 +1,27 @@
+.arbitration {
+	&__card {
+		&:hover {
+			box-shadow: 0 0 1rem rgba(63,87,193,.2);
+		} 
+	}
+
+	&__card-link {
+		padding: 15% 10%;
+		background-color: $white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 255px;
+		
+	}
+	&__card-title {
+		font-size: 15px;
+		text-align: center;
+	}
+	&__card-logo {
+		margin-bottom: 25px;
+		max-width: 100px;
+		max-height: 100px;
+	}
+}

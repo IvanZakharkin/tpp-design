@@ -1,0 +1,84 @@
+section.news-detail.py-5
+	.container.news-detail__container
+		.news-detail__title
+			|75-летию Победы. 
+			|ТПП КБР перечислила средства на строительство мемориала советскому солдату под Ржевом
+		.news-detail__row
+			.news-detail__date 
+				.ribbon.ribbon_fs-14 14.11.2019
+			.news-detail__btn
+				a(href="#").news-detail__btn-link
+					+icon('tag', 'news-detail__btn-icon')
+				.news-detail__btn-link
+					+icon('share', 'news-detail__btn-icon')
+					.news-detail__share-links
+						.share-links
+							a.share-links__item(href="#")
+								svg.share-links__icon
+									use(xlink:href=`../images/icons/symbol/news-icon-sprite.svg#facebook`)
+							a.share-links__item(href="#")
+								svg.share-links__icon
+									use(xlink:href=`../images/icons/symbol/news-icon-sprite.svg#google-plus`)
+							a.share-links__item(href="#")
+								svg.share-links__icon
+									use(xlink:href=`../images/icons/symbol/news-icon-sprite.svg#livejournal`)
+							a.share-links__item(href="#")
+								svg.share-links__icon
+									use(xlink:href=`../images/icons/symbol/news-icon-sprite.svg#odnoclassniki`)
+							a.share-links__item(href="#")
+								svg.share-links__icon
+									use(xlink:href=`../images/icons/symbol/news-icon-sprite.svg#twitter`)
+							a.share-links__item(href="#")
+								svg.share-links__icon
+									use(xlink:href=`../images/icons/symbol/news-icon-sprite.svg#vk`)
+				a(href="#").news-detail__btn-link
+					+icon('print', 'news-detail__btn-icon')
+		.news-detail__pic
+			+image('news.detail/main.jpg', 'news-detail__img')
+		.news-detail__content
+			.news-detail__text
+				p 
+					| 2020 год объявлен Годом памяти и славы. Одним из важных событий юбилейного года станет торжественное открытие под Ржевом в Тверской области крупнейшего в стране мемориала советскому солдату. Идея его создания принадлежит ветеранам Великой Отечественной войны. Проект реализуется Российским военно-историческим обществом при поддержке постоянного комитета Союзного государства Россия-Беларусь, Министерства культуры РФ, Министерства обороны РФ и правительства Тверской области.
+				p 
+					| Активисты Российского военно-исторического общества установили имена 66 тысяч погибших в Ржевской битве советских солдат и офицеров, в память о которых на насыпном кургане появится 25-метровая фигура красноармейца. Столь масштабных монументов в современной России ещё не возводили – он будет одним из самых крупных в нашей стране и Европе.
+				p 
+					| В результате конкурса победил проект молодого белгородского скульптора Андрея Коробцова и архитектора Константина Фомина: бронзовый солдат вознесётся над землёй, уносимый клином журавлей, в который превратились полы его шинели. Скульптура состоит из 600 деталей. Работу выполняет мастерская скульптора, народного художника РФ Александра Рукавишникова. Ведётся и строительство музейного павильона, в котором разместится филиал Музея Победы.
+				.news-detail__subtitle Подзаголовок
+				p Активисты Российского военно-исторического общества установили имена 66 тысяч погибших в Ржевской битве советских солдат и офицеров, в память о которых на насыпном кургане появится 25-метровая фигура красноармейца. Столь масштабных монументов в современной России ещё не возводили – он будет одним из самых крупных в нашей стране и Европе.
+				p В ответ на обращение ТПП РФ об оказании возможной финансовой поддержки для создания Ржевского мемориала, коллектив Торгово-промышленной палаты Союз «Торгово-промышленная палата Кабардино-Балкарской Республики» поддержал предложение председателя организации Хасана Гукетлова и внёс свой посильный взнос на благое дело.
+				p Мемориал строится, в том числе, и благодаря народным пожертвованиям. Подробности на платформе dar.histrf.ru.
+			.news-detail__author Пресс-служба ТПП РФ, К.Андроникашвили
+		-var galery1 = [['photo1.jpg', 'Подпись1'],['photo2.jpg', 'Подпись2'],['photo3.jpg', 'Подпись3'],['photo4.jpg', 'Подпись4'],['photo5.jpg', 'Подпись5'],['photo6.jpg', 'Подпись6']];
+		-var galery2 = [['photo1.jpg'],['photo2.jpg'],['photo3.jpg'],['photo4.jpg'],['photo5.jpg'],['photo6.jpg']];
+		.news-detail__photo
+			h3.person-detail__title Фотогалерея
+
+			.slider-photos-one-pic
+				.slider-photos-one-pic__counter-photo
+				.slider-photos-one-pic__container
+					button.slider-photos-one-pic__btn.slider-photos-one-pic__btn_prev
+						+icon('arrow', 'slider-photos-one-pic__btn-icon')
+					button.slider-photos-one-pic__btn.slider-photos-one-pic__btn_next
+						+icon('arrow', 'slider-photos-one-pic__btn-icon')
+					ul.slider-photos-one-pic__list
+						each slide in galery1
+							li.slider-photos-one-pic__item
+								.slider-photos-one-pic__pic
+									+image(`page-news/${slide[0]}`,'slider-photos-one-pic__img')
+								.slider-photos-one-pic__subscription #{slide[1]}
+
+			.slider-photos
+				ul.slider-photos__list
+					each navSlide in galery1
+						li.slider-photos__item
+							+image(`page-news/${navSlide[0]}`,'slider-photos__img')
+		.news-detail__docs
+			.news-detail__block-title.news-detail__block-title_docs Документы
+			ul.news-detail__docs-list
+				li.news-detail__docs-item 
+					a.news-detail__docs-item-link(href="#") Выступление Антонио Фаллико
+				li.news-detail__docs-item
+					a.news-detail__docs-item-link(href="#") Выступление Антонио Фаллико
+				li.news-detail__docs-item
+					a.news-detail__docs-item-link(href="#") Название документа
+

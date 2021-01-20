@@ -1,0 +1,44 @@
+.company.py-5.bg-light
+	.container
+		.row.mb-4
+			.col.d-flex
+				h2.title Предприятия
+			.col.text-right
+				a.btn.btn-outline-blue.text-uppercase.ml-3(href="#") Подробнее
+		.slider.company__slider
+			button.slider__btn.slider__btn_prev.slider__btn_small
+				+icon('arrow', 'slider__btn-icon')
+			button.slider__btn.slider__btn_next.slider__btn_small
+				+icon('arrow', 'slider__btn-icon')
+			- 
+				var companyList = [
+					[
+						'company1.jpg',
+						'TRIOS GmbH Maintenance Expertise: услуги в сфере профессиональной очистки оборудования нефтехимических и ',
+					],
+					[
+						'company2.jpg',
+						'GETEC AG: энергоснабжение из возобновляемых источников энергии'
+					],
+					[
+						'company3.jpg',
+						'Microvista GmbH',
+					],
+					[
+						'company2.jpg',
+						'GETEC AG: энергоснабжение из возобновляемых источников энергии'
+					],
+					[
+						'company3.jpg',
+						'Microvista GmbH',
+					],
+					
+				]
+			.slider__container.row
+				each companyItem in companyList
+					.col.py-3
+						.company-card.card
+							.card-body.company-card__body
+								.company-card__logo
+									+image(`company/${companyItem[0]}`, "company-card__logo-img")
+								a.company-card__link(href="#")=companyItem[1]

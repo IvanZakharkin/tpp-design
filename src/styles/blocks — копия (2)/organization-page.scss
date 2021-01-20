@@ -1,0 +1,23 @@
+.organizations-page {
+	&__title {
+		margin-bottom: 30px;
+	}
+	&__desk {
+		font-size: 18px;
+		color: #81869e;
+		margin-bottom: 60px;
+		line-height: 1.7;
+	}
+
+	&__filter {
+		margin-bottom: 30px;
+	}
+
+	&__map {
+		height: 670px;
+
+		#yandex-map {
+			height: 100%;
+		}
+	}
+}

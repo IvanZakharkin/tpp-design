@@ -1,0 +1,82 @@
+.modal-organizations-search {
+    &__dialog {
+        max-width: 1000px;
+    }
+    &__content {
+        padding: 10% 5% 10% 36%;
+        background-image: url("./images/caduceus-blue.svg");
+        background-repeat: no-repeat;
+        background-size: 400px 95%;
+        background-position: -200px bottom;
+        position: relative;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            background: transparent url("./images/icon-popup-search-organizations.png") 100% 100% / contain no-repeat;
+            width: 10%;
+            padding: 10%;
+            top: 10%;
+            left: 10%;
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        &__content {
+            padding: 5%;
+            &:after {
+                display: none;
+            }
+        }
+    }
+    &__text {
+        font-size: 18px;
+        color: #81869e;
+        
+    }
+    &__place {
+        font-size: 24px;
+        color: #000000;
+        font-weight: bold;
+    }
+
+    &__organizations-item {
+        margin-bottom: 8px;
+        list-style-type: none;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        font-size: 18px;
+        color: #054da5;
+
+        &:hover {
+            color: #054da5;
+            text-decoration: underline;
+        }
+    }
+
+    &__icon {
+        width: 15px;
+        height: 15px;
+        fill: #054da5;
+    }
+    
+    &__stroke-search {
+        display: flex;
+    }
+    &__stroke-search-btn {
+        width: 55px;
+    }
+    &__input {
+        flex: 1;
+        padding: 10px 15px;
+        background: #fff;
+        font-size: 18px;
+        color: #000000;
+        border: 1px solid #044ea4;
+    }
+}

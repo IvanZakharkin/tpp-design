@@ -1,0 +1,128 @@
+section.services-promo
+	.services-promo__slider.slider
+		.services-promo__slider-item
+			.container.services-promo__slider-container
+				.services-promo__slider-content
+					.services-promo__slider-title
+						span 500
+						| бизнес-услуг, которым можно доверять
+					.services-promo__slider-text-block
+						.services-promo__slider-text В Системе Торгово-промышленной палаты РФ определен перечень преференций для членов ТПП, в том числе система скидок на предоставляемый спектр услуг.
+						a(href="#").btn.btn-outline-yellow.btn-lg Выбрать услугу
+		.services-promo__slider-item
+			.container.services-promo__slider-container
+				.services-promo__slider-content
+					.services-promo__slider-title
+						span Все
+						| бизнес-услуги в одном месте
+					.services-promo__slider-text-block
+						.services-promo__slider-text 180 территориальных палат, «Центр международной торговли», «Экспоцентр», «Союзпатент», «Союзэкспертиза», а также более 350 других предприятий и фирм образуют инфраструктуру обслуживания предпринимательства на федеральном и региональном уровнях.
+						a(href="#").btn.btn-outline-yellow.btn-lg Задать вопрос
+.serices-features.py-5
+	.container
+		.row
+			.col-12.col-sm-6.col-md-4
+				.card.serices-features-card
+					.card-body.serices-features-card__body
+						.serices-features-card__icon
+							+image('services/icon-business-support.png','serices-features-card__icon-img')
+						.serices-features-card__title Сопровождение бизнеса
+						.serices-features-card__desk Экспертиза, Сертификация, Оценка, Подготовка кадров, Деловое образование, Переводы и т.п.
+			.col-12.col-sm-6.col-md-4
+				.card.serices-features-card
+					.card-body.serices-features-card__body
+						.serices-features-card__icon
+							+image('services/icon-business-development.png','serices-features-card__icon-img')
+						.serices-features-card__title Развитие бизнеса
+						.serices-features-card__desk Выставки, ярмарки, конгрессы, Поддержка внешне-экономической деятельности, Консалтинг
+			.col-12.col-sm-6.col-md-4
+				.card.serices-features-card
+					.card-body.serices-features-card__body
+						.serices-features-card__icon
+							+image('services/icon-business-protect.png','serices-features-card__icon-img')
+						.serices-features-card__title Защита бизнеса
+						.serices-features-card__desk Обеспечение безопасности ведения бизнеса, Третейское разбирательство и медиация
+.services-video.py-5
+	.container.h-100
+		.video
+			.video__preview
+				.video__preview-text-center
+					.video__preview-title Бизнес-услуги
+					.video__preview-subtitle во всех сферах деловой жизни
+				+image('services/video-preview.png','video__preview-img')
+				.video__play
+					+icon('play', 'video__play-icon')
+			iframe#video-ytb(src='https://www.youtube.com/embed/0uN4kC8ze4Y', allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture")
+
+.services-banner.py-5
+	.container.services-banner__container
+		.services-banner__content
+			ul.services-banner__features-list
+				li.services-banner__features-item
+					.services-banner__features-item-icon
+						+image('services/banner-features-icon1.png', 'services-banner__features-item-img')
+					.services-banner__features-item-text
+						.services-banner__features-item-title Качество
+						.services-banner__features-item-desk Многолетний опыт работы на зарубежных рынках, высокая квалификация персонала
+				li.services-banner__features-item
+					.services-banner__features-item-icon
+						+image('services/banner-features-icon2.png', 'services-banner__features-item-img')
+					.services-banner__features-item-text
+						.services-banner__features-item-title Надежность
+						.services-banner__features-item-desk Более 500 видов услуг доступны с компьютера или с мобильного устройства
+				li.services-banner__features-item
+					.services-banner__features-item-icon
+						+image('services/banner-features-icon3.png', 'services-banner__features-item-img')
+					.services-banner__features-item-text
+						.services-banner__features-item-title Скорость
+						.services-banner__features-item-desk Заказчик в режиме реального времени отслеживает ход выполнения обращения
+
+.services-list.py-5
+	.container
+		.services-list__search
+			.search-line
+				.search-line__icon
+					+icon('search', 'search-line__icon-pic')
+				.search-line__text Поиск услуг
+				.search-line__line
+					input.search-line__line-input
+				button.btn.btn-primary.search-line__btn Найти
+		.row
+			-
+				var servicesList = [
+					['Экспертиза',
+					'экспертиза.svg',
+					['Идентификационная экспертиза, ', 'Контрактная экспертиза, ', 'Пожарно-техническая экспертиза и пожарный аудит, ', 'Страховая экспертиза, ', 'Судебная экспертиза', 'Товарная экспертиза', 'Экспертиза страны происхождения товара, ', 'Энергетическое обследование']
+					],
+					['Оценка',
+					'оценка.svg',
+					['Оценка бизнеса, ', 'Оценка нематериальных активов, ', 'Оценка технологического оборудования, деталей машин, ', 'Оценка ущерба, ', 'Оценка недвижимости, ', 'Оценка сооружений и передаточных устройств, ', 'Оценка транспортных средств, ', 'Другие виды оценки']
+					],
+					['Сертификация',
+					'сертификация.svg',
+					['Классификация средств размещения, ', 'Экспертизы и сертификации товаров, ', 'Сертификация систем менеджмента качества, ', 'Заполнение декларации о розничной продаже алкогольной продукции, ', 'Предоставление информации о нормативной документации в сфере']
+					],
+					['Выставка',
+					'выставки.svg',
+					['Организация и проведение выставок, ', 'Организация и проведение деловых миссий, ', 'Организация и проведение', 'Форумов, конгрессов и презентаций, ', 'Консультации по вопросам выставок, ярмарок, конгрессов, деловых миссий, презентаций']
+					],
+					['Консультация',
+					'консультация.svg',
+					['Консультации по бизнес-планированию, ', 'Консультации по внешнеэкономической деятельности, ', 'Консультации по вопросам сертификации, ', 'Консультации по защите, инвентаризации и оценке интеллектуальной собственности, ', 'Консультации по корпоративному управлению Консультации по налогообложению']
+					],
+					['Образование',
+					'образование.svg',
+					['Организация и проведение выставок, ', 'Организация и проведение деловых миссий, ', 'Организация и проведение, Форумов, конгрессов и презентаций, ', 'Консультации по вопросам выставок, ярмарок, конгрессов, деловых миссий, презентаций']
+					],
+				];
+			each serviesItem in servicesList	
+				.col-12.col-md-6.col-lg-4.mb-4
+					.card.service
+						.card-body.service__body
+							.service__header
+								.service__pic
+									+image(`services/${serviesItem[1]}`,'service__img')
+								h3.service__title=serviesItem[0]
+							.service__links
+								each linksItem in serviesItem[2]
+									a.service__link(href='#') #{linksItem} 

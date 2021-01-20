@@ -1,0 +1,230 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+  margin: 0 -25px;
+	&__container {
+    padding: 0 25px;
+    flex-wrap: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    .col:not(:first-child) {
+        display: none;
+    }
+    &.slick-initialized {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 1s ease-out;
+      .col:not(:first-child) {
+        display: block;
+      }
+    }
+		// display: block;
+	}
+  &__dots_promo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    display: flex;
+
+    li {
+      position: relative;
+      width: 10px;
+      height: 10px;
+	  margin: 0 5px;
+	  transition: width 0.5s;
+    }
+
+    li button {
+      font-size: 0;
+      line-height: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      color: transparent;
+      border: 0;
+      outline: none;
+      background: transparent;
+    }
+    
+    li button:hover,
+    li button:focus {
+      outline: none;
+    }
+    
+    li button:hover:before,
+    li button:focus:before {
+      background-color: rgba($color: $white, $alpha: 1.0);
+    }
+    
+    li button:before {
+      content: '';
+      border-radius: 5px;
+      line-height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: $white, $alpha: .5);
+       
+    }
+    
+    li.slick-active {
+	  width: 20px;
+	  transition: width 0.5s;
+      button:before {
+        background-color: rgba($color: $white, $alpha: 1.0);
+      }
+    } 
+  }
+  &__dots_blue {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    display: flex;
+
+    li {
+      position: relative;
+      width: 10px;
+      height: 10px;
+	  margin: 0 5px;
+	  transition: width 0.5s;
+    }
+
+    li button {
+      font-size: 0;
+      line-height: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      color: transparent;
+      border: 0;
+      outline: none;
+      background: transparent;
+    }
+    
+    li button:hover,
+    li button:focus {
+      outline: none;
+    }
+    
+    li button:hover:before,
+    li button:focus:before {
+      background-color: rgba($color: $gray, $alpha: 1.0);
+    }
+    
+    li button:before {
+      content: '';
+      border-radius: 5px;
+      line-height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: $gray, $alpha: .5);
+       
+    }
+    
+    li.slick-active {
+      button:before {
+        background-color: rgba($color: $blue, $alpha: 1.0);
+      }
+    } 
+  }
+ 
+  &__btn {
+    width: 95px;
+    height: 95px;
+    padding: 0;
+    border: 1px solid $gray;
+    border-radius: 50%;
+    background: rgba($color: $light, $alpha: 1);
+    // font-size: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+	z-index: 100;
+	outline: none;
+	opacity: 0.4;
+
+	&:hover,
+    &:focus {
+	  outline: none;
+	}
+	&:hover {
+	  opacity: 0.8;
+	}
+	
+	&_small {
+		width: 55px;
+		height: 55px;
+
+		.slider__btn-icon {
+			height: 20px;
+	  		width: 20px;
+		}
+	}
+	
+  }
+  
+  &__btn_prev {
+    left: 0px;
+  }
+  &__btn_next {
+	right: 0px;
+	
+	.slider__btn-icon {
+		transform: translate(-50%, -50%) rotate(180deg);
+	}
+  }
+
+  &__btn-icon {
+	  height: 40px;
+	  width: 40px;
+	  fill:$blue;
+	  position: absolute;
+	  top:50%;
+	  left:50%;
+	  transform: translate(-50%, -50%);
+  }
+
+  &__btn_news {
+	  border: none;
+	  background: none;
+  }
+  
+	@include media-breakpoint-down(md) {
+		&__btn {
+			width: 50px;
+			height: 50px;
+			.slider__btn-icon {
+				height: 20px;
+				width: 20px;
+			}	
+		}
+		&__btn_prev {
+			left: 0px;
+		  }
+		&__btn_next {
+			right: 0px;	
+	  	}
+}
+}
+@include media-breakpoint-down(lg) {
+	.slider__btn_news {
+		border: 1px solid $gray;
+		background: rgba($color: $light, $alpha: 1);
+	}
+
+	.slider__btn_news.slider__btn_prev  {
+		left: 6%;
+	}
+	.slider__btn_news.slider__btn_next   {
+		right: 6%;
+	}
+}

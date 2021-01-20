@@ -1,0 +1,45 @@
+.organization-card {
+	min-height: 220px;
+	box-shadow: 0 0 6.5px rgba(61,75,137,0.19);
+	&:hover {
+		box-shadow:0 0 11px rgba(66,83,155,0.3);
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+	}
+	&__content {
+		flex: 1;
+		padding-right: 80px;
+		position: relative;
+	}
+	&__title {
+		font-size: 16px;
+		color: $black;
+		margin-bottom: 8px;
+	}
+	&__link {
+		font-size: 14px;
+		color: #03489a;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__tags {
+		padding: 7px 0;
+		border-top: 1px solid #e1e1e1;
+	}
+
+	&__logo{
+		position: absolute;
+		top: 0;
+		right: 0;
+		max-width: 85px;
+	}
+	&__logo-img{
+		object-fit: contain;
+	}
+
+}

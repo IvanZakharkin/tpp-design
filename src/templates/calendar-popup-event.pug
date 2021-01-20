@@ -1,0 +1,25 @@
+.card.calendar-popup-event
+	.card-body.calendar-popup-event__body
+		button.calendar-popup-event__close
+			i.fas.fa-times
+		.calendar-popup-event__name
+			input.calendar-popup-event__name-input(placeholder='Название')
+		.calendar-popup-event__choice-type
+			button.btn.calendar-popup-event__choice-type-btn.calendar-popup-event__choice-type-btn_active Событие
+			button.btn.calendar-popup-event__choice-type-btn Анонс
+			button.btn.calendar-popup-event__choice-type-btn Тематики
+		.calendar-popup-event__parameters
+			.calendar-popup-event__parameter
+				| 18 марта 2020 8:00 - 9:00 (GMT+3)
+			.calendar-popup-event__parameter
+				| Гости
+				input.calendar-popup-event__input
+			.calendar-popup-event__parameter
+				| Группа
+				input.calendar-popup-event__input
+			.calendar-popup-event__parameter
+				| Статус:
+				.text-primary Забронирован
+		.calendar-popup-event__btns
+			button.btn.calendar-popup-event__btn.calendar-popup-event__btn_parameters Другие параметры
+			button.btn.calendar-popup-event__btn.calendar-popup-event__btn_save Сохранить

@@ -1,0 +1,132 @@
+.form-title {
+    font-size: 30px;
+    color: #1d3e7b;
+}
+
+.form-lable-input {
+    font-size: 14px;
+    color: #81869e;
+}
+
+.form-btn-add-plus {
+    border-radius: 50%;
+    border: 1px solid #eaeaee;
+    color: #507dbb;
+    font-weight: 100;
+    font-size: 30px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-btn-text {
+    color: #2164b1;
+    font-size: 14px;
+    border-color: #d7d7d7;
+    background-color: #f8f9fb;
+
+    &_gray {
+        color: #ffffff;
+        background-color: #8ea1bb;
+        border-color: #8ea1bb;
+    }
+}
+
+.expertice-type-packaging {
+    padding: 11px 0;
+}
+.expertice-form-link {
+    color: #1b5ab1;
+    font-size: 21px;
+}
+.expertice-form-red-link {
+    color: #ff0a4f;
+    font-size: 14px;
+    text-decoration: underline;
+}
+.form-control-expertice-acts {
+    font-size: 14px;
+    height: auto;
+    padding: 10px 15px;
+    background-color: #f8f9fb;
+
+    &[readonly] {
+        background: none;
+        border: none;
+        background-color: transparent;
+    }
+}
+
+
+.expertice-popup-organization-info {
+    &__title {
+        font-size: 17px;
+        color: #000000;
+        font-weight: bold;
+        margin-bottom: 4px;
+
+        span {
+            color: #b2b6c5;
+            &:hover {
+                color: #000000;
+            }
+        }
+    }
+    &__value {
+        font-size: 14px;
+        color: #81869e;
+        margin-bottom: 4px;
+    }
+    &__link {
+        color: #2164b2;
+        font-size: 16px;
+        margin-bottom: 4px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.expertice-acts-popup {
+    .modal-dialog {
+        max-width: 1090px;
+    }
+
+    .modal-body {
+        padding: 0 35px;
+    }
+
+    .close {
+        outline: none
+    }
+}
+
+.expertice-popup-organization {
+    padding: 20px 0;
+    border-top: 1px solid #d9d9d9;
+
+
+}
+.expertice-popup-organization-title {
+    font-size: 24px;
+    color: #2164b2;
+}
+
+.expertice-acts-slider {
+    .slider__container {
+        margin-right: -.9375rem;
+        margin-left: -.9375rem;
+    }
+    .slick-track {
+        display: flex;
+        
+    }
+    .slick-slide:focus {
+        outline: none;
+        
+    }
+}

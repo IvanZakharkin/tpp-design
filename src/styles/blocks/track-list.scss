@@ -1,0 +1,147 @@
+.track-list {
+    &__step {
+        display: flex;
+        // align-items: center;
+        color: #81869e;
+        font-size: 14px;
+        margin-bottom: 15px;
+
+        // &:last-child, &:nth-last-child(2) {
+        //     .track-list__step-icon:after {
+        //         display: none;
+        //     }
+        // }
+
+        &_red {
+            color: #ff1a5a;
+            .track-list__link {
+                color: #ff1a5a;
+            }
+            .track-list__input {
+                color: #ff1a5a;
+            }
+            .track-list__step-icon-pic {
+                fill: #ff1a5a;
+            }
+        }
+
+        &_no-dots {
+            .track-list__step-icon::after {
+                display: none;
+            }
+        }
+    }
+    &__steps-container {
+        &_transfer {
+            // visibility: hidden;
+            box-shadow: 0 0 0 0.2rem rgba(65,98,169,.25);
+            .track-list__step_transport {
+                // visibility: hidden;
+                // box-shadow: 0 0 0 0.2rem rgba(65,98,169,.25);
+            }
+            .track-list__step_place {
+                // visibility: hidden;
+                // box-shadow: 0 0 0 0.2rem rgba(65,98,169,.25);
+            }
+            
+        }
+    }
+    &__step-title {
+        width: 27%;
+        padding: 9px 12px;
+    }
+    &__step-info {
+        color: #575757;
+        font-size: 16px;
+        width: 69%;
+        display: flex;
+        position: relative;
+        padding-right: 20px;
+
+        &:hover {
+            .track-list__step-btn_transfer {
+                display: block;
+            }
+        }
+    }
+    &__step-icon {
+        flex: 1;
+        text-align: center;
+        position: relative;
+        padding: 9px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:after {
+            content: "";
+            display: block;
+            height: 20px;
+            width: 1px;
+            border-right: 4.5px dotted #bec0cd;
+            position: absolute;
+            top: 92%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+    &__step-icon-pic {
+        width: 17px;
+        height: 17px;
+        fill: #81869e;
+    }
+    &__link {
+        color: #2164b1;
+    }
+    &__step-info-hover {
+        position: relative;
+        padding: 9px 12px;
+        padding-right: 35px;
+        flex: 1;
+        &:hover {
+            background-color: #f5f5f5;
+            .track-list__step-btn_close {
+                display: block;
+            }
+
+        }
+    }
+    &__step-btn {
+        display: none;
+        color: #9fa1a9;
+        &_close {
+            position: absolute;
+            font-size: 12px;
+            padding: 0;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%)
+
+        }
+        &_transfer {
+            font-size: 14px;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%)
+        }
+    }
+
+    &__input {
+        border: none;
+        background: transparent;
+        width: 100%;
+        color: #2164b1;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

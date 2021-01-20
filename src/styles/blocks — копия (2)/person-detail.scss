@@ -1,0 +1,175 @@
+.person-detail {
+	&__container {
+		padding: 0 115px 0 15px;
+	}
+	@include media-breakpoint-down(md) { 
+		&__container {
+			padding-right: 15px;
+    		padding-left: 15px;
+		}
+	 }
+
+
+
+	&__pic {
+		max-width: 265px;	
+	}
+
+	
+	
+	&__name {
+		font-size: 37px;
+		color: $black;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+	&__post{
+		font-size: 22px;
+		color: $black;
+		margin-bottom: 30px;
+	}
+	&__title {
+		font-size: 30px;
+		color: #134689;
+		margin-bottom: 20px;
+		font-weight: 400;
+	}
+
+	&__content {
+		font-size: 18px;
+		line-height: 1.33;
+		color: $dark-gray;
+
+		p{
+			margin-bottom: 20px;
+		}
+		a {
+			color: $blue;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__photo {
+		margin-bottom: 30px;
+	}
+	
+	&__expert-opinions-list {
+		margin-bottom: 30px;
+		
+	}
+	&__expert-opinion {
+		padding: 20px 0;
+		border-top: 1px solid #c8c8c8;
+		list-style: none;
+
+		&:last-child {
+			border-bottom: 1px solid #c8c8c8;
+		}
+		
+	}
+	&__expert-opinion-link {
+		&:hover {
+			.person-detail__expert-opinion-title {
+				color: $blue;
+			}
+		}
+	}
+	&__expert-opinion-title {
+		font-size: 25px;
+		line-height: 1.12;
+		margin-bottom: 25px;
+		font-weight: bold;
+	}
+	&__expert-opinion-desk {
+		font-size: 18px;
+		margin-bottom: 25px;
+		color: $dark-gray;
+	}
+	&__expert-opinion-tag {
+		display: inline-flex;
+		color: $dark-gray;
+		font-size: 13px;
+	}
+	&__expert-opinion-tag-link {
+		color: $blue;
+		text-transform: uppercase;
+		font-size: 13px;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+	}
+
+	&__expert-opinion-date {
+		padding: 10px 15px;
+		background: $blue;
+		position: relative;
+		color: $white;
+		font-size: 12px;
+		border-radius: 3px;
+		display: inline-block;
+		margin-bottom: 30px;
+
+		&:after {
+			content: '';
+			display: block;
+			height: 100%;
+			border: 17px solid transparent; 
+			border-bottom: 17px solid transparent;
+			border-right: 10px solid transparent;
+			border-left: 11px solid $blue;
+			border-top: 16px solid $blue;
+			position: absolute;
+			top:0;
+			right: -20px;
+			border-top-right-radius: 3px;;
+		}
+	}
+
+	&__contacts-list {
+		font-size: 18px;
+		color: $gray;
+		margin-bottom: 20px;
+	}
+	&__contacts-list-item {
+		list-style-type: none;
+	}
+	&__contacts-mail {
+		font-size: 16px;
+		color: $blue;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__subject-expert {
+		position: relative;
+	}
+
+	&__subject-expert-link {
+		display: block;
+		padding: .8125rem;
+		background-color: #f3f3f3;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		left: -50px;
+	}
+	&__subject-expert-icon {
+		width: 1.0625rem;
+		height: 1.0625rem;
+		fill: #8a97aa;
+
+		&:hover {
+			fill: #1d5393;
+		}
+	}
+	
+
+
+}

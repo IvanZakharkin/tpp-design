@@ -1,0 +1,25 @@
+.publications {
+	&__container {
+		height: 280px;
+		overflow: hidden;
+	}
+	&__list{
+		width: 100%;
+		overflow-x: scroll;
+		padding: 25px 0;
+	}
+	&__list-container{
+		width: 1250px;
+ 		padding-bottom: 20px;
+	}
+
+	@include media-breakpoint-down(xs) { 
+		&__list-container {
+			width: auto;
+		}
+
+		&__container {
+			height: auto;
+		}
+	}
+}

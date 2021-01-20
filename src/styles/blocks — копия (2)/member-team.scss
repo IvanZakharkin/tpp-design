@@ -1,0 +1,116 @@
+.member-team {
+	transition: transform .3s ease-out;
+	padding-top:50px;
+	&:hover {
+		transform: translateY(-20px);
+		transition: transform .3s ease-out;
+		// .member-team__container {
+		// 	box-shadow: 1.06px 1.696px 12px rgba(0,15,72,0.35);
+		// }
+		
+	}
+
+	&_contacts {
+		.member-team__container {
+			min-height: 280px;
+		}
+	}
+
+	
+	&__container {
+		position: relative;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		padding: 70px 35px 40px 35px;
+		background: $white;
+		min-height: 300px;
+	}
+	
+	&__avatar {
+		width: 95px;
+		height: 95px;
+		border-radius: 50%;
+		overflow: hidden;
+		position: absolute;
+		left: 50%;
+		top: -50px;
+		transform: translateX(-50%);
+		border: 6px solid #024291; 
+	}
+	&__avatar-img{
+		object-fit: cover;
+		width: 100%;
+        height: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&__name {
+		text-transform: uppercase;
+		font-size: 15px;
+		font-weight: bold;
+		margin-bottom: 5px;
+		color: $blue;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&__post {
+		text-transform: uppercase;
+		font-size: 11px;
+		color: $gray;
+		font-weight: bold;
+		position: relative;
+
+		&:after {
+			content: '';
+			display: block;
+			height: 2px;
+			width: 60px;
+			position: absolute;
+			bottom: -20px;
+			left: 50%;
+			transform: translateX(-50%);
+			background: $blue;
+		}
+	}
+
+	&__info {
+		font-size: 16px;
+		color: black;
+		margin-top: auto;
+		max-height: 108px;
+		position: relative;
+		overflow: hidden;
+
+		&:after {
+			height: 25px;
+			width: 100%;
+			display: block;
+			content: '';
+			position: absolute;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background: linear-gradient(to bottom,rgba(255,255,255,0) 0,rgba(255,255,255,.45) 26%,rgba(255,255,255,.9) 63%,#fff 100%);
+			z-index: 5;
+		}
+		
+		// position: relative;
+
+		// &:after {
+		// 	content: '';
+		// 	display: block;
+		// 	height: 2px;
+		// 	width: 60px;
+		// 	position: absolute;
+		// 	top: -45px;
+		// 	left: 50%;
+		// 	transform: translateX(-50%);
+		// 	background: $blue;
+		// }
+	}
+}

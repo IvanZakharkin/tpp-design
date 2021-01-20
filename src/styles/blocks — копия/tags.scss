@@ -1,0 +1,33 @@
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+}
+.tags__item {
+	margin-right: 5px;
+	margin-bottom: 5px;
+	
+
+}
+.tags__link{
+	color: $dark-gray;
+	margin-right: 5px;
+	padding: 3px 5px;
+	background-color: $lightgray;
+	display: block;
+	border-radius: 5px;
+	font-size: 11px;
+
+	&:hover {
+		background-color: #e2e2e2;
+	}
+
+	&_showAll {
+		background-color: transparent;
+		color: $blue;
+		
+		&:hover {
+			text-decoration: underline;
+			background-color: transparent;
+		}
+	}
+}

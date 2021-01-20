@@ -1,0 +1,36 @@
+.serices-features-card {
+	height: 100%;
+	box-shadow: 0 0 6.5px rgba(61,75,137,0.19);
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__icon {
+		max-height: 120px;
+		margin-bottom: 25px;
+	}
+	&__title {
+		margin-bottom: 25px;
+		font-size: 23px;
+		line-height: 1.09;
+		color: #15498a;
+		font-weight: 400;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	&__desk {
+		width: 292px;
+		font-size: 16px;
+		color: #81869e;
+		font-weight: 400;
+		text-align: center;
+		-webkit-line-clamp: 3;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		height: 55px;
+	}
+}

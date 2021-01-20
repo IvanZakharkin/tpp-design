@@ -1,0 +1,40 @@
+.card.calendar-popup-event
+	.card-body.calendar-popup-event__body
+		.calendar-popup-event__close
+		.calendar-popup-event__name
+			input.calendar-popup-event__name-input(placeholder='Название')
+		.calendar-popup-event__choice-type
+			button.btn.calendar-popup-event__choice-type-btn.calendar-popup-event__choice-type-btn_active Мероприятие
+			button.btn.calendar-popup-event__choice-type-btn Напоминание
+		.calendar-popup-event__parameters
+			.calendar-popup-event__parameter.calendar-popup-event__parameter_time
+				<i class="far fa-clock  mr-3"></i>
+				.calendar-popup-event__parameter-date
+					input.calendar-popup-event__input(placeholder="18 марта")
+				.calendar-popup-event__parameter-time
+					.dropdown
+						button.btn.calendar-popup-event__input.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') 12:00
+						.dropdown-menu
+							button.dropdown-item(type='button') 13:00
+							button.dropdown-item(type='button') 14:00
+				.mr-1 -
+				.calendar-popup-event__parameter-date
+					input.calendar-popup-event__input(placeholder="18 марта")
+				.calendar-popup-event__parameter-time
+					.dropdown
+						button.btn.calendar-popup-event__input.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') 12:00
+						.dropdown-menu
+							button.dropdown-item(type='button') 13:00
+							button.dropdown-item(type='button') 14:00
+			.calendar-popup-event__parameter
+				<i class="fas fa-map-marker-alt mr-3"></i>
+				input.calendar-popup-event__input(placeholder="Добавьте гостей")
+			.calendar-popup-event__parameter
+				<i class="fas fa-map-marker-alt mr-3"></i>
+				input.calendar-popup-event__input(placeholder="Добавьте местоположение") 
+			.calendar-popup-event__parameter
+				<i class="fas fa-map-marker-alt mr-3"></i>
+				input.calendar-popup-event__input(placeholder="Добавьте описание")
+		.calendar-popup-event__btns
+			button.btn.calendar-popup-event__btn.calendar-popup-event__btn_parameters Другие параметры
+			button.btn.calendar-popup-event__btn.calendar-popup-event__btn_save Сохранить

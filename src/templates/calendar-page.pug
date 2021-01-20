@@ -1,0 +1,176 @@
+section.calendar-page.py-5.bg-light.d-none.d-md-block
+	.container
+		.row.mb-4
+			.col-6.d-flex.align-items-center
+				button.btn.calendar-page__btn-create + Создать событие
+				.calendar-page__choise-date
+					.calendar-page__choise-date-item
+						bitton.btn.calendar-page__btn-gray.px-3
+							i.fas.fa-chevron-left
+					.calendar-page__choise-date-item
+						bitton.btn.calendar-page__btn-gray Сегодня
+					.calendar-page__choise-date-item
+						bitton.btn.calendar-page__btn-gray.px-3
+							i.fas.fa-chevron-right
+					.calendar-page__choise-date-item
+						.calendar-page__date май 2020 год
+			.col-6.d-flex.justify-content-end
+				button.btn.calendar-page__btn-icon
+					i.fas.fa-search
+				button.btn.calendar-page__btn-icon
+					i.far.fa-question-circle
+				button.btn.calendar-page__btn-icon
+					i.fas.fa-cog
+				.dropdown.calendar-page__view
+					a.btn.dropdown-toggle.calendar-page__view-current(href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Неделя
+					div.dropdown-menu(aria-labelledby="dropdownMenuLink")
+						a.dropdown-item.calendar-page__view-item(href="#") День
+						a.dropdown-item.calendar-page__view-item(href="#") Неделя
+						a.dropdown-item.calendar-page__view-item(href="#") Месяц
+						a.dropdown-item.calendar-page__view-item(href="#") Год
+						a.dropdown-item.calendar-page__view-item(href="#") Расписание
+		.calendar-page__row
+			.calendar-page__col-left
+				.lcalendar
+					.lcalendar__months
+						button.lcalendar__months-btn.lcalendar__btn_prev
+							i.fas.fa-chevron-left
+						ul.lcalendar__months-list
+							each yersItem in ['Октябрь', 'Август','Сентябрь']
+								if yersItem == 'Сентябрь'
+									li.lcalendar__month.lcalendar__month_active
+										button.lcalendar__month-btn=yersItem
+								else 
+									li.lcalendar__month
+										button.lcalendar__month-btn=yersItem
+						buttton.lcalendar__months-btn.lcalendar__months-btn_next
+							i.fas.fa-chevron-right
+					ul.lcalendar__days-week
+						each daysItem in ['пн', 'вт','ср','чт','пт','сб','вс']
+							li.lcalendar__day-week=daysItem
+					- var n = 1;		
+					ul.lcalendar__days
+						while n < 43
+							if n == 1
+								li.lcalendar__day.lcalendar__day_not_current-month
+										button.lcalendar__day-btn= n++
+							if n == 2
+								li.lcalendar__day.lcalendar__day_not_current-month
+									button.lcalendar__day-btn= n++
+							if n == 3
+								li.lcalendar__day.lcalendar__day_not_current-month
+										button.lcalendar__day-btn= n++
+							if n == 4
+								li.lcalendar__day.lcalendar__day_not_current-month
+									button.lcalendar__day-btn= n++
+							if n == '24'
+								li.lcalendar__day.lcalendar__day_current
+									button.lcalendar__day-btn= n++
+							else 
+								li.lcalendar__day
+									button.lcalendar__day-btn= n++
+				.calendar-page__calendars
+					.calendar-page__calendars-title Календари
+					.calendar-page__calendars-list
+						.calendar-page__calendars-list-item
+							label(class="checkbox-calendar")
+								input.checkbox-calendar__input(type="checkbox")
+								.checkbox-calendar__fake(style="background: orange;")
+								.checkbox-calendar__title Праздники РФ
+					button.btn.calendar-page__btn-gray + Добавить календарь
+			.calendar-page__col-right
+				.bcalendar
+					.bcalendar__schedule
+						.bcalendar__schedule-container
+							- 
+								var events = [
+									['8','вс', '13:30-14:00', 'Новое заседание'],
+									['9','пн', '13:30-14:00', 'Новое заседание'],
+									['10','вт', '13:30-14:00', 'Новое заседание'],
+									['11','ср', '13:30-14:00', 'Новое заседание'],
+									['12','чт', '13:30-14:00', 'Новое заседание'],
+									['13','пт', '13:30-14:00', 'Новое заседание'],
+									['14','сб', '13:30-14:00', 'Новое заседание'],
+								]
+							each event, index in events
+								if index === 3 
+									.bcalendar__schedule-event.bcalendar__schedule-event_current
+										.bcalendar__schedule-event-day=event[0]
+										.bcalendar__schedule-event-day-name=event[1]
+										.bcalendar__schedule-event-day-current сегодня
+										.bcalendar__schedule-event-time=event[2] 
+										.bcalendar__schedule-event-name
+											.bcalendar__schedule-event-name-circle(style="background: red")
+											.bcalendar__schedule-event-name-text=event[3]
+								else
+									.bcalendar__schedule-event
+										.bcalendar__schedule-event-day=event[0]
+										.bcalendar__schedule-event-day-name=event[1]
+										.bcalendar__schedule-event-day-current сегодня
+										.bcalendar__schedule-event-time=event[2] 
+										.bcalendar__schedule-event-name
+											.bcalendar__schedule-event-name-circle(style="background: red")
+											.bcalendar__schedule-event-name-text=event[3]
+
+						.bcalendar__schedule-footer
+							.bcalendar__schedule-footer-text Расписание до 14 мая 2020 года. 
+							button.bcalendar__schedule-footer-btn-more Позже
+
+
+					//- .bcalendar__days
+					//- 	each day in [['вс', '8'],['пн', '9'],['вт', '10'],['ср', '11'],['чт', '12'],['пт', '13'],['сб', '14'],]
+					//- 		if day[1] == '9'
+					//- 			.bcalendar__day.bcalendar__day_active
+					//- 				.bcalendar__day-name= day[0]
+					//- 				.bcalendar__day-num
+					//- 					button.bcalendar__day-num-btn= day[1]
+					//- 		else 
+					//- 			.bcalendar__day
+					//- 				.bcalendar__day-name= day[0]
+					//- 				.bcalendar__day-num
+					//- 					button.bcalendar__day-num-btn= day[1]
+					.bcalendar__week-grid
+						.bcalendar__week-grid-cols
+							.bcalendar__week-grid-time
+								each time in ['1:00','2:00','3:00','4:00','5:00','6:00','7:00','8:00','9:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00']
+									.bcalendar__week-grid-hour
+										.bcalendar__week-grid-hour-value= time
+							.bcalendar__week-grid-day
+								-var d = 0
+								while d < 24
+									- d++
+									.bcalendar__week-grid-day-hour
+							.bcalendar__week-grid-day
+								-var d = 0
+								while d < 24
+									- d++
+									.bcalendar__week-grid-day-hour
+							.bcalendar__week-grid-day
+								-var d = 0
+								while d < 24
+									- d++
+									.bcalendar__week-grid-day-hour
+							.bcalendar__week-grid-day
+								-var d = 0
+								while d < 24
+									- d++
+									.bcalendar__week-grid-day-hour
+							.bcalendar__week-grid-day
+								.bcalendar__week-grid-day-hour
+								.bcalendar__week-grid-day-hour
+									.bcalendar__event(style="background: #ffbc3b; width:100%; height:95%")
+										.bcalendar__event-title Встреча с главой тпп
+								-var d = 2
+								while d < 24
+									- d++
+									.bcalendar__week-grid-day-hour
+							.bcalendar__week-grid-day
+								-var d = 0
+								while d < 24
+									- d++
+									.bcalendar__week-grid-day-hour
+							.bcalendar__week-grid-day
+								-var d = 0
+								while d < 24
+									- d++
+									.bcalendar__week-grid-day-hour

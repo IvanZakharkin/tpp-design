@@ -1,0 +1,27 @@
+section.team.py-4.py-lg-5
+	.container
+		.row.mb-4
+				.col
+					h2.title.team__title Персоны
+				.col.text-right
+					a.btn.btn-outline-white.text-uppercase(href="#") Подробнее
+		- 
+			var members = [
+				["sf1.jpg", "Анатолий  Выборный", "президент Торгово-промышленной палаты России (ТПП РФ)", "(495) 620-03-32", "tpprf@tpprf.ru"],
+				["sf1.jpg","Андрей  Костогрызов ", "заместитель  президента Торгово-промышленной палаты России (ТПП РФ)", "(495) 620-03-32", "tpprf@tpprf.ru"],
+				["sf3.jpg","Антонина  Ряховская", "Председатель  Подкомитета по антикризисному управлению (ТПП РФ)", "(495) 620-03-32", "a.i.poddevalin@rostechn.ru"],
+			];
+	.team__container
+		.team__list.container
+			.row.team__list-container
+				each member in members
+					.col-12.col-sm-4
+						.member-team.member-team_contacts
+							a.member-team__container(href="#")
+								.member-team__avatar
+									+image(`persons/${member[0]}`, "member-team__avatar-img")
+								.member-team__name #{member[1]}
+								.member-team__post #{member[2]}
+								.member-team__info 
+									p #{member[3]}
+									p #{member[4]}

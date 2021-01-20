@@ -1,0 +1,31 @@
+.orv {
+	display: flex;
+	align-items: center;
+
+	@include media-breakpoint-down(xs) { 
+		& {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	 }
+
+	&__logo {
+		width: 250px;
+		margin-right: 40px;
+
+		
+	}
+
+	@include media-breakpoint-down(xs) { 
+		&__logo {
+			margin-right: 0px;
+			margin-bottom: 30px;
+		}
+	 }
+
+	&__desk {
+		font-size: 16px;
+		color: $dark-gray;
+		flex: 1;
+	}
+}

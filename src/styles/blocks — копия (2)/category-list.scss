@@ -1,0 +1,45 @@
+.category-list {
+	&_bg_white {
+		.category__link{
+			background: #fff;
+		}
+	}
+	&__item {
+		list-style-type: none;
+		margin-right: 15px;
+		margin-bottom: 10px;
+	
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__link {
+		border: 1px solid $gray;
+		border-radius: 20px;
+		font-size: 15px;
+		color: $black;
+		
+
+		span {
+			color: #849ec6;
+		}
+		&:hover {
+			background: #507dbb;
+			color:white;
+
+			span {
+				color:white;
+			}
+		}
+	}
+	&__item.active {
+		.category-list__link{
+			background: #507dbb;
+			color:white;
+			span {
+				color:white
+			}
+				
+		}
+	}
+}

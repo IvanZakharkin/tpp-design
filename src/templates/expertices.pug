@@ -1,0 +1,434 @@
+.expertice-acts.py-5
+    .container
+        .row.mb-4
+            .col.d-flex
+                h2.title Экспертиза страны происхождения товар
+        .mb-5
+            .form-title.mb-4 Заявитель
+            .form-group.row
+                .col-sm-2.col-form-label.form-lable-input
+                    | Фио Заявителя<span class="text-warning">*<span>
+                .col-sm-10
+                    input#inputEmail3.form-control.form-control-expertice-acts(type='text', placeholder='')
+            .form-group.row
+                .col-sm-2.col-form-label.form-lable-input
+                    | Телефон заявителя<span class="text-warning">*<span>
+                .col-sm-10.d-flex.align-items-center
+                    input.form-control.form-control-expertice-acts(type='tel', placeholder='')
+                    button.btn.form-btn-add-plus.ml-3 +
+            .form-group.row
+                .col-sm-2.col-form-label.form-lable-input
+                    | Электронная почта заявителя<span class="text-warning">*<span>
+                .col-sm-10.d-flex.align-items-center
+                    input.form-control.form-control-expertice-acts(type='email', placeholder='')
+                    button.btn.form-btn-add-plus.ml-3 +
+            .row
+                .col-6
+                    .form-group.row
+                        .col-sm-4.col-form-label.form-lable-input
+                            | ИНН заявителя<span class="text-warning">*<span>
+                        .col-sm-8
+                            input.form-control.form-control-expertice-acts(type='text', placeholder='')
+                .col-6
+                    .form-group.row
+                        .col-sm-3.col-form-label.form-lable-input
+                            | ЕСИА Заявителя<span class="text-warning">*<span>
+                        .col-sm-9
+                            input.form-control.form-control-expertice-acts(type='text', placeholder='')
+        .mb-5
+            .form-title.mb-4 Маршрут
+            .row
+                .col-12.col-sm-6
+                    .form-group.row
+                        .col-sm-4.col-form-label.form-lable-input 
+                            | <b>Экспортер</b> (контрактодержатель)
+                        .col-sm-8
+                            .form-control.form-control-expertice-acts.text-primary(type='text', placeholder='')
+                                a.expertice-form-link(href="#" data-toggle="modal" data-target="#expertice-acts-popup") ООО "Ромашка"
+                    .form-group.row
+                        .col-sm-4.col-form-label.form-lable-input
+                            | <b>Грузоотправитель</b> (склад)
+                        .col-sm-8
+                            .form-control.form-control-expertice-acts(type='tel', placeholder='')
+                                a.expertice-form-link(href="#") ООО "Ромашка-транспорт"
+                    .form-group.row
+                        .col-sm-4.col-form-label.form-lable-input
+                            | <b>Грузополучатель</b> (склад)
+                        .col-sm-8
+                            .form-control.form-control-expertice-acts(type='email', placeholder='')
+                                a.expertice-form-link(href="#") Romashka-transport Ltd
+                    .form-group.row
+                        .col-sm-4.col-form-label.form-lable-input
+                            | <b>Импортер</b>
+                        .col-sm-8
+                            .form-control.form-control-expertice-acts(type='text', placeholder='')
+                                a.expertice-form-red-link(href="#") Укажите организацию
+                .col-12.col-sm-6
+                    .track-list
+                        .track-list__step
+                            .track-list__step-title Адрес отправителя
+                            .track-list__step-icon
+                                i.fas.fa-map-marker-alt
+                            .track-list__step-info
+                                .track-list__step-info-hover
+                                    a.track-list__link(href="#") Россия, 300041, Тула, Советская улица, 17
+                                    button.btn.btn-sm.track-list__step-btn.track-list__step-btn_close &#10006;
+                                button.btn.track-list__step-btn.track-list__step-btn_transfer.ml-4
+                                    i.fas.fa-grip-lines
+                        .track-list__step
+                            .track-list__step-title
+                            .track-list__step-icon
+                                i.fas.fa-car
+                            .track-list__step-info
+                                .track-list__step-info-hover
+                                        span Грузовой автомобиль
+                                        button.btn.btn-sm.track-list__step-btn.track-list__step-btn_close &#10006;
+                                button.btn.track-list__step-btn.track-list__step-btn_transfer.ml-4
+                                    i.fas.fa-grip-lines
+                        .track-list__step
+                            .track-list__step-title
+                            .track-list__step-icon
+                                i.far.fa-dot-circle
+                            .track-list__step-info
+                                .track-list__step-info-hover
+                                    a.track-list__link(href="#") Россия, Санкт-Петербург, порт Галерный ков
+                                        button.btn.btn-sm.track-list__step-btn.track-list__step-btn_close &#10006;
+                                button.btn.track-list__step-btn.track-list__step-btn_transfer.ml-4
+                                    i.fas.fa-grip-lines
+                        .track-list__step.track-list__step_red
+                            .track-list__step-title
+                            .track-list__step-icon
+                                i.fas.fa-question
+                            .track-list__step-info
+                                .track-list__step-info-hover
+                                    a.track-list__link(href="#") Укажите вид транспортировки
+                                        button.btn.btn-sm.track-list__step-btn.track-list__step-btn_close &#10006;
+                                button.btn.track-list__step-btn.track-list__step-btn_transfer.ml-4
+                                    i.fas.fa-grip-lines
+                        .track-list__step
+                            .track-list__step-title Страна отправления
+                            .track-list__step-icon
+                                i.fas.fa-map-marker-alt
+                            .track-list__step-info
+                                .track-list__step-info-hover
+                                    a.track-list__link(href="#") Сhina, 300041, Pekin, litujiw[htn’ ,, 17
+                                        button.btn.btn-sm.track-list__step-btn.track-list__step-btn_close &#10006;
+                                button.btn.track-list__step-btn.track-list__step-btn_transfer.ml-4
+                                    i.fas.fa-grip-lines
+                        .track-list__step
+                            .track-list__step-title
+                            .track-list__step-icon
+                                i.fas.fa-plus
+                            .track-list__step-info.py-0
+                                button.btn.form-btn-add-text
+                                    | Добавить промежуточный пункт маршрута 
+        .mb-5
+            .form-title.mb-4 Товар
+            .row
+                .col-3.pr-0
+                    .form-lable-input.expertice-type-packaging
+                        | Вид упаковки
+                    select.form-control.form-control-expertice-acts
+                        option Бутылка
+                        option Банка
+                        option Пакет
+                                
+                .col-9.pl-0
+                    table.expertice-acts-product-table.table-borderless
+                        colgroup
+                            col(width="20%")
+                            col(width="9%")
+                            col(width="14%")
+                            col(width="15%")
+                            col(width="15%")
+                            col(width="17%")
+                        thead.thead
+                            tr
+                                th Наименование товара
+                                th Стоимость
+                                th Происхождение
+                                th Изготовитель
+                                th ТН ВЭД
+                                th Комментарий
+                        tbody.tbody
+                            tr
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="Яблочное пюре")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="150")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="П/К/Д")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="ООО Яблоко")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="П/К/Д")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="ООО Яблоко")
+                            tr
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="Яблочное пюре")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="150")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="П/К/Д")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="ООО Яблоко")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="П/К/Д")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="ООО Яблоко")
+                            tr
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="Яблочное пюре")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="150")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="П/К/Д")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="ООО Яблоко")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="П/К/Д")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="ООО Яблоко")
+                            tr
+                                td(colspan="6")
+                                    button.btn.btn-sm.form-btn-add-text + Добавить состав сырья
+            .row
+                .col-3.pr-0
+                    .form-lable-input.expertice-type-packaging
+                        | Вид упаковки
+                    select.form-control.form-control-expertice-acts
+                        option Бутылка
+                        option Банка
+                        option Пакет
+                                
+                .col-9.pl-0
+                    table.expertice-acts-product-table.table-borderless
+                        colgroup
+                            col(width="20%")
+                            col(width="9%")
+                            col(width="14%")
+                            col(width="15%")
+                            col(width="15%")
+                            col(width="17%")
+                        thead.thead
+                            tr
+                                th Наименование товара
+                                th Стоимость
+                                th Происхождение
+                                th Изготовитель
+                                th ТН ВЭД
+                                th Комментарий
+                        tbody.tbody
+                            tr
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="Яблочное пюре")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="150")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="П/К/Д")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="ООО Яблоко")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="П/К/Д")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="ООО Яблоко")
+                            tr
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="Яблочное пюре")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="150")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="П/К/Д")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="ООО Яблоко")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="П/К/Д")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="ООО Яблоко")
+                            tr
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="Яблочное пюре")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="150")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="П/К/Д")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="ООО Яблоко")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="П/К/Д")
+                                td
+                                    input.form-control.form-control-expertice-acts(placeholder="ООО Яблоко")
+                            tr
+                                td(colspan="6")
+                                    button.btn.btn-sm.form-btn-add-text + Добавить состав сырья
+                        tr
+                            td(colspan="6")
+                                button.btn.btn-sm.form-btn-add-text + Добавить товар
+        .mb-5
+            .form-title.mb-4 Документы о происхождении товара
+            .account-info-list.mb-4
+                .account-info-list__item.form-group.d-flex.align-items-center
+                    .account-info-list__item-title.mr-3 Email
+                    .form-control.account-info-list__item-value.account-info-list__item-value_file
+                        span.text-primary asdasd.jpg
+                        button.btn(type="button") &times;
+                .account-info-list__item.form-group.d-flex.align-items-center
+                    .account-info-list__item-title.mr-3 Email
+                    .form-control.account-info-list__item-value.account-info-list__item-value_file
+                        span.text-primary asdasd.jpg
+                        button.btn(type="button") &times;
+            button.btn.btn-outline-primary#account-btn-add-document(type="button") + Добавить документ 
+        //- .mb-5
+        //-     .form-title.mb-4 Выберите тип сертификации
+        //-     .slider.expertice-acts-slider.mb-4
+        //-         //- button.slider__btn.slider__btn_prev.slider__btn_small
+        //-         //-     +icon('arrow', 'slider__btn-icon')
+        //-         //- button.slider__btn.slider__btn_next.slider__btn_small
+        //-         //-     +icon('arrow', 'slider__btn-icon')
+        //-         .slider__container
+        //-             - 
+        //-                 var certificates= 
+        //-                     [
+        //-                         [
+        //-                             "СТ-1", 
+        //-                             "Экспертиза по определению страны происхождения товара проводится в отношении товаров, изготовленных на территории Российской Федерации и предназначенных для экспорта. Для внутреннего рынка проводится сертификация продукции как продукции собственного производства. Экспертиза страны происхождения товара необходима ",
+        //-                             "expertices/expertices2.jpg",
+        //-                             "Экспертиза по определению страны происхождения товара проводится в отношении товаров, изготовленных на территории Российской Федерации и предназначенных для экспорта. Для внутреннего рынка проводится сертификация продукции как продукции собственного производства. Экспертиза страны происхождения товара необходима ",  
+        //-                         ],
+        //-                         [
+        //-                             "Общая форма", 
+        //-                             "Экспертиза по определению страны происхождения товара проводится в отношении товаров, изготовленных на территории Российской Федерации и предназначенных для экспорта. Для внутреннего рынка проводится сертификация продукции как продукции собственного производства. Экспертиза страны происхождения товара необходима ", 
+        //-                             "expertices/expertices1.jpg",
+        //-                             "Экспертиза по определению страны происхождения товара проводится в отношении товаров, изготовленных на территории Российской Федерации и предназначенных для экспорта. Для внутреннего рынка проводится сертификация продукции как продукции собственного производства. Экспертиза страны происхождения товара необходима "
+        //-                         ],
+                                
+        //-                     ]
+        //-             each certificate,index in certificates
+        //-                 .col-12.col-sm-6
+        //-                     if index == 0 
+        //-                         .card.expetice-card.expetice-card_ordered
+        //-                             .card-body.expetice-card__body
+        //-                                 .expetice-card__pic.mr-3
+        //-                                     +image(`${certificate[2]}`, "expetice-card__img")
+        //-                                 .expetice-card__info
+        //-                                     .expetice-card__title.mb-2= certificate[0] 
+        //-                                         <span class="text-weigth-bold text-success"> (Требуется Акт экспертиз)<span>
+        //-                                     .expetice-card__text.mb-3
+        //-                                         p= certificate[1]
+        //-                                         p= certificate[3]
+        //-                                     .d-flex
+        //-                                         a.btn.btn-outline-primary.mr-3(href="#") Подробнее
+        //-                     else 
+        //-                         .card.expetice-card
+        //-                             .card-body.expetice-card__body
+        //-                                 .expetice-card__pic.mr-3
+        //-                                     +image(`${certificate[2]}`, "expetice-card__img")
+        //-                                 .expetice-card__info
+        //-                                     .expetice-card__title.mb-2= certificate[0]
+        //-                                     .expetice-card__text.mb-3
+        //-                                         p= certificate[1]
+        //-                                         p= certificate[3]
+        //-                                     .d-flex
+        //-                                         a.btn.btn-outline-primary.mr-3(href="#") Подробнее
+        //-                                         a.btn.btn-outline-primary(href="#") Получить
+        .row.mb-4
+            .col-12.col-sm-6
+                .card.expetice-card.expetice-card_hidden(style="display: none")
+                    .card-body.expetice-card__body
+                        .expetice-card__pic.mr-3
+                            +image("expertices/expertices1.jpg", "expetice-card__img")
+                        .expetice-card__info
+                            .expetice-card__title.mb-2 Акт экспертизы страны происхождения товара
+                            .expetice-card__text.mb-3
+                                p Экспертиза по определению страны происхождения товара проводится в отношении товаров, изготовленных на территории Российской Федерации и предназначенных для экспорта.
+                                p Для внутреннего рынка проводится сертификация продукции как продукции собственного производства. Экспертиза страны происхождения товара необходима для получения сертификата происхождения товара.
+                                p Сертификат происхождения товара выдается на основании акта экспертизы по определению страны происхождения товара
+                            .d-flex
+                                a.btn.btn-outline-primary.mr-3(href="#") Подробнее
+                                a.btn.btn-outline-primary.mr-3(href="#") Получить
+                                a.btn.btn-outline-primary(href="#") Загрузить
+        button.btn.btn.btn-blue.text-uppercase.px-5.py-2(type="submit") Заказать
+    #expertice-acts-popup.modal.fade.show.expertice-acts-popup(tabindex='-1', role='dialog')
+        .modal-dialog(role='document')
+            .modal-content
+                button.close.text-right.p-3(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                .modal-body
+                    .d-flex.mb-4
+                        .form-lable-input.mr-4 Государтсвенная принадлежность
+                        .form-check.form-check-inline
+                            input#inlineRadio1.form-check-input(type='radio', name='inlineRadioOptions', value='option1')
+                            label.form-check-label(for='inlineRadio1') Российская
+                        .form-check.form-check-inline
+                            input#inlineRadio2.form-check-input(type='radio', name='inlineRadioOptions', value='option2')
+                            label.form-check-label(for='inlineRadio2') Зарубежная
+                    .d-flex.mb-4
+                        .d-flex.align-items-center.mr-4
+                            .form-lable-input.mr-2 ИНН
+                            input.form-control.form-control-expertice-acts(type='text', placeholder="ИНН")
+                        .d-flex.align-items-center.mr-4
+                            .form-lable-input.mr-2 КПП
+                            input.form-control.form-control-expertice-acts(type='text', placeholder="КПП" value="12312312")
+                        button.btn.btn-outline-primary Подробнее
+                    .expertice-popup-organization
+                        .expertice-popup-organization-title.mb-2 ООО "Ромашка транспорт"
+                        .text-success.mb-2 Действующая организация
+                                i.fas.fa-check-circle.ml-2
+                        .row
+                            .col-6
+                                .expertice-popup-organization-info.mb-3
+                                    .expertice-popup-organization-info__title ОГРН
+                                    .expertice-popup-organization-info__value 2415759898 от 6 ноября 2002 г
+                                .row.mb-3
+                                    .col-6
+                                        .expertice-popup-organization-info
+                                            .expertice-popup-organization-info__title Дата регистрации 
+                                            .expertice-popup-organization-info__value 16.07.1997 г. 10 000 руб
+                                            a.expertice-popup-organization-info__link(href="#") Все реквизиты
+                                    .col-6
+                                        .expertice-popup-organization-info
+                                            .expertice-popup-organization-info__title Уставной капитал 
+                                            .expertice-popup-organization-info__value 10000
+                                .expertice-popup-organization-info.mb-3
+                                    .expertice-popup-organization-info__title Юридический адрес 
+                                    .expertice-popup-organization-info__value 300000, Тульская обл. г. Тула, ул. Ф.Энгельса, д. 70, лит. А, комн. 23 
+                                .expertice-popup-organization-info.mb-3
+                                    .expertice-popup-organization-info__title + Код Google 
+                                    .expertice-popup-organization-info__value 5HFR+XP Тула 
+                                .expertice-popup-organization-info.mb-3
+                                    .expertice-popup-organization-info__title Руководитель
+                                    .expertice-popup-organization-info__value Директор
+                                    a.expertice-popup-organization-info__link(href="#") Удальцов Виктор Александрович
+                                    .expertice-popup-organization-info__value с ноября 2002 г.
+                                .expertice-popup-organization-info.mb-3
+                                    .expertice-popup-organization-info__title Среднесписоченая численность <span class="mr-2"><i class="far fa-question-circle"></i></span>
+                                    .expertice-popup-organization-info__value 17 сотрудников (2019).
+                                .expertice-popup-organization-info.mb-3
+                                    .expertice-popup-organization-info__title Реестр МСП <span class="mr-2"><i class="far fa-question-circle"></i></span>
+                                    .expertice-popup-organization-info__value Статус: микропредприятие присвоен 1 авгута 2016 г..
+                            .col-6
+                                .expertice-popup-organization-info.mb-3
+                                    .expertice-popup-organization-info__title Основной вид деятельности 
+                                    .expertice-popup-organization-info__value Деятельность, связанная с использование вычислительной техники и информационных технологий, прочая [62.09] 
+                                .expertice-popup-organization-info.mb-3
+                                    .expertice-popup-organization-info__title Основной вид деятельности 
+                                    .expertice-popup-organization-info__value Деятельность, связанная с использование вычислительной техники и информационных технологий, прочая [62.09] 
+                                     a.expertice-popup-organization-info__link(href="#") Все виды деятельности [10]
+                                .expertice-popup-organization-info.mb-3
+                                    .expertice-popup-organization-info__title Налоговый орган 
+                                    .expertice-popup-organization-info__value Межрайонная инспекция ФНС России №12 по Тульской области с 23 ноября 2015 г. 
+                                .expertice-popup-organization-info.mb-3
+                                    .expertice-popup-organization-info__title Коды статистики 
+                                    .expertice-popup-organization-info__value ОКПО        475390634630 
+                                    .expertice-popup-organization-info__value ОКАТО       475390634630 
+                                    .expertice-popup-organization-info__value ОКТМО       475390634630 
+                                    .expertice-popup-organization-info__value ОКФС        16 
+                                    .expertice-popup-organization-info__value Частная собственность
+                                    .expertice-popup-organization-info__value ОКОГУ      475390634630
+                                    .expertice-popup-organization-info__value Организации, утвержденные юридическими лицами или гражданами, или юридическими лицами и гражданами совместн
+                                .expertice-popup-organization-info.mb-3
+                                    .expertice-popup-organization-info__title Контакты 
+                                    .expertice-popup-organization-info__value Телефон 8 (945) 345 67 67
+                                    a.expertice-popup-organization-info__link(href="#") Все контакты
+

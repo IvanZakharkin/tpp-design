@@ -1,0 +1,48 @@
+.ribbon {
+	padding: 7px 20px 7px 10px;
+	// background: ;
+	color: $white;
+	font-size: 11px;
+	display: inline-block;
+	position: relative;
+	background: transparent url(../images/ribbon.svg) top left/100% no-repeat;
+
+	// &:after {
+	// 	content: '';
+	// 	display: block;
+	// 	height: 100%;
+	// 	border: 17px solid transparent; 
+	// 	border-bottom: 17px solid transparent;
+	// 	border-right: 10px solid transparent;
+	// 	border-left: 11px solid $blue;
+	// 	border-top: 16px solid $blue;
+	// 	position: absolute;
+	// 	top:0;
+	// 	right: -20px;
+	// }
+}
+
+.ribbon_shadow {
+	box-shadow: 1.414px 1.414px 1px rgba(0,0,0,0.63);
+
+	&:after {
+		box-shadow: 1.414px 1.414px 1px rgba(0,0,0,0.63);
+	}
+}
+
+.ribbon_fs-14 {
+	font-size: 14px;
+	// &:after {
+	// 	content: '';
+	// 	display: block;
+	// 	height: 100%;
+	// 	border-bottom: 18px solid transparent;
+	// 	border-right: 18px solid transparent;
+	// 	border-left: 18px solid $blue;
+	// 	border-top: 18px solid $blue;
+	// 	position: absolute;
+	// 	top:0;
+	// 	right: auto;
+	// 	left: 100%;
+	// }
+}

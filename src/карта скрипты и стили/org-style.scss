@@ -1,0 +1,75 @@
+#YaMap {
+	width: 100%;
+	height: 100%;
+} 
+
+.organizations__maps-filter {
+    .color01 .checkbox__title {
+        &:before {
+            background: #f04246;
+        }
+        &:after {
+            border-color: white;
+        }
+    }
+    .color02 .checkbox__title {
+        &:before {
+            background: #6db131;
+        }
+        &:after {
+            border-color: white;
+        }
+    }
+    .color03 .checkbox__title {
+        &:before {
+            background: #143A6B;
+        }
+        &:after {
+            border-color: white;
+        }
+    }
+    .color04 .checkbox__title {
+        &:before {
+            background: #ff7e00;
+        }
+        &:after {
+            border-color: white;
+        }
+    }
+    .color05 .checkbox__title {
+        &:before {
+            background: #c6c806;
+        }
+        &:after {
+            border-color: white;
+        }
+    }
+    .color06 .checkbox__title {
+        &:before {
+            background: #ff9bfe;
+        }
+        &:after {
+            border-color: white;
+        }
+    }
+    .color07 .checkbox__title {
+        &:before {
+            background: #41a63c;
+        }
+        &:after {
+            border-color: white;
+        }
+    }
+
+}
+
+
+.dropdown-menu-tpp {
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%;
+
+    .dropdown-item {
+        white-space: normal;
+    }
+}

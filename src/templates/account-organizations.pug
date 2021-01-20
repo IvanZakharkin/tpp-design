@@ -1,0 +1,115 @@
+.account-organizations.py-5
+    .container
+        .row.mb-5
+            .col-12.col-sm-6.mb-4.mb-sm-0
+                h2.title Мои организации
+            .col-12.col-sm-6.text-left.text-sm-right
+                button#account-btn-add-organization.btn.btn-blue.text-uppercase + Добавить организацию
+        ul.nav.nav-tabs.account-organizations__tabs(role="tablist")
+            each index in [1, 2, 3]
+                li.nav-item.account-organizations__tabs-item
+                    if index == 1
+                        a.nav-link.account-organizations__tabs-link(href=`#organization-${index}` data-toggle="tab") ИП Куренков Александр Викторович
+                    if index == 2
+                        a.nav-link.account-organizations__tabs-link(href=`#organization-${index}` data-toggle="tab") ООО Ромашки
+                    if index == 3
+                        a.nav-link.account-organizations__tabs-link(href=`#organization-${index}` data-toggle="tab") ООО Тульский Пряник
+        .tab-content
+            each index in [1, 2, 3]
+                .tab-pane.fade(role='tabpanel', aria-labelledby='nav-home-tab', id=`organization-${index}`)
+                     form.account-organization.py-5
+                        .row.mb-5
+                            - 
+                                var certificates= 
+                                    [
+                                        ["Свидетельство участника Антикоррупционной Хартии", "AC-RU-188 действует до 01.09.2020", "account-organizations/certificate1.jpg"],
+                                        ["Свидетельство члена Реестра надежных партнеров", "NP-PRI-74  действует до 11.08.2020", "account-organizations/certificate2.jpg"],
+                                        ["Членский билет Торгово-промышленной Палаты", "Отсутствует", "account-organizations/certificate3.jpg"]
+                                    ]
+                            each certificate,index in certificates
+                                if index == 2
+                                    .col-12.col-sm-6.col-md-4.mb-3.mb-md-0
+                                        .card.account-organization-certificate.account-organization-certificate_not-active
+                                            .card-body.account-organization-certificate__body
+                                                .account-organization-certificate__pic.mr-3
+                                                    +image(`${certificate[2]}`, "account-organization-certificate__img")
+                                                .account-organization-certificate__info
+                                                    .account-organization-certificate__title.mb-2= certificate[0]
+                                                    .account-organization-certificate__text.mb-3= certificate[1]
+                                                    a.btn.btn-outline-primary(href="#") Подать заявку
+                                else 
+                                    .col-12.col-sm-6.col-md-4.mb-3.mb-md-0
+                                        .card.account-organization-certificate
+                                            .card-body.account-organization-certificate__body
+                                                .account-organization-certificate__pic.mr-3
+                                                    +image(`${certificate[2]}`, "account-organization-certificate__img")
+                                                .account-organization-certificate__info
+                                                    .account-organization-certificate__title.mb-2= certificate[0]
+                                                    .account-organization-certificate__text= certificate[1]
+                        ul.account-info-list.mb-5.w-75
+                            -
+                                var info = [
+                                    ["ОГРНИП", "316715400122041"],
+                                    ["ИНН", "710302319409"],
+                                    ["ОКОПФ", "50102 — Индивидуальные предприниматели"],
+                                    ["Дата регистрации", "6 декабря 2016 г."],
+                                    ["Дата постановки на учёт","30 декабря 2017 г."],
+                                    ["Полное юридическое название","Индивидуальный предприниматель Куренков Александр Викторови"],
+                                    ["Вид деятельности ","Деятельность по обработке данных, предоставление услуг по размещению информации и связанная с этим деятельность (63.11)"],
+                                    ["Телефон","+7 (4872) 28-92-02"],
+                                    ["Адрес","г. Тула, ул. Ф. Энгельса, 70, оф. 390"],
+                                    ["Email","ekaterina@list.ru"],
+                                ]
+                            each infoItem in info
+                                li.account-info-list__item.mb-3
+                                    h3.account-info-list__item-title.mb-2= infoItem[0]
+                                    .account-info-list__item-value= infoItem[1]
+                            li.account-info-list__item.account-info-list__item_tel.mb-3
+                                h3.account-info-list__item-title.mb-2 Телефон
+                                .position-relative.mb-2
+                                    input.form-control(placeholder="+7 (4872) 28-92-02" type="tel" name="tel")
+                                    button.btn.btn-sm.account-info-list__btn#account-btn-add-tel(type="button") +
+                                        //- i.fas.fa-plus
+                            li.account-info-list__item.mb-3 
+                                h3.account-info-list__item-title.mb-2 Адрес дял доставки документов
+                                input.form-control(placeholder="г. Тула, ул. Ф. Энгельса, 70, оф. 390" type="text" name="address")
+                            li.account-info-list__item.mb-3 
+                                h3.account-info-list__item-title.mb-2 Юридический адрес
+                                input.form-control(placeholder="г. Тула, ул. Ф. Энгельса, 70, оф. 390" type="text" name="address")
+                            li.account-info-list__item.account-info-list__item_email.mb-3
+                                h3.account-info-list__item-title.mb-2 Email
+                                .position-relative.mb-2
+                                    input.form-control(placeholder="ekaterina@list.ru" type="email" name="email")
+                                    button.btn.btn-sm.account-info-list__btn#account-btn-add-email(type="button") +
+                                        
+                                
+                        
+                        btn.btn.btn-outline-primary.account-organization__btn-save(type="submit") Сохранить
+    #account-organizations-popup.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+        .modal-dialog(role='document')
+            form.modal-content(action="")
+                .modal-header
+                    h5.modal-title Добавление организации
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body
+                    .form-group
+                        label.col-form-label(for='inn') ИНН
+                        input#inn.form-control(type='text')
+                .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Закрыть
+                    button.btn.btn-primary(type='submit') Добавить организацию
+    #account-organizations-popup.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+        .modal-dialog(role='document')
+            form.modal-content(action="")
+                .modal-header
+                    h5.modal-title Добавление организации
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body
+                    .form-group
+                        label.col-form-label(for='inn') ИНН
+                        input#inn.form-control(type='text')
+                .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Закрыть
+                    button.btn.btn-primary(type='submit') Добавить организацию

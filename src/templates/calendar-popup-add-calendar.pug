@@ -1,0 +1,21 @@
+.calendar-popup-add-calendar.card
+	.card-body
+		h5.calendar-popup-add-calendar__title Форум предпринимателей
+		button.close.calendar-popup-add-calendar__btn-close(type='button', data-dismiss='modal', aria-label='Close')
+			span(aria-hidden='true') ×
+		.calendar-popup-add-calendar__body
+			input.calendar-popup-add-calendar__input(placeholder="Название")
+			.calendar-popup-add-calendar__row
+				.calendar-popup-add-calendar__icon
+					i.fas.fa-map-marker-alt.mr-2
+				input.calendar-popup-add-calendar__select(placeholder="Местоположение")
+			.calendar-popup-add-calendar__row
+				.calendar-popup-add-calendar__icon
+					i.fas.fa-check
+				input.calendar-popup-add-calendar__select(placeholder="ОТветсвенный")
+			.calendar-popup-add-calendar__row
+				.calendar-popup-add-calendar__icon
+					i.fas.fa-check
+				input.calendar-popup-add-calendar__select(placeholder="ОТветсвенный" type="color")
+		.calendar-popup-add-calendar__footer
+			button.btn.btn-primary Создать

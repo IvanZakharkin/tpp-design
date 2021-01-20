@@ -1,0 +1,99 @@
+.lcalendar {
+	color: #656875;
+	width: 215px;
+	&__months {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		margin-bottom: 1.25rem;
+	}
+	&__month {
+		// padding: 0 10px;
+		// flex: 1;
+    	text-align: center;
+		&_active {
+			.lcalendar__month-btn {
+				color: #4162a9;
+			}
+		}
+
+	}
+	&__month-btn {
+		text-align: center;
+		font-weight: bold;
+		color: #656875;
+		font-size: 12px;
+		background: none;
+		border: none;
+		padding: 0;
+		
+	}
+	&__months-btn {
+		font-size: 12px;
+		padding: 0 4px;
+		background: none;
+		border: none;
+	}
+
+	&__months-list {
+		display: flex;
+		flex: 1;
+		justify-content: space-around;
+		margin-bottom: 0;
+	}
+
+	&__days-week {
+		display: flex;
+		border-bottom: 1px solid #656875;
+	}
+	&__day-week {
+		padding: 5px 11px;
+		font-size: 12px;
+		width: calc(100% / 7);
+		text-align: center;
+	}
+	&__days {
+		
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__day {
+
+		border-radius: 50%;
+		width: calc(100% / 7);
+
+		&_not_current-month {
+			.lcalendar__day-btn {
+				color: rgba($color: #9b9ea3, $alpha: .7);
+			}	
+		}
+
+		&:hover {
+			background-color: #f0efef;
+		}
+
+		
+		&_current {
+			background-color: #e89d06;
+
+			.lcalendar__day-btn {
+				color: white;
+			}
+			&:hover {
+				background-color: #e89d06;
+			}
+			
+		}
+	}
+
+	&__day-btn {
+		background: none;
+		border: none;
+		padding: 0;
+		font-size: 10px;
+		padding: 10px 10px;
+		text-align: center;
+		font-weight: 700;
+		width: 100%;
+	}
+}

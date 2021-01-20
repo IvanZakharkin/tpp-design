@@ -1,0 +1,36 @@
+.socials {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	&__item {
+		margin-right: 10px;
+		list-style-type: none;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__link {
+		padding: 5px;
+		background: rgba($color: $white, $alpha: .6);
+		border-radius: 50%;
+		display: block;
+		&:hover {
+			text-decoration: none;
+			background: $indigo;
+			opacity: 1;
+			transition: .4s;
+			.socials__icon {
+				fill:$white;
+				opacity: 1;
+				transition: .4s;
+			}
+
+		}
+	}
+	&__icon {
+		width: 20px;
+		height: 20px;
+		fill: $indigo;
+	}
+}

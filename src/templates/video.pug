@@ -1,0 +1,47 @@
+section.video-section.py-5
+	.container
+		
+		.row.mb-4
+			.col
+				h2.title.video-section__title Видео
+			.col.text-right
+				a.btn.btn-outline-white.text-uppercase(href="#") Подробнее
+		.row
+			.col-12.col-md-8
+				.video-section__main
+					.video
+						.video__preview#video-ytb-preview
+							a.video__preview-tag(href="#") ТПП информ
+							+image('video/video-preview.jpg','video__preview-img')
+							.video__play
+								+icon('play', 'video__play-icon')
+						<iframe id="video-ytb" src="https://www.youtube.com/embed/LnMZAYD248M" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+						//- iframe#video-ytb(src='https://www.youtube.com/embed/0uN4kC8ze4Y', allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture")
+			.col-12.col-md-4
+				.video-section__secondary
+					.video
+						.video__preview(data-toggle="modal" data-target="#videoSecondary1")
+							a.video__preview-tag(href="#") ТПП информ
+							+image('video/video-preview.jpg','video__preview-img')
+							.video__play
+								+icon('play', 'video__play-icon')
+						//- <iframe id="video-ytb" src="https://www.youtube.com/embed/a4Sjqb_74UE" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+						//- iframe(width='100%', height="100%" src='https://www.youtube.com/embed/0uN4kC8ze4Y', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+						.video__modal.modal.fade#videoSecondary1.video__modal(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
+							.modal-dialog.modal-dialog-centered
+								.modal-content
+									//- iframe(width='100%', height="100%" src='https://www.youtube.com/embed/0uN4kC8ze4Y', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+									<iframe id="video-ytb" src="https://www.youtube.com/embed/a4Sjqb_74UE" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+				.video-section__secondary
+					.video
+						.video__preview(data-toggle="modal" data-target="#videoSecondary2")
+							a.video__preview-tag(href="#") ТПП информ
+							+image('video/video-preview.jpg','video__preview-img')
+							.video__play
+								+icon('play', 'video__play-icon')
+						iframe(width='100%', height="100%",  src='https://www.youtube.com/embed/IpWRQtQHKps', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+						.video__modal.modal.fade#videoSecondary2.video__modal(tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true')
+							.modal-dialog.modal-dialog-centered
+								.modal-content
+									iframe(width='100%', height="100%",  src='https://www.youtube.com/embed/IpWRQtQHKps', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+									

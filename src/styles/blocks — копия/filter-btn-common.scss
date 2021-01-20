@@ -1,0 +1,15 @@
+.filter-btn-common {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1d5393;
+    background: 0 0;
+    border: none;
+    outline: 0;
+}
+
+.filter-btn-common__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: #1d5393;
+}

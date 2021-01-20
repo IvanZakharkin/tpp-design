@@ -1,0 +1,448 @@
+.service-page
+	.expertises.py-5
+		.container.expertises__container
+			.expertises__icon
+				+image(`services/экспертиза.svg`,'service__img')
+			.title.mb-4 Экспертиза
+			-
+				var expetisesList = [
+					[
+						'Идентификационная экспертиза', 
+						[
+							'Материаловедческая экспертиза', 
+							'Определение наличия озоноразрушающих веществ в холодильных установках и системах кондиционирования',
+							'Химическая экспертиза',
+							'Определение наименования и принадлежности объекта к продукции, ввоз которой ограничен или она запрещена к обороту',
+							'Установление признаков контрафактности и признаков фальсификации продукции',
+							'Геммологическая экспертиза',
+						]
+					], 
+					[
+						'Контактная экспертиза', 
+						[
+							'Материаловедческая экспертиза', 
+							'Определение наличия озоноразрушающих веществ в холодильных установках и системах кондиционирования',
+							'Химическая экспертиза',
+							'Определение наименования и принадлежности объекта к продукции, ввоз которой ограничен или она запрещена к обороту',
+							'Установление признаков контрафактности и признаков фальсификации продукции',
+							'Геммологическая экспертиза',
+						]
+					], 
+					[
+						'Пожарно-техническая экспертиза и пожарный аудит', 
+						[
+							'Материаловедческая экспертиза', 
+							'Определение наличия озоноразрушающих веществ в холодильных установках и системах кондиционирования',
+							'Химическая экспертиза',
+							'Определение наименования и принадлежности объекта к продукции, ввоз которой ограничен или она запрещена к обороту',
+							'Установление признаков контрафактности и признаков фальсификации продукции',
+							'Геммологическая экспертиза',
+						]
+					], 
+					[
+						'Страховая экспертиза', 
+						[
+							'Материаловедческая экспертиза', 
+							'Определение наличия озоноразрушающих веществ в холодильных установках и системах кондиционирования',
+							'Химическая экспертиза',
+							'Определение наименования и принадлежности объекта к продукции, ввоз которой ограничен или она запрещена к обороту',
+							'Установление признаков контрафактности и признаков фальсификации продукции',
+							'Геммологическая экспертиза',
+						]
+					], 
+					[
+						'Судебная экспертиза', 
+						[
+							'Материаловедческая экспертиза', 
+							'Определение наличия озоноразрушающих веществ в холодильных установках и системах кондиционирования',
+							'Химическая экспертиза',
+							'Определение наименования и принадлежности объекта к продукции, ввоз которой ограничен или она запрещена к обороту',
+							'Установление признаков контрафактности и признаков фальсификации продукции',
+							'Геммологическая экспертиза',
+						]
+					], 
+					[
+						'Таможенная/внешнеэкономическая экспертиза', 
+						[
+							'Материаловедческая экспертиза', 
+							'Определение наличия озоноразрушающих веществ в холодильных установках и системах кондиционирования',
+							'Химическая экспертиза',
+							'Определение наименования и принадлежности объекта к продукции, ввоз которой ограничен или она запрещена к обороту',
+							'Установление признаков контрафактности и признаков фальсификации продукции',
+							'Геммологическая экспертиза',
+						]
+					], 
+					[
+						'Товарная экспертиза', 
+						[
+							'Материаловедческая экспертиза', 
+							'Определение наличия озоноразрушающих веществ в холодильных установках и системах кондиционирования',
+							'Химическая экспертиза',
+							'Определение наименования и принадлежности объекта к продукции, ввоз которой ограничен или она запрещена к обороту',
+							'Установление признаков контрафактности и признаков фальсификации продукции',
+							'Геммологическая экспертиза',
+						]
+					], 
+					[
+						'Экспертиза страны происхождения товара', 
+						[
+							'Материаловедческая экспертиза', 
+							'Определение наличия озоноразрушающих веществ в холодильных установках и системах кондиционирования',
+							'Химическая экспертиза',
+							'Определение наименования и принадлежности объекта к продукции, ввоз которой ограничен или она запрещена к обороту',
+							'Установление признаков контрафактности и признаков фальсификации продукции',
+							'Геммологическая экспертиза',
+						]
+					], 
+					[
+						'Энергетическое обследование предприятий (энергоаудит)', 
+						[
+							'Материаловедческая экспертиза', 
+							'Определение наличия озоноразрушающих веществ в холодильных установках и системах кондиционирования',
+							'Химическая экспертиза',
+							'Определение наименования и принадлежности объекта к продукции, ввоз которой ограничен или она запрещена к обороту',
+							'Установление признаков контрафактности и признаков фальсификации продукции',
+							'Геммологическая экспертиза',
+						]
+					], 
+					[
+						'Консультации по вопросам экспертиз', 
+						[
+							'Материаловедческая экспертиза', 
+							'Определение наличия озоноразрушающих веществ в холодильных установках и системах кондиционирования',
+							'Химическая экспертиза',
+							'Определение наименования и принадлежности объекта к продукции, ввоз которой ограничен или она запрещена к обороту',
+							'Установление признаков контрафактности и признаков фальсификации продукции',
+							'Геммологическая экспертиза',
+						]
+					], 
+					[
+						'Криминалистические экспертизы', 
+						[
+							'Материаловедческая экспертиза', 
+							'Определение наличия озоноразрушающих веществ в холодильных установках и системах кондиционирования',
+							'Химическая экспертиза',
+							'Определение наименования и принадлежности объекта к продукции, ввоз которой ограничен или она запрещена к обороту',
+							'Установление признаков контрафактности и признаков фальсификации продукции',
+							'Геммологическая экспертиза',
+						]
+					], 
+					[
+						'Специальная оценка условий труда', 
+						[
+							'Материаловедческая экспертиза', 
+							'Определение наличия озоноразрушающих веществ в холодильных установках и системах кондиционирования',
+							'Химическая экспертиза',
+							'Определение наименования и принадлежности объекта к продукции, ввоз которой ограничен или она запрещена к обороту',
+							'Установление признаков контрафактности и признаков фальсификации продукции',
+							'Геммологическая экспертиза',
+						]
+					], 
+					[
+						'Строительно-техническая экспертиза', 
+						[
+							'Материаловедческая экспертиза', 
+							'Определение наличия озоноразрушающих веществ в холодильных установках и системах кондиционирования',
+							'Химическая экспертиза',
+							'Определение наименования и принадлежности объекта к продукции, ввоз которой ограничен или она запрещена к обороту',
+							'Установление признаков контрафактности и признаков фальсификации продукции',
+							'Геммологическая экспертиза',
+						]
+					], 
+					[
+						'Сюрвейерские экспертизы', 
+						[
+							'Материаловедческая экспертиза', 
+							'Определение наличия озоноразрушающих веществ в холодильных установках и системах кондиционирования',
+							'Химическая экспертиза',
+							'Определение наименования и принадлежности объекта к продукции, ввоз которой ограничен или она запрещена к обороту',
+							'Установление признаков контрафактности и признаков фальсификации продукции',
+							'Геммологическая экспертиза',
+						]
+					], 
+					[
+						'Технологическая экспертиза', 
+						[
+							'Материаловедческая экспертиза', 
+							'Определение наличия озоноразрушающих веществ в холодильных установках и системах кондиционирования',
+							'Химическая экспертиза',
+							'Определение наименования и принадлежности объекта к продукции, ввоз которой ограничен или она запрещена к обороту',
+							'Установление признаков контрафактности и признаков фальсификации продукции',
+							'Геммологическая экспертиза',
+						]
+					], 
+					[
+						'Экономическая экспертиза', 
+						[
+							'Материаловедческая экспертиза', 
+							'Определение наличия озоноразрушающих веществ в холодильных установках и системах кондиционирования',
+							'Химическая экспертиза',
+							'Определение наименования и принадлежности объекта к продукции, ввоз которой ограничен или она запрещена к обороту',
+							'Установление признаков контрафактности и признаков фальсификации продукции',
+							'Геммологическая экспертиза',
+						]
+					], 
+					[
+						'Экспертизы других видов', 
+						[
+							'Материаловедческая экспертиза', 
+							'Определение наличия озоноразрушающих веществ в холодильных установках и системах кондиционирования',
+							'Химическая экспертиза',
+							'Определение наименования и принадлежности объекта к продукции, ввоз которой ограничен или она запрещена к обороту',
+							'Установление признаков контрафактности и признаков фальсификации продукции',
+							'Геммологическая экспертиза',
+						]
+					], 
+				]
+			ul.expertises__list
+				each expetisesItem, index in expetisesList
+					if index == 1
+						li.card.expertises__item.expertises__item_active
+							.card-body.expertises__item-body
+								.expertises__item-header
+									.expertises__item-title= expetisesItem[0]
+									.expertises__item-icon
+										i.fas.fa-chevron-down
+								ul.expertises__item-types
+									each expertLink in expetisesItem[1]
+										li.expertises__item-type
+											a.expertises__item-type-link(href="#")= expertLink
+					else 
+						li.card.expertises__item
+							.card-body.expertises__item-body
+								.expertises__item-header
+									.expertises__item-title= expetisesItem[0]
+									.expertises__item-icon
+										i.fas.fa-chevron-down
+								ul.expertises__item-types
+									each expertLink in expetisesItem[1]
+										li.expertises__item-type
+											a.expertises__item-type-link(href="#")= expertLink
+.service-videos.py-5.bg-light
+	.container.service-videos__container
+		.title.mb-4 Видео по теме
+		.service-videos__list
+			.row.service-videos__list-container
+				.col-6
+					.service-videos__item
+						.video
+							.video__preview
+								.video__date
+									.ribbon 22.04.1995
+								+image('video/video-preview.jpg','video__preview-img')
+								.video__play
+									+icon('play', 'video__play-icon')
+							iframe#video-ytb(src='https://www.youtube.com/embed/0uN4kC8ze4Y', allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" width="100%" height="100%")
+					.service-videos__item-title Это бизнес
+				.col-6
+					.service-videos__item
+						.video
+							.video__preview
+								.video__date
+									.ribbon 22.04.1995
+								+image('video/video-preview.jpg','video__preview-img')
+								.video__play
+									+icon('play', 'video__play-icon')
+							iframe#video-ytb(src='https://www.youtube.com/embed/0uN4kC8ze4Y', allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" width="100%" height="100%")
+					.service-videos__item-title Это бизнес
+				.col-6
+					.service-videos__item
+						.video
+							.video__preview
+								.video__date
+									.ribbon 22.04.1995
+								+image('video/video-preview.jpg','video__preview-img')
+								.video__play
+									+icon('play', 'video__play-icon')
+							iframe#video-ytb(src='https://www.youtube.com/embed/0uN4kC8ze4Y', allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture")
+					.service-videos__item-title Это бизнес
+
+
+
+.service-features.py-5
+	.container
+		.title.mb-4 Наши преимущества
+		.row
+			-
+				var features = [
+					['icon1.png', '591 эксперт', 'по направлению «Экспертиза в сфере федеральной контрактной системы закупок товаров, работ, услуг для государственных и муниципальных нужд»'],
+					['icon2.png', '782 эксперта', 'по направлению «Экспертиза в сфере федеральной контрактной системы закупок товаров, работ, услуг для государственных и муниципальных нужд»'],
+					['icon3.png', 'система из 179 палат', 'оказывающих услуги по экспертизе во всех регионах России, а также 43 региональных отделения крупнейшей в России независимой экспертной организации АНО «Союзэкспертиза» ТПП РФ (СОЭКС)'],
+					['icon4.png', 'собственные лабаратории', 'Наличие собственных лабораторий для проведения экспертиз широкого профиля в различных регионах Российской Федерации'],
+					['icon5.png', 'более 20 лет работы', 'Более 20 лет профессиональной работы на рынке услуг независимой экспертизы.'],
+					['icon6.png', 'уникальная база', 'по экспертизе, включающая более 200 отраслевых стандартов, разработанных специалистами системы ТПП РФ'],
+					['icon7.png', 'собственные системы', 'обучения, повышения квалификации и аттестации экспертов, реализуемая на базе 9 учебных центров на территории России'],
+					['icon7.png', 'система сертификации', 'инспекционных услуг «Инспектсерт», в рамках которой проходит обучение и аттестация экспертов по направлению экспертиза по определению страны происхождения товара.'],
+
+				]
+			each feat in features
+				.col-12.col-sm-6.col-md-4.p-4
+					.service-feature
+						.service-feature__icon
+							+image(`expertises/${feat[0]}`)
+						.service-feature__content
+							.service-feature__title= feat[1]
+							.service-feature__desk= feat[2]
+.services-banner.py-5
+	.container.services-banner__container
+		.services-banner__content
+			.services-banner__title Выберите 
+				.services-banner__subtitle исполнителей
+			.services-banner__text Выберите подходящего и ближайшего исполнителя, отметьте его  и заполните форму обратной связи. С вами свяжется специалист и предоставит всю информацию
+			.services-banner__notice * Сведения об услугах носят справочный характер и не являются публичной офертой. Условия оказания услуг устанавливаются конкретным договором между Заказчиком и Исполнителем.
+
+.service-contacts.py-5
+	.container
+		.row
+			.col-12.col-sm-6.mb-4
+				.service-contacts__organization
+					.service-contacts__organization-title
+						label.checkbox.checkbox_service
+							input.checkbox__input(type="checkbox")
+							.checkbox__title Союз "Торгово-промышленная палата Краснодарского края"
+					.service-contacts__organization-contacts
+						ul.contacts-list.contacts-list_service
+							li.contacts-list__item
+								+icon('map','contacts-list__item-icon')
+								.contacts-list__item-text
+									span 109012 Москва, ул. Ильинка, 6/1, c.1
+							li.contacts-list__item
+								+icon('map','contacts-list__item-icon')
+								.contacts-list__item-text
+									span 109012 Москва, ул. Ильинка, 6/1, c.1
+							li.contacts-list__item
+								+icon('phone','contacts-list__item-icon')
+								.contacts-list__item-text
+									a(href="#") +7 (495) 620-0009, 
+									a(href="#") +7 (495) 620-0360
+							li.contacts-list__item
+								+icon('mail','contacts-list__item-icon')
+								.contacts-list__item-text
+									a(href="#") tpprf@tpprf.ru
+			.col-12.col-sm-6.mb-4
+				.service-contacts__organization
+					.service-contacts__organization-title
+						label.checkbox.checkbox_service
+							input.checkbox__input(type="checkbox")
+							.checkbox__title Союз "Торгово-промышленная палата Краснодарского края"
+					.service-contacts__organization-contacts
+						ul.contacts-list.contacts-list_service
+							li.contacts-list__item
+								+icon('map','contacts-list__item-icon')
+								.contacts-list__item-text
+									span 109012 Москва, ул. Ильинка, 6/1, c.1
+							li.contacts-list__item
+								+icon('map','contacts-list__item-icon')
+								.contacts-list__item-text
+									span 109012 Москва, ул. Ильинка, 6/1, c.1
+							li.contacts-list__item
+								+icon('phone','contacts-list__item-icon')
+								.contacts-list__item-text
+									a(href="#") +7 (495) 620-0009, 
+									a(href="#") +7 (495) 620-0360
+							li.contacts-list__item
+								+icon('mail','contacts-list__item-icon')
+								.contacts-list__item-text
+									a(href="#") tpprf@tpprf.ru
+			.col-12.col-sm-6.mb-4
+				.service-contacts__organization
+					.service-contacts__organization-title
+						label.checkbox.checkbox_service(for="123")
+							input.checkbox__input(type="checkbox", id="123")
+							.checkbox__title Союз "Торгово-промышленная палата Краснодарского края"
+					.service-contacts__organization-contacts
+						ul.contacts-list.contacts-list_service
+							li.contacts-list__item
+								+icon('map','contacts-list__item-icon')
+								.contacts-list__item-text
+									span 109012 Москва, ул. Ильинка, 6/1, c.1
+							li.contacts-list__item
+								+icon('map','contacts-list__item-icon')
+								.contacts-list__item-text
+									span 109012 Москва, ул. Ильинка, 6/1, c.1
+							li.contacts-list__item
+								+icon('phone','contacts-list__item-icon')
+								.contacts-list__item-text
+									a(href="#") +7 (495) 620-0009, 
+									a(href="#") +7 (495) 620-0360
+							li.contacts-list__item
+								+icon('mail','contacts-list__item-icon')
+								.contacts-list__item-text
+									a(href="#") tpprf@tpprf.ru
+			.col-12.col-sm-6.mb-4
+				.service-contacts__organization
+					.service-contacts__organization-title
+						label.checkbox.checkbox_service
+							input.checkbox__input(type="checkbox")
+							.checkbox__title Союз "Торгово-промышленная палата Краснодарского края"
+					.service-contacts__organization-contacts
+						ul.contacts-list.contacts-list_service
+							li.contacts-list__item
+								+icon('map','contacts-list__item-icon')
+								.contacts-list__item-text
+									span 109012 Москва, ул. Ильинка, 6/1, c.1
+							li.contacts-list__item
+								+icon('map','contacts-list__item-icon')
+								.contacts-list__item-text
+									span 109012 Москва, ул. Ильинка, 6/1, c.1
+							li.contacts-list__item
+								+icon('phone','contacts-list__item-icon')
+								.contacts-list__item-text
+									a(href="#") +7 (495) 620-0009, 
+									a(href="#") +7 (495) 620-0360
+							li.contacts-list__item
+								+icon('mail','contacts-list__item-icon')
+								.contacts-list__item-text
+									a(href="#") tpprf@tpprf.ru
+		.service-contacts__consult
+			.service-contacts__form-title Выберите услугу, по которой хотите заказать консультацию
+			.row
+				form.service-contacts__form
+				.col-12.col-sm-6
+					.form-group.service-contacts__form-group
+						//- input.form-control.service-contacts__form-control(type='email', placeholder='Email')
+						.dropdown
+							button.btn.service-contacts__form-dropdown.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+								| Выберите услугу
+							.dropdown-menu.service-contacts__form-control
+								a.dropdown-item(href='#') Action
+								a.dropdown-item(href='#') Another action
+								a.dropdown-item(href='#') Something else here
+					.form-group.service-contacts__form-group
+						input.form-control.form-control.service-contacts__form-control(type='email', placeholder='Email')
+					.form-group.service-contacts__form-group
+						textarea.form-control.form-control.service-contacts__form-control.service-contacts__form-control_textarea(name="")
+				.col-12.col-sm-6
+					.form-group.service-contacts__form-group
+						input.form-control.form-control.service-contacts__form-control(type='text', placeholder='Имя')
+					.form-group.service-contacts__form-group
+						input.form-control.form-control.service-contacts__form-control(type='tel', placeholder='Телефон')
+					.form-group
+						label.checkbox.checkbox_service-form
+							input.checkbox__input(type="checkbox")
+							.checkbox__title(type="checkbox") Нажимая кнопку «Отправить», я даю своё согласие Торгово-промышленной палате Российской Федерации на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных Политикой конфиденциальности.
+					button.btn.btn-primary.btn-lg(type='submit') Задать вопрос
+.serices-features.py-5
+	.container
+		.row
+			.col-12.col-sm-6.col-md-4
+				.card.serices-features-card
+					.card-body.serices-features-card__body
+						.serices-features-card__icon
+							+image('services/icon-business-support.png','serices-features-card__icon-img')
+						.serices-features-card__title Сопровождение бизнеса
+						.serices-features-card__desk Экспертиза, Сертификация, Оценка, Подготовка кадров, Деловое образование, Переводы и т.п.
+			.col-12.col-sm-6.col-md-4
+				.card.serices-features-card
+					.card-body.serices-features-card__body
+						.serices-features-card__icon
+							+image('services/icon-business-development.png','serices-features-card__icon-img')
+						.serices-features-card__title Развитие бизнеса
+						.serices-features-card__desk Выставки, ярмарки, конгрессы, Поддержка внешне-экономической деятельности, Консалтинг
+			.col-12.col-sm-6.col-md-4
+				.card.serices-features-card
+					.card-body.serices-features-card__body
+						.serices-features-card__icon
+							+image('services/icon-business-protect.png','serices-features-card__icon-img')
+						.serices-features-card__title Защита бизнеса
+						.serices-features-card__desk Обеспечение безопасности ведения бизнеса, Третейское разбирательство и медиация

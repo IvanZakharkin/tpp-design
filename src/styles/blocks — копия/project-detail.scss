@@ -1,0 +1,52 @@
+.project-detail {
+	
+	&__pic {
+		margin-bottom: 25px;
+	}
+	&__img {
+		width:100%;
+	}
+
+	
+	&__title {
+		font-size: 18px;
+		color: $black;
+		margin-bottom: 15px;
+	}
+
+	&__desk {
+		font-size: 16px;
+	}
+	
+	&__info {
+		display: flex;
+		flex-direction: column;
+	}
+	&__info-title {
+		display: flex;
+		padding: 20px 0;
+		align-items: center;
+		border-bottom: 2px solid #3949A0;
+	}
+	&__info-title-icon {
+		width: 25px;
+		height: 25px;
+		fill: #3949A0;
+	}
+	&__info-title-text {
+		text-transform: uppercase;
+		color: $black;
+		font-size: 12px;
+		margin-left: 15px;
+		font-weight: bold;
+	}
+	&__info-text {
+		padding: 20px 0;
+		font-size: 16px;
+		
+		p {
+			margin-bottom: 5px;
+		}
+
+	}
+}

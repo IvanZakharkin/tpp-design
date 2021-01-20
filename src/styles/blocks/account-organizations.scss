@@ -1,0 +1,36 @@
+.account-organizations {
+    &__tabs.nav-tabs {
+        flex-wrap: nowrap;
+    }
+    &__tabs-item.nav-item {
+        overflow: hidden;
+        list-style-type: none;
+    }
+    &__tabs-link.nav-link {
+        position: relative;
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        color: #03499b;
+        padding: 10px 15px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-decoration: none;
+
+        &.active {
+            color: #000000;
+        }
+
+        // &:after {
+        //     content: "";
+        //     display: block;
+        //     position: absolute;
+        //     height: 100%;
+        //     width: 15px;
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     background: linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,.45) 26%,#fff 63%,#fff 100%);
+        // }
+    }
+}

@@ -1,0 +1,57 @@
+section.materials.py-5.bg-light
+	.container
+		.row.mb-4
+			.col-12.col-sm-6.mb-4.mb-sm-0
+				h2.title Материалы
+			.col-12.col-sm-6.text-left.text-sm-right
+				a.btn.btn-outline-blue.text-uppercase(href="#") Подробнее
+		.materials__category.mb-4
+			ul.category.nav.category_bg_white
+				each item in ["Все", "Заседания", "Информация по странам", "Материалы рабочей группы по дерегуляции", "Отчетная информация"]
+					li.category__item.nav-item
+						a.category__link.nav-link(href="#")= item
+		- 
+				var materialsList = [
+					[
+						'Закон РФ от 07.07.1993 N 5338-1 (ред. от 29.12.2015) "О международном коммерческом арбитраже"',
+						'20 декабря',
+						['word', 'word']
+					],
+					[
+						'Обучение медиаторов',
+						'20 декабря',
+						['no-type']
+					],
+					[
+						'Положение о МКАС при ТПП РФ (Приложение I к Закону Российской Федерации "О международном коммерческом арбитраже")',
+						'20 декабря',
+						['pdf']
+					],
+					[
+						'Положение о МКАС при ТПП РФ (Приложение I к Закону Российской Федерации "О международном коммерческом арбитраже")',
+						'19 декабря',
+						['pdf', 'word']
+					],
+					[
+						'Обучение медиаторов',
+						'20 декабря',
+						['no-type']
+					],
+					[
+						'Положение о МКАС при ТПП РФ (Приложение I к Закону Российской Федерации "О международном коммерческом арбитраже")',
+						'20 декабря',
+						['pdf']
+					],
+					
+				]
+		.row
+			each materilsItem in materialsList
+				.col-12.col-md-6.col-lg-4.mb-4
+					.card.material
+						.card-body.material__content
+							a.material__title(href="#")= materilsItem[0]
+							.material__date= materilsItem[1]
+							ul.material__docs
+								each link in materilsItem[2]
+									li(class=`material__doc material__doc_${link}`)
+										a.material__doc-link(href="#") cкачать

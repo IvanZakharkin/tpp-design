@@ -1,0 +1,111 @@
+.header-search {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+    background: #f2f2f2;
+    box-shadow: 0px 13px 8px rgba(0,0,0,0.23);
+    height: 70vh;
+    &_tpp {
+        left: auto;
+        right: 0;
+        max-width: 700px;
+        // height: auto;
+        // max-height: 80vh;
+    }
+    
+    &__container {
+        padding: 5px 50px 20px 50px;
+        height: 85%;
+        overflow: auto;
+    }
+    &__left-col{
+        height: 100%;
+        border-right: 1px solid #c8d3dd;
+    }
+    &__right-col{
+        height: 100%;
+    }
+
+    &__flags {
+        margin-top: -15px;
+        padding-top: 15px;
+        padding-right: 20px;
+        padding-left: 30px;
+        height: 100%;
+    }
+    &__text-content {
+        padding-right: 30px;
+        height: 100%;
+    }
+
+    &__result-item {
+        margin-bottom: 20px;
+    }
+    &__result-item-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #002e6d;
+        display: block;
+        .fa-angle-up {
+            display: inline;
+        }
+        .fa-angle-down {
+            display: none;
+        }
+        
+        &:hover {
+            color: #e79d06;
+            text-decoration: none;
+        }
+
+        &.collapsed {
+            .fa-angle-up {
+                display: none;
+            }
+            .fa-angle-down {
+                display: inline;
+            }
+
+        }
+    }
+    &__result-item-content {
+        padding-left: 3%;
+        line-height: 1.5;
+    }
+    &__link {
+        font-size: 16px;
+        color: #002e6d;
+        display: inline-block;
+
+        &:hover {
+            color: #002e6d;
+            text-decoration: underline;
+        }
+    }
+    &__input-box {
+        display: flex;
+    }
+
+    &__input {
+        flex: 1;
+        border: 1px solid #b2bdcb;
+        border-radius: 0;
+    }
+
+    &__form {
+        padding-left: 50px;
+        padding-top: 4px;
+        padding-right: 8px;
+    }
+
+    &__flag-btn {
+        display: block;
+        padding: 5px;
+        
+        &.active {
+            border: 1px solid #e79d06;
+        }
+    }
+}

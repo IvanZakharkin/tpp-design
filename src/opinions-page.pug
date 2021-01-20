@@ -1,0 +1,29 @@
+include ./mixins/mixins2.pug
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		title Торгово-промышленная палата Российской Федерации
+		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css", integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous")
+		link(href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&display=swap&subset=cyrillic" rel="stylesheet")
+		link(href='https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap', rel='stylesheet')
+		script(src='https://api-maps.yandex.ru/2.1/?apikey=2c576677-96e4-446b-ac13-a99766e3803c&lang=ru_RU', type='text/javascript')
+		link(rel="stylesheet" href="../main.css")
+	body
+		.wrapper
+			.wrapper-content
+				include ./templates/header.pug
+				.main-content
+					include ./templates/opinions.pug
+					include ./templates/partners.pug
+				include ./templates/footer.pug
+
+script(src="../vendors/jquery/jquery.min.js")
+script(src="../vendors/slick/slick.min.js")
+script(src="../vendors/simplebar/simplebar.min.js")
+script(src="../vendors/wow.js/wow.min.js")
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+script(src="../main.js")

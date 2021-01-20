@@ -1,0 +1,27 @@
+.company-card {
+	min-height: 260px;
+	&:hover {
+		box-shadow: 0 0 16px rgba(63,87,193,0.2);
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__logo {
+		height: 125px;
+		margin-bottom: 25px;
+	}
+	&__logo-img {
+		object-fit: contain;
+	}
+	&__link {
+		text-align: center;
+		color: #1d5393;
+		font-size: 16px;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

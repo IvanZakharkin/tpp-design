@@ -1,0 +1,88 @@
+.account-appeal.py-5
+    .container
+        .row.mb-5
+            .col-12.col-sm-6.mb-4.mb-sm-0
+                h2.title Обращения
+            .col-12.col-sm-6.text-left.text-sm-right
+                a.btn.btn-blue.text-uppercase(href='#') + Создать обращение
+        .row.mb-3
+            .col-10
+                ul.category-list.nav
+                    li.category-list__item.nav-item
+                        a.category-list__link.nav-link(href='#') Все
+                            span.ml-2 65
+                    li.category-list__item.nav-item
+                        a.category-list__link.nav-link(href='#') Заседания
+                    li.category-list__item.nav-item
+                        a.category-list__link.nav-link(href='#')
+                            | Информация
+                            | по странам
+                            span.ml-2 23
+                    li.category-list__item.nav-item
+                        a.category-list__link.nav-link(href='#')
+                            | Материалы
+                            | рабочей группы по дерегуляции
+                            span.ml-2 65
+                    li.category-list__item.nav-item
+                        a.category-list__link.nav-link(href='#')
+                            | Отчетная
+                            | информация
+                            span.ml-2 65
+            .col-2
+        table.table.table-bordered.account-appeal-table
+            colgroup
+                col
+                col
+                col
+                col
+                col
+            thead.account-appeal-table__head
+                tr.account-appeal-table__row
+                    th Услуга
+                    th № обращения
+                    th Дата Обращения
+                    th Дата Завершения
+                    th Статус
+            tbody.account-appeal-table__body
+                tr.account-appeal-table__row
+                    td(data-title="Услуга")
+                        a.account-appeal-table__link(href="#") Размещение коммерческих предложений
+                    td(data-title="№ обращения") 519-000057
+                    td(data-title="Дата Обращения") 11 марта 2020 г. 11:12:54
+                    td(data-title="Дата Завершения") 11 марта 2020 г. 12:12:22
+                    td(data-title="Статус")
+                        .account-appeal-table__status.account-appeal-table__status_new Новая
+                tr.account-appeal-table__row
+                    td(data-title="Услуга")
+                        a.account-appeal-table__link(href="#") Размещение коммерческих предложений
+                    td(data-title="№ обращения") 519-000057
+                    td(data-title="Дата Обращения") 11 марта 2020 г. 11:12:54
+                    td(data-title="Дата Завершения") 11 марта 2020 г. 12:12:22
+                    td(data-title="Статус")
+                        .account-appeal-table__status.account-appeal-table__status_progress В работе
+                tr.account-appeal-table__row.account-appeal-table__row_appeal-done
+                    td 
+                        a.account-appeal-table__link(href="#") Размещение коммерческих предложений
+                    td 519-000057
+                    td 11 марта 2020 г. 11:12:54
+                    td 11 марта 2020 г. 12:12:22
+                    td 
+                        .account-appeal-table__status.account-appeal-table__status_progress В работе
+#account-apperal-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title New message
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        form
+          .form-group
+            label.col-form-label(for='recipient-name') Recipient:
+            input#recipient-name.form-control(type='text')
+          .form-group
+            label.col-form-label(for='message-text') Message:
+            textarea#message-text.form-control
+      .modal-footer
+        button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+        button.btn.btn-primary(type='button') Send message

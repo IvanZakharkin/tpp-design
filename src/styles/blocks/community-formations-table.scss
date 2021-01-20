@@ -1,0 +1,167 @@
+// .community-formations-table {
+//     &.table {
+//         border: 1px solid #d9dae4;
+//         text-align: center;
+//         font-size: 15px;
+//         color: #4f5762;
+//         font-weight: 400;
+//     }
+//     td, th {
+//         border: 1px solid #d9dae4;
+//         vertical-align: middle;
+//     }
+//     thead {
+//         background: #f0f5f8;
+
+//         th {
+//             font-size: 15px;
+//             line-height: 17px;
+//             color: #4f5762;
+//             font-weight: 700;
+//         }
+//     }
+
+//     &__link {
+//         font-size: 15px;
+//         color: #1f4c91;
+//         font-weight: 400;
+//     }
+
+    
+//     .community-formations-table__name {
+//         font-size: 18px;
+//         color: #1f4c91;
+//         font-weight: 700;
+
+//         &:hover {
+//             text-decoration: underline;
+//         }
+//     }
+//     .community-formations-table-contacts {
+//         display: flex;
+//         text-align: left;
+//     }
+//     .community-formations-table-contacts__avatar {
+//         width: 50px;
+//         margin-right: 20px;
+//         flex-shrink: 0;
+//     }
+//     .community-formations-table-contacts__person {
+//         margin-bottom: 7px;
+        
+//     }
+//     .community-formations-table-contacts__person-post {
+//         font-size: 15px;
+//         color: #4f5762;
+//         font-weight: 400;
+//     }
+//     .community-formations-table-contacts__person-name {
+//         font-size: 15px;
+//         color: #2b5aa2;
+//         font-weight: bold;
+//     }
+// }
+// .community-formations-block-hover {
+//     position: relative;
+//     display: inline-block;
+//     &:hover {
+//         .community-formations-block-hover__title {
+//             text-decoration: underline;
+//         }
+//         .community-formations-block-hover__content {
+//             display: block;
+//         }
+
+//         &:after {
+//             content: '';
+//             display: block;
+//             position: absolute;
+//             bottom: 100%;
+//             left: 0%;
+//             height: 30px;
+//             width: 320px;
+//         }
+
+        
+//         // &:before {
+//         //     content: '';
+//         //     display: block;
+//         //     position: absolute;
+//         //     width: 1rem;
+//         //     height: 1rem;
+//         //     bottom: calc(100% + 11px);
+//         //     left: 20px;
+//         //     background-color: #fff;
+//         //     box-shadow: 0px 1px 0.375rem rgba(34,49,115,.41);
+//         //     transform: scale(1, 2) rotate(45deg);
+//         //     z-index: 1000;
+//         // } 
+//     }
+//     &__title {
+//         font-size: inherit;
+//         font-weight: inherit;
+//         color: inherit;
+
+        
+//     }
+//     &__content {
+//         position: absolute;
+//         bottom: calc(100% + 10px);
+//         left: 0%;
+//         padding: 20px;
+//         border-radius: 6px;
+//         box-shadow: 0 0 6.5px rgba(34,49,115,0.41);
+//         background-color: #ffffff;
+//         display: none;
+//         width: 310px;
+//         max-height: 250px;
+//         overflow: auto;
+//         z-index: 100;
+//         text-align: left;
+//         // &:after {
+//         //     content: '';
+//         //     display: block;
+//         //     position: absolute;
+//         //     bottom: 0%;
+//         //     left: 0%;
+//         //     height: 20px;
+//         //     width: 100%;
+//         //     background: #ffffff;
+//         // }
+//     }
+
+//     &__content-item {
+//         margin-bottom: 10px;
+//         display: flex;
+//         align-items: center;
+
+//         svg {
+//             margin-right: 10px;
+//             fill: #1f4c91;
+//             width: 15px;
+//             height: 15px;
+//             flex-shrink: 0;
+//         }
+
+//         &:after {
+//             margin-bottom: 0;
+//         }
+//     }
+
+//     &__link {
+//         font-size: 14px;
+//         line-height: 15px;
+//         color: #1f4c91;
+//         font-weight: 400;
+//         max-height: 30px;
+//         overflow: hidden;
+//         -webkit-line-clamp: 2;
+//         display: -webkit-box;
+//         -webkit-box-orient: vertical;
+
+//         &:hover {
+//             text-decoration: underline;
+//             color: #1f4c91;
+//         }
+//     }
+// }

@@ -1,0 +1,266 @@
+section.calendar.py-5
+	.container
+		.row.mb-4
+			.col.d-flex
+				h2.title Календарь
+				.dropdown.ml-3.calendar__years.d-none.d-md-block
+					a#dropdownMenuLink.calendar__year.btn.btn-outline-blue.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+						| 2020 год
+					.dropdown-menu(aria-labelledby='dropdownMenuLink')
+						a.calendar__year.dropdown-item(href='#') 2019 год
+						a.calendar__year.dropdown-item(href='#') 2018 год
+						a.calendar__year.dropdown-item(href='#') 2017 год
+			.col.text-right
+				a.btn.btn-outline-blue.text-uppercase.d-none.d-sm-inline-block(href="#") Инфографика
+				a.btn.btn-outline-blue.text-uppercase.ml-3(href="#") Подробнее
+		.calendar__row.calendar__row_mobile
+			.dropdown.ml-3.calendar__years
+					a#dropdownMenuLink.calendar__year.btn.btn-outline-blue.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+						| 2020 год
+					.dropdown-menu(aria-labelledby='dropdownMenuLink')
+						a.calendar__year.dropdown-item(href='#') 2019 год
+						a.calendar__year.dropdown-item(href='#') 2018 год
+						a.calendar__year.dropdown-item(href='#') 2017 год
+			.dropdown.calendar__months
+				a#dropdownMenuLink.btn.dropdown-toggle.calendar__month(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Декабрь
+				.dropdown-menu(aria-labelledby='dropdownMenuLink')
+					a.calendar__month.dropdown-item(href='#') Январь
+					a.calendar__month.dropdown-item(href='#') Февраль
+					a.calendar__month.dropdown-item(href='#') Март
+		.calendar__row
+			.dropdown.calendar__months.d-none.d-md-block
+				a#dropdownMenuLink.btn.dropdown-toggle.calendar__month(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Декабрь
+				.dropdown-menu(aria-labelledby='dropdownMenuLink')
+					a.calendar__month.dropdown-item(href='#') Январь
+					a.calendar__month.dropdown-item(href='#') Февраль
+					a.calendar__month.dropdown-item(href='#') Март
+			ul.calendar__days
+				li.calendar__day
+					a.calendar__day-btn(href='#') 10
+				li.calendar__day
+					a.calendar__day-btn(href='#') 11
+				li.calendar__day.calendar__day_current
+					a.calendar__day-btn(href='#') 12
+				li.calendar__day
+					a.calendar__day-btn(href='#') 13
+				li.calendar__day
+					a.calendar__day-btn(href='#') 14
+				li.calendar__day.calendar__day_off-time
+					a.calendar__day-btn(href='#') 15
+				li.calendar__day.calendar__day_off-time
+					a.calendar__day-btn(href='#') 16
+				li.calendar__day
+					a.calendar__day-btn(href='#') 17
+				li.calendar__day
+					a.calendar__day-btn(href='#') 18
+				li.calendar__day
+					a.calendar__day-btn(href='#') 19
+				li.calendar__day
+					a.calendar__day-btn(href='#') 20
+				li.calendar__day
+					a.calendar__day-btn(href='#') 21	
+				li.calendar__day
+					a.calendar__day-btn(href='#') 22	
+				li.calendar__day
+					a.calendar__day-btn(href='#') 23	
+			button.calendar__btn-filter(data-toggle="collapse" href="#calendar-filter")
+				.calendar__btn-filter-text Развернуть
+				i.fas.fa-chevron-down
+		.calendar__filter.collapse#calendar-filter
+			.calendar__filter-row
+				.calendar__filter-left
+					.calendar__filter-months
+						button.calendar__filter-months-btn
+							i.fas.fa-chevron-left
+						ul.calendar__filter-months-list
+							each yersItem in ['Январь', 'Февраль','Март']
+								li.calendar__filter-month=yersItem
+									//- button.btn.calendar__filter-month-btn
+						button.calendar__filter-months-btn
+							i.fas.fa-chevron-right
+					ul.calendar__filter-days-week
+						each daysItem in ['пн', 'вт','ср','чт','пт','сб','вс']
+							li.calendar__filter-day-week=daysItem
+					- var n = 1;		
+					ul.calendar__filter-days
+						while n < 43
+							if n==1 || n==2 || n==3 || n==4 || n==43 || n==42 || n==41
+								li.calendar__filter-day.not-current-month= n++
+							else if n==23
+								li.calendar__filter-day.current= n++
+							else
+								li.calendar__filter-day= n++
+				.calendar__filter-right
+					form.calendar__filter-form
+						.calendar__filter-options
+							.calendar__filter-options-header
+								.calendar__filter-options-checkbox
+									label.checkbox.checkbox_calendar
+										input.checkbox__input(type="checkbox")
+										.checkbox__title по всем тематикам
+								a.calendar__filter-btn-request(href="#") + Заявка на проведение
+							.calendar__filter-options-row
+								.calendar__filter-options-col
+									.calendar__filter-option
+										label.checkbox.checkbox_calendar
+											input.checkbox__input(type="checkbox")
+											.checkbox__title агропромышленный комплекс
+									.calendar__filter-option
+										label.checkbox.checkbox_calendar
+											input.checkbox__input(type="checkbox")
+											.checkbox__title банковская деятельность
+									.calendar__filter-option
+										label.checkbox.checkbox_calendar
+											input.checkbox__input(type="checkbox")
+											.checkbox__title БРИКС
+									.calendar__filter-option
+										label.checkbox.checkbox_calendar
+											input.checkbox__input(type="checkbox")
+											.checkbox__title внешние связи
+									.calendar__filter-option
+										label.checkbox.checkbox_calendar
+											input.checkbox__input(type="checkbox")
+											.checkbox__title выставочная деятельность
+									.calendar__filter-option
+										label.checkbox.checkbox_calendar
+											input.checkbox__input(type="checkbox")
+											.checkbox__title благотворительность
+									.calendar__filter-option
+										label.checkbox.checkbox_calendar
+											input.checkbox__input(type="checkbox")
+											.checkbox__title бизнесс
+									.calendar__filter-option
+										label.checkbox.checkbox_calendar
+											input.checkbox__input(type="checkbox")
+											.checkbox__title госзакупки
+								.calendar__filter-options-col
+									.calendar__filter-option
+										label.checkbox.checkbox_calendar
+											input.checkbox__input(type="checkbox")
+											.checkbox__title агропромышленный комплекс
+									.calendar__filter-option
+										label.checkbox.checkbox_calendar
+											input.checkbox__input(type="checkbox")
+											.checkbox__title банковская деятельность
+									.calendar__filter-option
+										label.checkbox.checkbox_calendar
+											input.checkbox__input(type="checkbox")
+											.checkbox__title БРИКС
+									.calendar__filter-option
+										label.checkbox.checkbox_calendar
+											input.checkbox__input(type="checkbox")
+											.checkbox__title внешние связи
+									.calendar__filter-option
+										label.checkbox.checkbox_calendar
+											input.checkbox__input(type="checkbox")
+											.checkbox__title выставочная деятельность
+									.calendar__filter-option
+										label.checkbox.checkbox_calendar
+											input.checkbox__input(type="checkbox")
+											.checkbox__title благотворительность
+									.calendar__filter-option
+										label.checkbox.checkbox_calendar
+											input.checkbox__input(type="checkbox")
+											.checkbox__title бизнесс
+									.calendar__filter-option
+										label.checkbox.checkbox_calendar
+											input.checkbox__input(type="checkbox")
+											.checkbox__title госзакупки
+
+
+
+
+		.row.py-4.calendar__events
+			.col-12.col-md-6.col-lg-4
+				.card.mb-4.calendar__event
+					a.calendar__event-link(href='#1')
+						.card-body.calendar__event-body
+							.calendar__event-date 20 декабря 2019
+							.calendar__event-title IV Всероссийская конференция по брендингу «Продовольственный бренд. Чем регион может удивить Россию и мир?»
+							//- .calendar__event-desk 28 февраля 2020 года в Конгресс-центре Торгово-промышленной палаты Российской Федерации (г. Москва, ул. Ильинка, д. 6/1) в 10.30 (начало регистрации – 9.30) состоится
+							.calendar__event-tags
+								ul.tags
+									li.tags__item 
+										a.tags__link(href="#2") Агропромышленный комплекс
+									li.tags__item 
+										a.tags__link(href="#") Бренды
+									li.tags__item 
+										a.tags__link(href="#") +26
+				.card.mb-4.calendar__event
+					a.calendar__event-link(href='#')
+						.card-body.calendar__event-body
+							.calendar__event-date 21 декабря 2019
+							.calendar__event-title Реализация постановления Правительства РФ от 17.07.2015 № 719 «О подтверждении производства промышленной продукции на территории РФ»
+							//- .calendar__event-desk
+							.calendar__event-tags
+								ul.tags
+									li.tags__item 
+										a.tags__link(href="#") Агропромышленный комплекс
+									li.tags__item 
+										a.tags__link(href="#") Бренды
+									li.tags__item 
+										a.tags__link(href="#") +26
+			.col-12.col-md-6.col-lg-4
+				.card.mb-4.calendar__event
+					a.calendar__event-link(href='#')
+						.card-body.calendar__event-body
+							.calendar__event-date 22 декабря 2019
+							.calendar__event-title Хеджирование рыночных рисков для малых и средних компаний
+							//- .calendar__event-desk 
+							.calendar__event-pic
+								+image('calendar/event1.jpg', 'calendar__event-img')
+							.calendar__event-tags
+								ul.tags
+									li.tags__item 
+										a.tags__link(href="#") Агропромышленный комплекс
+									li.tags__item 
+										a.tags__link(href="#") Бренды
+									li.tags__item 
+										a.tags__link(href="#") +26
+				.card.mb-4.calendar__event
+					a.calendar__event-link(href='#')
+						.card-body.calendar__event-body
+							.calendar__event-date 22 декабря 2019
+							.calendar__event-title IV Общероссийский бизнес-форум «ЭКОТЕХНОПАРКИ РОССИИ» 
+							.calendar__event-desk
+							.calendar__event-tags
+								ul.tags
+									li.tags__item 
+										a.tags__link(href="#") Агропромышленный комплекс
+									li.tags__item 
+										a.tags__link(href="#") Бренды
+									li.tags__item 
+										a.tags__link(href="#") +26
+			.col-12.col-md-6.col-lg-4
+				.card.mb-4.calendar__event
+					a.calendar__event-link(href='#')
+						.card-body.calendar__event-body
+							.calendar__event-date 23 декабря 2019
+							.calendar__event-title Московский Аэротрополис – территория развития бизнеса
+							//- .calendar__event-desk 28 февраля 2020 года в Конгресс-центре Торгово-промышленной палаты Российской Федерации (г. Москва, ул. Ильинка, д. 6/1) в 10.30 (начало регистрации – 9.30) состоится
+							.calendar__event-pic
+								+image('calendar/event2.jpg', 'calendar__event-img')
+							.calendar__event-tags
+								ul.tags
+									li.tags__item 
+										a.tags__link(href="#") Агропромышленный комплекс
+									li.tags__item 
+										a.tags__link(href="#") Бренды
+									li.tags__item 
+										a.tags__link(href="#") +26
+				.card.mb-4.calendar__event
+					a.calendar__event-link(href='#')
+						.card-body.calendar__event-body
+							.calendar__event-date 23 декабря 2019
+							.calendar__event-title Реализация постановления Правительства РФ от 17.07.2015 № 719 «О подтверждении производства промышленной продукции на территории РФ»
+							//- .calendar__event-desk
+							.calendar__event-tags
+								ul.tags
+									li.tags__item 
+										a.tags__link(href="#") Агропромышленный комплекс
+									li.tags__item 
+										a.tags__link(href="#") Бренды
+									li.tags__item 
+										a.tags__link(href="#") +26
+			button.calendar__events-btn-expand
+				+icon('down-arrow', 'calendar__events-btn-expand-icon')

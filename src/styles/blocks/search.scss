@@ -1,0 +1,30 @@
+.search {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	padding: 10px 5px;
+	position: relative;
+	&__btn {
+		padding: 0;
+	}
+	&__popup {
+		position: absolute;
+		background: white;
+		padding: 15px 20px;
+		top: 102%;
+		right: 0;
+		z-index: 150;
+		width: 500px;
+		display: none;
+		box-shadow: 0 0 1rem rgba(63,87,193,.2);
+		&.show {
+			display: flex;
+		}
+	}
+
+	@include media-breakpoint-down(sm) { 
+		&__popup {
+			width: 320px;
+		}
+	}
+}

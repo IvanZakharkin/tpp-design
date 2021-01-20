@@ -1,0 +1,46 @@
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1280px
+);
+
+$theme-colors: (
+  "primary": #4162a9,
+  "indigo": #002e6d,
+  "light": #f0f5f8,
+  "blue": #1d5393,
+  "white": #fff,
+  "yellow": #e89d06,
+  "lightgray": #f0efef,
+  "whiteopacity": rgba(255,255,255,.6),
+);
+$primary: #4162a9;
+$indigo: #002e6d;
+$light: #f0f5f8;
+$gray: #9b9ea3;
+$dark-gray: #656875;
+$blue: #1d5393;
+$yellow: #e89d06;
+$lightgray: #f0efef;
+
+
+// Links
+$link-color:                              $blue !default;
+$link-hover-color:                        $blue !default;
+$link-hover-decoration:                   underline !default;
+
+
+// // Cards
+
+$card-border-radius:                10px !default;
+$card-border-color:                 #d8dee7 !default;
+
+
+
+@import  "'../../node_modules/bootstrap/scss/bootstrap";
+
+
+
+@import  './layout/base';
+@import  "./blocks/*";

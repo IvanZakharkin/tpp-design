@@ -1,0 +1,8 @@
+.bg-caduceus {
+	position: relative;
+	&:after {
+		position: absolute;
+
+	}
+	background: url('./images/caduceus.svg') no-repeat center center / contain;
+}

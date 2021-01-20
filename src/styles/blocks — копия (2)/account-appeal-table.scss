@@ -1,0 +1,90 @@
+.account-appeal-table {
+    color: #4f5762;
+    font-size: 15px;
+    &__head {
+        .account-appeal-table__row {
+            background-color: #f0f5f8;
+        }
+        @include media-breakpoint-down(sm) {
+            .account-appeal-table__row {
+                display: none;
+            }	
+        }
+    }
+    &__body {
+        .account-appeal-table__row {
+            background-color: #f8fffd;
+
+            &:hover {
+                background-color: #fefcf5;
+            }
+        }
+        
+    }
+    &__row {
+        th {
+            font-weight: bold;
+            padding: 20px;
+        }
+        td {
+            padding: 20px;
+        }
+        &_appeal-done {
+            background-color: #ffffff;
+            color: #b9bcc5;
+
+            .account-appeal-table__link {
+                color: #b9bcc5;
+            }
+            .account-appeal-table__status {
+                color: #b9bcc5;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            border-bottom: 1px solid #dee2e6;
+
+            td {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                border: none;
+                padding: 14px;
+
+            }
+            td:before {
+                content: attr(data-title);
+                display: block;
+                position: relative;
+                margin-right: 10px;
+                font-weight: bold;
+            }
+
+
+        }
+    }
+
+    &__link {
+        text-transform: uppercase;
+        font-size: 15px;
+        color: #2b5aa2;
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__status {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+
+        &_new {
+            color: #3aa581;
+        }
+        &_progress {
+            color: #ffba00;
+        }
+    }
+}

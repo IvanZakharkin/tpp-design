@@ -1,0 +1,112 @@
+.mobile-calendar {
+
+	&__top-menu{
+		display: flex;
+		padding: 14px;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__btn {
+		border-radius: 5px;
+		background-color: #ffffff;
+		border: 1px solid #656875;
+		padding: 10px 20px;
+		font-size: 24px;
+		color: #656875;
+	}
+	&__btn_icon {
+		width: 60px;
+		height: 60px;
+		position: relative;
+	}
+
+	&__icon-arrow {
+		width: 20px;
+		// height: 32px;
+	}
+
+	&__btn_active {
+		color: $white;
+		background-color: #2164b1;
+	}
+	&__btn_icon {
+		padding: 15px 22px;
+	}
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 35px;
+		height: 35px;
+		fill: #656875;
+		
+		&_blue {
+			fill: #2164b1;
+		}
+	}
+
+	&__glued-btns {
+		display: flex;
+
+		.mobile-calendar__btn {
+			&:first-child {
+				border-top-right-radius: 0px;
+				border-bottom-right-radius: 0px;
+				border-right: none;
+			}
+			&:last-child {
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 0px;
+				border-left: none;
+			}
+		}
+
+	}
+
+	&__row-select {
+		display: flex;
+		justify-content: space-between;
+		padding: 14px;
+		background-color: #f0f5f8;
+		align-items: center;
+
+	}
+	&__row-select_top-menu {
+		background-color: #f8f8f8;
+		border-bottom: 1px solid #ffffff;
+		border-top: 1px solid #ffffff;
+	}
+
+	&__selected-date {
+		font-size: 30px;
+		color: #2164b1;
+		font-weight: 700;
+	}
+
+	&__days-week {
+		font-size: 39px;
+		color: #ffffff;
+		display: flex;
+		background-color: #2164b1;
+		
+	}
+	&__day-week {
+		padding: 4px 30px;
+		width: calc(100% / 7);
+		text-align: center;
+	}
+	&__days {
+		display: flex;
+    	flex-wrap: wrap;
+	}
+	&__day {
+		font-weight: bold;
+		color: #656875;
+		font-size: 32px;
+		padding: 15px 30px;
+		width: calc(100% / 7);
+		text-align: center;
+	}
+}

@@ -1,0 +1,34 @@
+section.publications.py-5.bg-light
+	.container
+		.row.mb-4
+			.col
+				h2.title Издания
+			.col.text-right
+				a.btn.btn-outline-blue.text-uppercase(href="#") Все издания
+	.container.publications__container
+		.publications__list
+			.row.publications__list-container
+				.col-12.col-sm-4.mb-4
+					.card.publication
+						a.card-body.publication__link(href="#")
+							.publication__pic
+								+image('publications/publication1.jpg','publication__img')
+							.publication__desk
+								.publication__title Проект Итало-Российской торговой палаты журнал «Russian Business Guide». 
+								.publication__date Февраль 2020
+				.col-12.col-sm-4.mb-4
+					.card.publication
+						a.card-body.publication__link(href="#")
+							.publication__pic
+								+image('publications/publication2.jpg','publication__img')
+							.publication__desk
+								.publication__title Проект Брянской ТПП журнал "Деловой Брянск" 01 (186)
+								.publication__date Февраль 2020
+				.col-12.col-sm-4.mb-4
+					.card.publication
+						a.card-body.publication__link(href="#")
+							.publication__pic
+								+image('publications/publication3.jpg','publication__img')
+							.publication__desk
+								.publication__title Проект Алтайской ТПП журнал "Наше дело" № 2 (265)
+								.publication__date Февраль 2020

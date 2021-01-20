@@ -1,0 +1,250 @@
+.bcalendar {
+	background-color: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	box-shadow: 0 0 16px rgba(63,87,193,0.2);
+
+	&__days {
+		display: flex;
+		padding: 10px 20px 10px 7.6%;
+		
+	}
+
+	&__day {
+		width: calc(100%/7);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border-right: 1px solid transparent;
+
+		&_active {
+			.bcalendar__day-name {
+				color: #ffbc3b;
+			}
+			.bcalendar__day-num {
+				background-color: #ffbc3b;
+				.bcalendar__day-num-btn{
+					color: white;
+				}
+				
+			}
+		}
+	}
+	&__day-name {
+		font-size: 10px;
+		color: #969696;
+		text-transform: uppercase;
+		margin-bottom: 7px;
+	}
+	&__day-num {
+		border-radius: 50%;
+	}
+
+	&__day-num-btn {
+		background: none;
+		border: none;
+		font-size: 24px;
+		color: #3e3e3e;
+		width: 50px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+	}
+	
+
+	&__week-grid{
+		display: flex;
+		// overflow-y: auto;
+		padding-right: 20px;
+		
+		height: 560px;
+	}
+
+	
+	&__week-grid-cols {
+		
+		height: 1210px;
+		display: flex;
+		flex: 1;
+		position: relative;
+
+	}
+
+	&__week-grid-time {
+		width: 7.6%;
+		border-right: 1px solid #e1e1e1;
+	}
+
+	&__grid-col {
+		width: calc((100% - 7.6%) / 7);
+		border-left: 1px solid #e1e1e1;
+
+		&:last-of-type {
+			border-right: 1px solid #e1e1e1;
+		}
+	}
+
+	// &__grid-time-line{
+	// 	position: absolute;
+	// 	height: 1px;
+	// 	background-color: #e1e1e1;
+	// 	top: 10px;
+	// 	right: 0;
+	// 	width: calc(100% - 6.3%);
+	// }
+	// &__grid-time-line-value {
+	// 	font-size: 10px;
+	// 	color: #969696;
+	// 	position: absolute;
+	// 	top: -5px;
+	// 	left: -4.5%;
+	// }
+
+	&__week-grid-hour {
+		text-align: center;
+		height: 50px;
+		position: relative;
+
+		&:after {
+			content: '';
+			display: block;
+			background-color: #e1e1e1;
+			height: 1px;
+			width: 12px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+		
+	}
+	&__week-grid-hour-value {
+		font-size: 11px;
+		color: #969696;
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		bottom: -6px;
+
+		
+	}
+	&__week-grid-day {
+		width: calc(100%/7);
+		// flex: 1;
+		border-right: 1px solid #e1e1e1;
+	}
+	&__week-grid-day-hour {
+		height: 50px;
+		border-bottom: 1px solid #e1e1e1;
+	}
+	&__event {
+		padding-top: 10px;
+		margin: 1px;
+		color: #fff;
+		overflow: hidden;
+		padding-left: .5em;
+		padding-right: .5em;
+		cursor: pointer;
+		border-radius: 2px;
+	}
+	&__event-title {
+		margin-bottom: 5px;
+		font-size: 14px;
+	}
+
+	&__schedule {
+		min-height: 650px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+		position: relative;
+	}
+	&__schedule-event {
+		display: flex;
+		align-items: center;
+		padding: 10px 20px;
+		font-size: 14px;
+		color: #969696;
+		border-bottom: 1px solid #e1e1e1;
+		border-right: 1px solid #e1e1e1;
+
+		&:first-child {
+			border-top: 1px solid #e1e1e1;
+		}
+
+		&_current {
+			.bcalendar__schedule-event-day {
+				background-color: #ffbc3b;
+				color: white;
+			}
+			.bcalendar__schedule-event-day-name {
+				color: #ffbc3b;
+			}
+			.bcalendar__schedule-event-day-current {
+				font-size: 14px;
+			}
+			
+		}
+	}
+	&__schedule-event-day {
+		width: 30px;
+		height: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 18px;
+		color: #3e3e3e;
+		margin-right: 20px;
+		border-radius: 50%;
+	}
+
+	&__schedule-event-day-name {
+		font-size: 10px;
+		text-transform: uppercase;
+		margin-right: 15px;
+		
+	}
+	&__schedule-event-day-current {
+		margin-right: 25px;
+		font-size: 0px;
+		color: #ffbc3b;
+		width: 55px;
+	}
+	&__schedule-event-time {
+		margin-right: 25px;
+	}
+	&__schedule-event-name {
+		display: flex;
+		align-items: center;
+		flex: 1;
+	}
+	&__schedule-event-name-circle {
+		width: 10px;
+		height: 10px;
+		margin-right: 20px;
+		border-radius: 50%;
+	}
+	&__schedule-footer {
+		padding-left: 25px;
+		font-size: 14px;
+		color: #969696;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	&__schedule-footer-text {
+		display: inline-block;
+	}
+	&__schedule-footer-btn-more {
+		display: inline-block;
+		background: none;
+		border: none;
+		color: #002e6d;
+		padding: 0;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+}

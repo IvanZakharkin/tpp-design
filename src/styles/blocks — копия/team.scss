@@ -1,0 +1,53 @@
+.team {
+	padding: 60px 0;
+	background-color: #024291;
+
+	&__list-container {
+		width: auto;
+		 padding-bottom: 0;
+	}
+	&__container{
+		height: auto;
+		overflow: none;
+	}
+	&__list {
+		// width: auto;
+		overflow-x: none;
+	}
+	
+
+	@include media-breakpoint-up(sm) { 
+		&__container {
+			height: 400px;
+			overflow: hidden;
+			 margin-top: -30px;
+
+		}
+		&__list{
+			width: 100%;
+			overflow-x: scroll;
+		}
+		&__list-container{
+			width: 1280px;
+			 padding-bottom: 60px;
+			 padding-top: 30px;
+		}
+	}
+	&__item-container {
+		padding-top:50px;
+	}
+
+	&__title {
+		color:$white;
+		margin-bottom: 15px;
+	}
+
+	&__btn-detail {
+		color: $white;
+		&:hover {
+			color: $blue;
+		}
+	}
+
+
+}

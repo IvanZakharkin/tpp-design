@@ -1,0 +1,55 @@
+
+<section class="structure py-5" id="structure">
+    <div class="container">
+        <div class="structure__content">
+            <ul class="structure-list list-group">
+                <li class="structure-list__item list-group-item" v-for="section in $store.state.divisions">
+                    <div class="structure-list__item-content">
+                        <div class="structure-list__item-title">
+                            | {{section.name}}
+                            <i class="fas fa-angle-down ml-2" v-if="section.subDivisions.length"></i>
+                        </div>
+                        <div class="btn-group structure-list__item-btns">
+                            <button type="button" class="btn btn-sm structure-list__item-btn" data-toggle="modal" data-target="#modalDevisions" @click="$store.commit('addSubdivision', division);"><i class="fas fa-plus"></i></button>
+                            <button type="button" class="btn btn-sm structure-list__item-btn"><i class="fas fa-pencil-alt" data-toggle="modal" data-target="#modalDevisions" @click="$store.commit('editSubdivision', section);"></i></button>
+                            <button class="btn btn-sm structure-list__item-btn" @click="$store.dispatch('deleteElement', section);"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    <ul class="list-group structure-list structure-list_level" v-if="section.subDivisions.length">
+                        <subdivision v-for="subDivision in section.subDivisions" :division="subDivision"></subdivision>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <modal-change-divisions :received-data="$store.state.modalData" inline-template>
+            <div class="modal fade" id="modalDevisions" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" ref="modalDevisions">
+                <div class="modal-dialog" role="document">
+                    <form class="modal-content" @submit.prevent="sendForm()">
+                        <div class="modal-header">
+                            <h3 class="modal-title">{{title[receivedData.type]}}</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            .form-group
+                                input.form-control(type="text" placeholder="Введите название" v-model="name" :disabled="receivedData.type === 'addPerson'")
+                            .form-group(v-if="receivedData.type === 'addPerson'")
+                                input.form-control(type="text" placeholder="Введите ФИО сотрудника" @keyup="search($event)" :value="person.name")
+                                <div class="dropdown show">
+                                    <div class="dropdown-menu w-100" ref="dropdownMenuSearch">
+                                        <a class="dropdown-item" href="#" v-for="elSearch in searchList" @click.prevent="selectPerson(elSearch)"> {{ elSearch.name }} </a>
+                                        <span class="dropdown-item" v-if="!searchList.length"> По вашему запросу ничего не найдено </span>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                            <button type="submit" class="btn btn-primary">Сохранить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </modal-change-divisions>
+    </div>
+</section>

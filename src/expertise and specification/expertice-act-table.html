@@ -1,0 +1,60 @@
+<div class="row" v-for="(product, index) in products">
+    <!-- <div class="col-3 pr-0">
+        <div class="form-lable-input expertice-type-packaging">Вид упаковки</div>
+        <select class="form-control form-control-expertice-acts" :value="product.typePackage">
+            <option v-for="type in typesPackage"> {{type}} </option>
+
+        </select>
+    </div> -->
+    <div class="col-9 pl-0">
+        <table class="expertice-acts-product-table table-borderless">
+            <colgroup>
+                <col width="20%"/>
+                <col width="9%"/>
+                <col width="14%"/>
+                <col width="15%"/>
+                <col width="15%"/>
+                <col width="17%"/>
+            </colgroup>
+            <thead class="thead">
+                <tr>
+                    <th>Наименование товара</th>
+                    <th>Стоимость</th>
+                    <th>Происхождение</th>
+                    <th>Изготовитель</th>
+                    <th>ТН ВЭД</th>
+                    <th>Комментарий</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                <tr  v-for="(composition, compositionIndex) in product.composition">
+                    <td class="position-relative">
+                        <input class="form-control form-control-expertice-acts"  :value="composition.name"/>
+                        <button class="btn btn-sm form-btn-add-plus" @click="removeMaterial(index, compositionIndex)" v-if="compositionIndex != 0"> - </button>
+                    </td>
+                    <td>
+                        <input class="form-control form-control-expertice-acts"  :value="composition.cost"/>
+                    </td>
+                    <td>
+                        <input class="form-control form-control-expertice-acts" :value="composition.origin"/>
+                    </td>
+                    <td>
+                        <input class="form-control form-control-expertice-acts"  :value="composition.maker"/>
+                    </td>
+                    <td>
+                        <input class="form-control form-control-expertice-acts"  :value="composition.tnved"/>
+                    </td>
+                    <td>
+                        <input class="form-control form-control-expertice-acts"  :value="composition.comment"/>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <button class="btn btn-sm form-btn-add-text" @click="addMaterial(index)">+ Добавить состав сырья</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

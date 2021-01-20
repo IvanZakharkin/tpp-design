@@ -1,0 +1,134 @@
+.services-promo {
+	width: 100%;
+	color: $white;
+	position: relative;
+	overflow: hidden;
+	
+	background-image: linear-gradient(-90deg, #0558b6 0%, #002d6d 99%);
+
+	&:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: center/contain no-repeat url('../images/icons/logo-tpp.svg');
+    left: 4%;
+    top: 66px;
+    width: 21.875rem;
+    height: 80%;
+	}
+	
+	&__slider.slider{
+		margin: 0;
+	}
+	
+	.services-promo__slider-container.bw-1 {
+		&:before {
+			content: '';
+			display: block;
+			width: 530px;
+			height: 80%;
+			background: center center / contain no-repeat url('../images/services/promo-women.png');
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			}
+	}
+
+	
+	.services-promo__slider-container.bw-2 {
+		&:before {
+			content: '';
+			display: block;
+			width: 530px;
+			height: 80%;
+			background: center center / contain no-repeat url('../images/services/promo-women2.png');
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			}
+	}
+
+	&__slider-container {
+    padding: 6% 5% 7% 25%;
+    position: relative;
+
+    // &:before {
+    //   content: '';
+    //   display: block;
+    //   width: 530px;
+    //   height: 80%;
+    //   background: center center / contain no-repeat url('../images/services/promo-women.png');
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: 0;
+
+    // }
+
+    
+
+	}
+	&__slider-title {
+    font-family: 'Roboto Condensed';
+    display: flex;
+    align-items: center;
+    font-size: 53px;
+    line-height: 52px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 35px;
+
+    span {
+      font-size: 222px;
+      margin-right: 20px;
+    }
+  }
+
+  &__slider-text-block {
+    padding-left: 20%;
+
+  }
+  &__slider-text{
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 300;
+    margin-bottom: 35px;
+
+  }
+	@include media-breakpoint-down(lg) { 
+		&__slider-left-col-big-text {
+			font-size: 100px;
+		}
+	}
+	&__slider-left-col-small-text {
+		font-size: 19px;
+	}
+
+	@include media-breakpoint-down(lg) { 
+		&__slider-left-col-small-text {
+			font-size: 15px;
+		}
+	}
+	&__slider-right-col-big-text {
+		font-size: 37px;
+		font-weight: bold;
+		margin-bottom: 10px;
+		font-weight: 300;
+	}
+
+	@include media-breakpoint-down(lg) { 
+		&__slider-right-col-big-text {
+			font-size: 24px;
+		}
+	}
+	&__slider-right-col-small-text {
+		font-size: 18px;
+		margin-bottom: 40px;
+		font-weight: 300;
+	}
+
+	@include media-breakpoint-down(lg) { 
+		&__slider-right-col-small-text{
+			font-size: 12px;
+		}
+	}
+}

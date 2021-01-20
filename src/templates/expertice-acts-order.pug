@@ -1,0 +1,90 @@
+.expertice-acts-order.py-5
+    .container
+        .row
+            .col-12.col-sm-5
+                .expertice-acts-order-card.card
+                    .card-body.expertice-acts-order-card__body
+                        .expertice-acts-order-card__header.d-flex.mb-3
+                            h3.form-title.mr-4 Статус заявки
+                            .btn.expertice-acts-order-card__status В работе
+                        .expertice-acts-order-card__content
+                            ul.expertice-acts-order-card__info-list
+                                li.expertice-acts-order-card__info-item
+                                    .expertice-acts-order-card__info-item-title Заявка подана
+                                    .expertice-acts-order-card__info-item-value 24 сентября 2018 г., 15:59
+                                li.expertice-acts-order-card__info-item
+                                    .expertice-acts-order-card__info-item-title С момента подачи заявки прошло
+                                    .expertice-acts-order-card__info-item-value 24 сентября 2018 г., 15:59
+                                li.expertice-acts-order-card__info-item
+                                    .expertice-acts-order-card__info-item-title С момента подачи заявки прошло
+                                    .expertice-acts-order-card__info-item-value 2 года
+                                li.expertice-acts-order-card__info-item
+                                    .expertice-acts-order-card__info-item-title Дата последнего изменения
+                                    .expertice-acts-order-card__info-item-value 29 июля 2020 г., 14:18
+                                li.expertice-acts-order-card__info-item
+                                    .expertice-acts-order-card__info-item-title Оплата
+                                    .expertice-acts-order-card__info-item-value <span class="text-danger mr-2">Ожидает оплаты </span>  <a class="expertice-acts-order-card__link" href="#">Детали заказа</a>
+            .col-12.col-sm-7
+                .expertice-acts-order-card.card
+                    .card-body.expertice-acts-order-card__body
+                        .expertice-acts-order-card__text-blue.mb-2 Ответсвенный
+                        .mb-2 Департамент цифрового развития
+                        .expertice-acts-order-card__content
+                            ul.expertice-acts-order-card__info-list
+                                li.expertice-acts-order-card__info-item
+                                    .expertice-acts-order-card__info-item-title Сотрудник
+                                    .expertice-acts-order-card__info-item-value Науменкова Валерия
+                                li.expertice-acts-order-card__info-item
+                                    .expertice-acts-order-card__info-item-title Телефон
+                                    .expertice-acts-order-card__info-item-value +7 (916) 088-75-56
+                            button.btn.btn.btn-blue.mb-3 Завершить выполнение заявки
+                            .d-flex.align-items-center.mb-3
+                                .expertice-acts-order-card__text-blue.mr-3 Оплата
+                                .text-success.mr-3 Включена
+                                a.expertice-acts-order-card__link.mr-3(href='#expertice-acts-order-card-payment' data-toggle="collapse") Редактировать
+                            #expertice-acts-order-card-payment.expertice-acts-order-card__payment-info.mb-3.collapse
+                                ul.expertice-acts-order-card__info-list.list-unstyled
+                                    li.expertice-acts-order-card__info-item
+                                        .expertice-acts-order-card__info-item-title № заказа
+                                        .expertice-acts-order-card__info-item-value 6565656565
+                                    li.expertice-acts-order-card__info-item.d-inline-flex.mr-3
+                                        .expertice-acts-order-card__info-item-title Электронная
+                                        .form-check
+                                            input#blankCheckbox.form-check-input.position-static(type='checkbox', value='option1', aria-label='...')
+                                    li.expertice-acts-order-card__info-item.d-inline-flex
+                                        .expertice-acts-order-card__info-item-title Сумма
+                                        input.form-control.form-control-sm
+                                    li.expertice-acts-order-card__info-item
+                                        .expertice-acts-order-card__info-item-title.flex-shrink-0 Перечень работ
+                                        input.form-control.form-control-sm
+                                .text-left
+                                    button.btn.btn-outline-blue Отмена
+                                    button.btn.btn-outline-blue Изменить
+                            .d-flex.align-items-center.mb-3
+                                button.btn.expertice-acts-order-card__btn-blue-light.mr-3 Отметить, что заявка оплачена
+                                a.expertice-acts-order-card__link(href='#').mr-3 Комплект документов
+        h3.form-title.mb-4 Сообщения
+        .expertice-acts-messanger
+            ul.expertice-acts-messanger__messages-list
+                li.expertice-acts-messanger__messages-list-item.mb-3
+                    .expertice-acts-messanger__message.mb-3
+                        .expertice-acts-messanger__message-header
+                            button.btn.expertice-acts-messanger__message-btn.mr-3
+                                i.fas.fa-long-arrow-alt-down
+                            .expertice-acts-messanger__message-date.mr-3 24.08.2018 г., 15:59 
+                            .expertice-acts-messanger__message-topic.mr-3 Тема сообщения
+                        .expertice-acts-messanger__message-content
+                li.expertice-acts-messanger__messages-list-item.mb-3
+                    .expertice-acts-messanger__message.mb-3
+                        .expertice-acts-messanger__message-header
+                            button.btn.expertice-acts-messanger__message-btn.mr-3
+                                i.fas.fa-long-arrow-alt-down
+                            .expertice-acts-messanger__message-date.mr-3 24.08.2018 г., 15:59 
+                            .expertice-acts-messanger__message-topic.mr-3 Тема сообщения
+                        .expertice-acts-messanger__message-content
+            button.btn.btn-primary.mb-4 Написать сообщение
+            .expertice-acts-messanger__chat
+                .expertice-acts-messanger__chat-title.mb-3 Написать сообщение
+                input.expertice-acts-messanger__chat-topic.form-control.mb-3(type="text" placeholder="Тема сообщения (не менее 10 символов)")
+                textarea.expertice-acts-messanger__chat-message.form-control.mb-3(type="text" placeholder="Сообщение не должно быть более 30 символов")
+                button.btn.btn-primary Отправить

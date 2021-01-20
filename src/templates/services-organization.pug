@@ -1,0 +1,53 @@
+section.services.py-5.bg-light
+	.container
+		.row.mb-4
+			.col
+				h2.title Услуги
+			.col.text-right
+				a.btn.btn-outline-blue.text-uppercase(href="#") Все услуги
+		.row
+			-
+				var servicesList = 
+					[
+						[
+							'Онлайн-семинары',
+							'Практические онлайн-семинары «Экспорт-навигация – курс на Германию» представительства ТПП РФ в Германии совместно с компанией NeuVenture Global'
+						],
+						[
+							'Оценка',
+							'Индивидуальные услуги российским предприятиям для экспортной деятельности в Германии'
+						],
+						[
+							'Сертификация',
+							'Стратегические онлайн-сессии и поиск деловых партнеров: подготовка российских компаний к выходу на рынок Германии'
+						],
+						[
+							'Онлайн-семинары',
+							'Практические онлайн-семинары «Экспорт-навигация – курс на Германию» представительства ТПП РФ в Германии совместно с компанией NeuVenture Global'
+						],
+						[
+							'Оценка',
+							'Индивидуальные услуги российским предприятиям для экспортной деятельности в Германии'
+						],
+						[
+							'Сертификация',
+							'Стратегические онлайн-сессии и поиск деловых партнеров: подготовка российских компаний к выходу на рынок Германии'
+						],
+					];
+			.slider.services-representation__slider
+				button.slider__btn.slider__btn_prev.slider__btn_small.slick-arrow(style='')
+					svg.slider__btn-icon
+						use(xlink:href='../images/icons/symbol/sprite.svg#arrow')
+				button.slider__btn.slider__btn_next.slider__btn_small.slick-arrow(style='')
+					svg.slider__btn-icon
+						use(xlink:href='../images/icons/symbol/sprite.svg#arrow')
+				.slider__container
+					each serviesItem in servicesList	
+						.col-12.col-md-6.col-lg-4.mb-4
+							.card.service
+								.card-body.service__body
+									.service__header
+										h3.service__title=serviesItem[0]
+									.service__text= serviesItem[1]
+
+

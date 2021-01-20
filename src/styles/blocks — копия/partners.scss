@@ -1,0 +1,36 @@
+.partners {
+
+	&__container {
+		height: 110px;
+		overflow: hidden;
+	}
+	&__list{
+		width: 100%;
+		overflow-x: scroll;
+		padding: 25px 0;
+	}
+	&__list-container{
+		width: 1250px;
+ 		padding-bottom: 20px;
+	}
+
+
+    &__logo{
+		cursor: pointer;
+	}
+    &__link{
+		display: block;
+		
+		.partners__icon {
+			display: block;
+			// transition: .5s ease-in-out;
+			cursor: pointer;
+			filter: grayscale(1)
+		}
+        &:hover {
+			.partners__icon {
+				filter: grayscale(0)
+			}
+        }
+    }
+}

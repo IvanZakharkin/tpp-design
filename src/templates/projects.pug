@@ -1,0 +1,55 @@
+section.projects.py-5.bg-light
+	.container
+		.row.mb-4
+			.col
+				h2.title Проекты
+			.col.text-right
+				a.btn.btn-outline-blue.text-uppercase.mr-2.d-none.d-sm-inline-block(href="#") Инфографика
+				a.btn.btn-outline-blue.text-uppercase(href="#") Все проекты
+		.slider.projects__slider
+			button.slider__btn.slider__btn_prev
+				+icon('arrow', 'slider__btn-icon')
+			button.slider__btn.slider__btn_next
+				+icon('arrow', 'slider__btn-icon')
+			.slider__container.row
+					.col
+						.project
+							a.project__link(href="#")
+								.project__pic
+									+image('projects/project1.jpg', 'project__img')
+								.project__logo
+									+image('projects/logo1.png', 'project__logo-img')
+							.project__btns
+								a.project__btn(href="#") Подать заявку
+								a.project__btn(href="#") Подать заявку
+					.col
+						.project
+							a.project__link(href="#")
+								.project__pic
+									+image('projects/project2.jpg', 'project__img')
+								.project__logo
+									+image('projects/logo2.png', 'project__logo-img')
+							.project__btns
+								a.project__btn(href="#") О конкурсе
+								a.project__btn(href="#") О конкурсе
+					.col
+						.project
+							a.project__link(href="#")
+								.project__pic
+									+image('projects/project1.jpg', 'project__img')
+								.project__logo
+									+image('projects/logo1.png', 'project__logo-img')
+							.project__btns
+								a.project__btn(href="#") Подать заявку
+								a.project__btn(href="#") Подать заявку
+					.col
+						.project
+							a.project__link(href="#")
+								.project__pic
+									+image('projects/project2.jpg', 'project__img')
+								.project__logo
+									+image('projects/logo2.png', 'project__logo-img')
+							.project__btns
+								a.project__btn(href="#") О конкурсе
+								a.project__btn(href="#") О конкурсе
+							

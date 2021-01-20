@@ -1,0 +1,43 @@
+.initiative {
+	position: relative;
+
+	&:hover {
+		box-shadow: 0 0 16px rgba(63,87,193,0.2);
+		// .initiative__title {
+		// 	text-decoration: underline;
+		// }
+		// .initiative__authority  {
+		// 	text-decoration: underline;
+		// }
+	}
+	&__title {
+		font-size: 16px;
+		color: $blue;
+		padding-right: 65px;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+		border-bottom: 1px solid $gray;
+		border-bottom: 1px solid #9b9ea3;
+		display: block;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&__authority {
+		font-size: 13px;
+		color: $yellow;
+		margin-bottom: 10px;
+		display: block;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__pic {
+		position: absolute;
+		right: 15px;
+		top: 15px;
+	}
+}

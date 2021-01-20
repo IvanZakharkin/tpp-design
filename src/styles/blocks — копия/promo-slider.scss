@@ -1,0 +1,8 @@
+.promo {
+	&__slider-img {
+		background-image: linear-gradient(-90deg, #0558b6 0%, #002d6d 99%);
+		// object-fit: cover;
+		height: 360px;
+		width: 100%;
+	}
+}

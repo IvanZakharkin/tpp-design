@@ -1,0 +1,31 @@
+.video-section {
+    background-color: #2d3745;
+    &__main {
+        height: 510px;
+    }
+    &__title {
+        color: $white;
+    }
+    &__secondary {
+        position: relative;
+        height: calc((100% - 35px) / 2);
+        margin-bottom: 35px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+   
+
+    @include media-breakpoint-down(md) {
+        &__secondary  {
+            height: 510px;
+        }
+        &__secondary-preview-img {
+            display: none;
+        }
+        &__secondary-play {
+            display: none;
+        }
+    }
+}

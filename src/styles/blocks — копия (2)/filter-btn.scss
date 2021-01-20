@@ -1,0 +1,30 @@
+.filter-btn {
+	
+		display: inline-flex;
+		// width: 160px;
+		// justify-content: space-between;
+		// align-items: center;
+		color: $blue;
+		background: none;
+		border: none;
+		outline: none;
+
+		&:hover,&:focus {
+			text-decoration: none;
+			outline: none;
+		}
+	
+	&__icon {
+		width: 20px;
+		height: 20px;
+		fill: $blue;
+	}
+	&__text {
+		color: $blue;
+		margin-right: 20px;
+	}
+
+	.fa-chevron-down{
+		transition: transform .5s ease-out;
+	}
+}

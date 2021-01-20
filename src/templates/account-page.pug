@@ -1,0 +1,130 @@
+//- #account-page
+.account-page.py-5
+    .container
+        .row
+            .col-12.col-md-3.mb-3.mb-md-0
+                .account-page__avatar
+                    .account-page__avatar-pic
+                        img.account-page__avatar-img(
+                            src="../images/persons/avatar1.jpg"
+                        )
+                    .account-page__avatar-hover-block
+                        button.btn.account-page__avatar-hover-block-btn-close(type="button")
+                            i.fas.fa-times
+                        .account-page__avatar-hover-block-content
+                            button.btn.account-page__avatar-hover-block-btn(type="button")
+                                .account-page__avatar-hover-block-btn-icon.mr-2
+                                    i.fas.fa-camera
+                                .account-page__avatar-hover-block-btn-title Сделать фото
+                            label.btn.account-page__avatar-hover-block-btn
+                                input.account-page__avatar-input-file(type="file")
+                                .account-page__avatar-hover-block-btn-icon.mr-2
+                                    i.fas.fa-upload
+                                .account-page__avatar-hover-block-btn-title Загрузить фото
+            .col-12.col-md-9
+                form.account-page__form(action="")
+                    .form-group
+                        .account-title.mb-4 Мои данные
+                        ul.account-info-list.mb-5.w-75
+                            label.account-info-list__item.form-group.d-block
+                                .account-info-list__item-title.mb-2 Фамилия
+                                .position-relative.mb-2
+                                    input.form-control.account-info-list__item-value(placeholder="Захаркин" type="text" name="last-name")
+                                    button.btn.btn-sm.account-info-list__btn.account-info-list__btn_text#btn-show-cases-popup(type='button') Другие падежи
+                            label.account-info-list__item.form-group.d-block
+                                .account-info-list__item-title.mb-2 Имя
+                                .position-relative.mb-2
+                                    input.form-control.account-info-list__item-value(placeholder="Иван" type="text" name="first-name")
+                                    button.btn.btn-sm.account-info-list__btn.account-info-list__btn_text#btn-show-cases-popup(type='button') Другие падежи
+                            label.account-info-list__item.form-group.d-block
+                                .account-info-list__item-title.mb-2 Отчество
+                                .position-relative.mb-2
+                                    input.form-control.account-info-list__item-value(placeholder="Сергеевич" type="text" name="patronymic")
+                                    button.btn.btn-sm.account-info-list__btn.account-info-list__btn_text#btn-show-cases-popup(type='button') Другие падежи
+                                
+                            label.account-info-list__item.form-group.d-block
+                                .account-info-list__item-title.mb-2 Должность
+                                input.form-control.account-info-list__item-value(placeholder="Фронтенедр" type="text" name="post")
+                            label.account-info-list__item.form-group.d-block
+                                .account-info-list__item-title.mb-2 Организация
+                                input.form-control.account-info-list__item-value(placeholder="Forumedia" type="text" name="address")
+                            label.account-info-list__item.form-group.d-block
+                                .account-info-list__item-title.mb-2 Пол
+                                select.form-control.account-info-list__item-value(placeholder="мужской" type="еуче" name="gender")
+                                    option мужской
+                                    option женский
+                            label.account-info-list__item.form-group.d-block
+                                .account-info-list__item-title.mb-2 Дата рождения
+                                input.form-control.account-info-list__item-value(placeholder="" type="text" name="")
+                    .form-group
+                        .account-title.mb-4 Контактные данные
+                        .account-info-list.mb-5.w-75
+                            label.account-info-list__item.form-group.d-block
+                                .account-info-list__item-title.mb-2 Email
+                                input.form-control.account-info-list__item-value(placeholder="email" type="email" name="email")
+                            label.account-info-list__item.form-group.d-block
+                                .account-info-list__item-title.mb-2 Мобильный телефон
+                                input.form-control.account-info-list__item-value(placeholder="123132132" type="text" name="tel")
+                    .form-group
+                        .account-title.mb-4 Изменить пароль
+                        .account-info-list.mb-5.w-75
+                            label.account-info-list__item.form-group.d-block
+                                .account-info-list__item-title.mb-2 Текущий пароль
+                                input.form-control.account-info-list__item-value(placeholder="123132132" type="password" name="current-password")
+                            label.account-info-list__item.form-group.d-block 
+                                .account-info-list__item-title.mb-2 Новый пароль
+                                input.form-control.account-info-list__item-value(placeholder="123132132" type="password" name="new-password")
+                            label.account-info-list__item.form-group.d-block 
+                                .account-info-list__item-title.mb-2 Повторите пароль
+                                input.form-control.account-info-list__item-value(placeholder="123132132" type="password" name="new-password-repeat")
+                    #account-document
+                        
+                    //- .form-group.mb-5
+                    //-     .account-title.mb-4 Документы
+                    //-     .account-info-list.mb-4
+                    //-         .account-info-list__item.form-group.d-flex.align-items-center
+                    //-             .account-info-list__item-title.mr-3 Email
+                    //-             .form-control.account-info-list__item-value.account-info-list__item-value_file
+                    //-                 span.text-primary asdasd.jpg
+                    //-                 button.btn(type="button") &times;
+                    //-         .account-info-list__item.form-group.d-flex.align-items-center
+                    //-             .account-info-list__item-title.mr-3 Email
+                    //-             .form-control.account-info-list__item-value.account-info-list__item-value_file
+                    //-                 span.text-primary asdasd.jpg
+                    //-                 button.btn(type="button") &times;
+                    //-     button.btn.btn-outline-primary#account-btn-add-document(type="button") + Добавить документ 
+                        
+                    
+                    button.btn.btn-primary.rounded-0(type="submit") Сохранить
+    #account-cases-popup.modal(tabindex='-1', role='dialog')
+        .modal-dialog.modal-lg(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title Фамилия по падежам
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body
+                    .account-info-list
+                        label.account-info-list__item.form-group.d-block
+                            .account-info-list__item-title.mb-2 Именительный: Есть кто? 
+                            input.form-control.account-info-list__item-value(placeholder="123132132" type="text")
+                        label.account-info-list__item.form-group.d-block
+                            .account-info-list__item-title.mb-2 Родительный: Нет кого?   
+                            input.form-control.account-info-list__item-value(placeholder="123132132" type="text" name="tel")
+                        label.account-info-list__item.form-group.d-block
+                            .account-info-list__item-title.mb-2 Дательный: Рад кому?
+                            input.form-control.account-info-list__item-value(placeholder="123132132" type="text" name="tel")
+                        label.account-info-list__item.form-group.d-block
+                            .account-info-list__item-title.mb-2 Винительный: Вижу кого?
+                            input.form-control.account-info-list__item-value(placeholder="123132132" type="text" name="tel")
+                        label.account-info-list__item.form-group.d-block
+                            .account-info-list__item-title.mb-2 Творительный: Доволен кем? 
+                            input.form-control.account-info-list__item-value(placeholder="123132132" type="text" name="tel")
+                        label.account-info-list__item.form-group.d-block
+                            .account-info-list__item-title.mb-2 Предложный: Думаю о ком? 
+                            input.form-control.account-info-list__item-value(placeholder="123132132" type="text" name="tel")
+                .modal-footer
+                    .text-muted.text-left.mb-4.flex-fill Данные сведения используются для автоматической генерации документов
+                    .text-right
+                        button.btn.btn-secondary(type='button', data-dismiss='modal') Закрыть
+                        button.btn.btn-primary(type='button') Добавить документ

@@ -1,0 +1,44 @@
+.offers.py-5.bg-light
+	.container
+		.row.mb-4
+			.col.d-flex
+				h2.title Предложения
+			.col.text-right
+				a.btn.btn-outline-blue.text-uppercase.ml-3(href="#") Подробнее
+		.slider.offers__slider
+			button.slider__btn.slider__btn_prev.slider__btn_small
+				+icon('arrow', 'slider__btn-icon')
+			button.slider__btn.slider__btn_next.slider__btn_small
+				+icon('arrow', 'slider__btn-icon')
+			- 
+				var offersList = [
+					[
+						'offer1.jpg',
+						'Международная выставочная логистика в России и Германии',
+					],
+					[
+						'offer2.jpg',
+						'"Девик Хандельс": поставка промышленного оборудования и комплектующих ведущих европейских '
+					],
+					[
+						'offer3.jpg',
+						'Поддержка международных "стартапов" в Лейпциге',
+					],
+					[
+						'offer2.jpg',
+						'Международная выставочная логистика в России и Германии'
+					],
+					[
+						'offer3.jpg',
+						'Поддержка международных "стартапов" в Лейпциге',
+					],
+					
+				]
+			.slider__container.row
+				each offerItem in offersList
+					.col.py-3
+						.company-card.card
+							.card-body.company-card__body
+								.company-card__logo
+									+image(`company/${offerItem[0]}`, "company-card__logo-img")
+								a.company-card__link(href="#")=offerItem[1]

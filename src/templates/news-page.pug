@@ -1,0 +1,80 @@
+section.news-page.py-5
+	.container
+		nav.mt-2.mb-4(aria-label='breadcrumb')
+			ol.breadcrumb(itemprop='http://schema.org/breadcrumb', itemscope='', itemtype='http://schema.org/BreadcrumbList')
+				li#bx_breadcrumb_0.breadcrumb-item(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+					a(href='/', title='Главная', itemprop='url')
+						span(itemprop='name') Главная
+				li.breadcrumb-item.active(aria-current='page', itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+					span(itemprop='name') Личный кабинет
+		.row.mb-4
+			.col-12.col-md-10
+				ul.news-page__category.nav
+					each item in ["Все", "Россия", "Регионы", "Мнения", "Анонсы", "СМИ"]
+						li.news-page__category-item.nav-item
+							a.news-page__category-link.nav-link(href="#")= item
+			.col-12.col-md-2.text-right.d-flex.align-items-center.justify-content-start.justify-content-md-end
+				ul.news-page__btns
+					li.news-page__btn
+						a.filter(href='#')
+							+icon('filter', 'filter__icon')
+					li.news-page__btn
+						a.btn-direction.btn-direction_vertical(href='#')
+							+icon('vertical-display', 'btn-direction-icon')
+					li.news-page__btn
+						a.btn-direction.btn-direction_gorizontal.btn-direction_active(href='#')
+							+icon('gorizontal-display', 'btn-direction-icon')
+		- 
+			var news = [
+				[
+					"news1.jpg", 
+					"14.11.2019", 
+					"История", 
+					"К 75-летию Победы. ТПП КБР перечислила средства на строительство мемориала советскому солдату под Ржевом", 
+					"Правительство подготовило один из самых впечатляющих и масштабных законов о стимулировании инвестиций в России. Но его эффективность будет зависеть от ряда деталей.", 
+				],
+				[
+					"news1.jpg", 
+					"14.11.2019", 
+					"История", 
+					"К 75-летию Победы. ТПП КБР перечислила средства на строительство мемориала советскому солдату под Ржевом", 
+					"Правительство подготовило один из самых впечатляющих и масштабных законов о стимулировании инвестиций в России. Но его эффективность будет зависеть от ряда деталей.", 
+				],
+				[
+					"news1.jpg", 
+					"14.11.2019", 
+					"История", 
+					"К 75-летию Победы. ТПП КБР перечислила средства на строительство мемориала советскому солдату под Ржевом", 
+					"Правительство подготовило один из самых впечатляющих и масштабных законов о стимулировании инвестиций в России. Но его эффективность будет зависеть от ряда деталей.", 
+				],
+				[
+					"news2.jpg", 
+					"01.06.2020",
+					"История", 
+					"ТПП РФ: национальный проект по МСП нуждается в серьезной доработке экологичес кого машиностроения", 
+					"3 декабря 2019 г. Департаментом содействия инвестициям и инновациям ТПП РФ совместно АО «Российский экспортный центр» был проведен семинар «Как защитить свои права на результаты интеллектуальной деятельности и оспорить патенты конкурентов»", 
+				],
+				[
+					"news3.jpg", 
+					"02.04.2020",
+					"Женщины", 
+					"На заседании Женского клуба в Госдуме представлена позиция Палаты по развитию женского и семейного предпринимательства на селе", 
+					"27 ноября эксперты Департамента содействия инвестициям и инновациям приняли участие в IX Всероссийской научно-практической конференции «Принципы и механизмы формирования национальной инновационной системы».", 
+				]		
+			];
+		.row.news-page__list
+			each newsItem in news
+				.col-12.col-sm-6.col-md-4.py-3
+					a.new.card(href="#")
+						.new__pic
+							+image(`news/${newsItem[0]}`, "new__img")
+							.new__date
+								.ribbon= newsItem[1]
+						.card-body.new__content
+							.new__category=newsItem[2]
+							.new__desk
+								h3.new__title=newsItem[3]
+								.new__text=newsItem[4]
+		.news-page__pagination
+			include ./pagination.pug
+

@@ -1,0 +1,58 @@
+@keyframes appearance-below {
+	from {
+		opacity: 0;
+		top: 300px;
+	}
+	to {
+		opacity: 1;
+		top:0;
+	}
+}
+@keyframes animation-left {
+	from {
+		opacity: 0;
+		left: -300px;
+	}
+	to {
+		opacity: 1;
+		left:0;
+	}
+}
+@keyframes animation-right {
+	from {
+		opacity: 0;
+		right: -800px;
+	}
+	to {
+		opacity: 1;
+		right:0;
+	}
+}
+@keyframes animation-opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.animation-down {
+	position: relative;
+	animation-name: appearance-below;
+	animation-duration: 1s;
+}
+.animation-left {
+	position: relative;
+	animation-name: animation-left;
+	animation-duration: 1s;
+}
+.animation-right {
+	position: relative;
+	animation-name: animation-right ;
+	animation-duration: 1s;
+}
+.animation-opacity {
+	position: relative;
+	animation-name: animation-opacity ;
+	animation-duration: 3s;
+}

@@ -1,0 +1,24 @@
+section.photoalbums.py-5
+	.container
+		.row.mb-5
+			.col-12.col-sm-6.mb-4.mb-sm-0
+				h2.title Фотоальбомы
+			.col-12.col-sm-6.text-left.text-sm-right
+				a.btn.btn-outline-blue.text-uppercase(href="#") Подробнее
+		-
+			var photoalbumsList = [
+				['1.jpg', 'Международная конференция "Практика медиации в России и Германии"'],
+				['2.jpg', 'Выпуск медиаторов 2017'],
+				['3.jpg', 'Международная научно- практическая конференция "Медиация в сфере интеллектуальной собственности" в Москве'],
+				//- ['1.jpg', 'Международная конференция "Практика медиации в России и Германии"'],
+				//- ['2.jpg', 'Выпуск медиаторов 2017'],
+				//- ['3.jpg', 'Международная научно- практическая конференция "Медиация в сфере интеллектуальной собственности" в Москве'],
+			] 
+		.row
+			each photoalbumsItem in photoalbumsList
+				.col-4.mb-4.py-3
+					a.card.photoalbum(href="#")
+						.card-body
+							.photoalbum__pic
+								+image(`photoalbums/${photoalbumsItem[0]}`, 'photoalbum__img')
+							.photoalbum__title= photoalbumsItem[1]

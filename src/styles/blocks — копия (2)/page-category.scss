@@ -1,0 +1,26 @@
+.page-category {
+    &__item {
+        margin-right: 15px;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        border: 1px solid $gray;
+        border-radius: 20px;
+        font-size: 15px;
+        color: $black;
+
+        &:hover {
+            background: #507dbb;
+            color:white
+        }
+    }
+    &__item.active {
+        .page-category__link{
+            background: $primary;
+            color:white
+        }
+    }
+}

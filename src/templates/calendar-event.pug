@@ -1,0 +1,100 @@
+.calendar-event-popup-fullscreen
+	.row.calendar-event-popup-fullscreen__header
+		.col-8
+			.calendar-event-popup-fullscreen__close
+				button.calendar-event-popup-fullscreen__close-btn
+					+icon('signs', 'calendar-event-popup-fullscreen__close-btn-icon')
+			.calendar-event-popup-fullscreen__name
+				input.calendar-event-popup-fullscreen__input-name(placeholder="Добавьте название")
+		.col-4
+			button.btn.calendar-event-popup-fullscreen__btn-save Сохранить
+	.calendar-event-popup-fullscreen__row
+		.calendar-event-popup-fullscreen__row-item
+			input.calendar-event-popup-fullscreen__field(
+				ref="inputDate" 
+				type='text',
+				:value='startValueInputDate',  
+				onclick='BX.calendar({node: this, field: this, bTime: false});'
+				@change="changingDate()"
+			)
+		.calendar-event-popup-fullscreen__row-item
+			input.calendar-event-popup-fullscreen__field(
+				ref="inputDate" 
+				type='time',
+				:value='startValueInputDate',  
+				onclick='BX.calendar({node: this, field: this, bTime: false});'
+				@change="changingDate()"
+			)
+		.calendar-event-popup-fullscreen__row-item -
+		.calendar-event-popup-fullscreen__row-item
+			input.calendar-event-popup-fullscreen__field(
+				ref="inputDate" 
+				type='time',
+				:value='startValueInputDate',  
+				onclick='BX.calendar({node: this, field: this, bTime: false});'
+				@change="changingDate()"
+			)
+		.calendar-event-popup-fullscreen__row-item
+			select.calendar-event-popup-fullscreen__field
+				option Часовой пояс
+				option 12
+				option 1
+	.row
+		.col-8
+			.calendar-event-popup-fullscreen__nav
+				.calendar-event-popup-fullscreen__nav-item Опции
+			.calendar-event-popup-fullscreen__options
+				.calendar-event-popup-fullscreen__options-row
+					.calendar-event-popup-fullscreen__options-checkbox-item
+						label.checkbox(for="")
+							input.checkbox__input
+							.checkbox__title Видеоконференция
+					.calendar-event-popup-fullscreen__options-checkbox-item
+						label.checkbox(for="")
+							input.checkbox__input
+							.checkbox__title Видеотрансляция
+					.calendar-event-popup-fullscreen__options-checkbox-item
+						label.checkbox(for="")
+							input.checkbox__input
+							.checkbox__title Аудизопись
+					.calendar-event-popup-fullscreen__options-checkbox-item
+						label.checkbox(for="")
+							input.checkbox__input
+							.checkbox__title Голосование
+					.calendar-event-popup-fullscreen__options-checkbox-item
+						label.checkbox(for="")
+							input.checkbox__input
+							.checkbox__title Пометка для материала
+					.calendar-event-popup-fullscreen__options-checkbox-item
+						label.checkbox(for="")
+							input.checkbox__input
+							.checkbox__title Пометка для материала
+				.calendar-event-popup-fullscreen__options-row
+					.calendar-event-popup-fullscreen__options-title Календарь
+					.calendar-event-popup-fullscreen__options-item
+				.calendar-event-popup-editor
+	.calendars-select
+		.calendars-select__selected-item
+			.calendars-select__calendar
+				.calendars-select__calendar-circle
+				.calendars-select__calendar-title Видеоконференции
+				button.calendars-select__calendar-location
+					i.fas.fa-map-marker-alt
+			.calendars-select__icon
+				i.fas.fa-sort-down
+		.calendars-select__dropdown
+			button.calendars-select__dropdown-item
+				.calendars-select__calendar
+					.calendars-select__calendar-circle(style="background-color: red")
+					.calendars-select__calendar-title Видеоконференции
+			button.calendars-select__dropdown-item
+				.calendars-select__calendar
+					.calendars-select__calendar-circle(style="background-color: yellow")
+					.calendars-select__calendar-title Видеоконференции
+			button.calendars-select__dropdown-item
+				.calendars-select__calendar
+					.calendars-select__calendar-circle(style="background-color: orange")
+					.calendars-select__calendar-title Видеоконференции
+
+	
+

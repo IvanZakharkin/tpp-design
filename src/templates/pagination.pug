@@ -1,0 +1,25 @@
+ul.pagination.justify-content-center
+	li.page-item.disabled
+		a.page-link(href='#')
+			+icon('back', 'pagination-arrow')
+	li.page-item
+		a.page-link(href='#') 1
+	li.page-item.active(aria-current='page')
+		a.page-link(href='javascipt:void(0);')
+			| 2 
+			span.sr-only (current)
+	li.page-item
+		a.page-link(href='#') 3
+	li.page-item
+		a.page-link(href='#') 4
+	li.page-item
+		a.page-link(href='#') 5
+	li.page-item
+		a.page-link(href='#') 6
+	li.page-item
+		a.page-link(href='#') 7
+	li.page-item
+		a.page-link(href='#') ...
+	li.page-item
+		a.page-link(href='#')
+			+icon('right', 'pagination-arrow')

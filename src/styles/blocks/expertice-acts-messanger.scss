@@ -1,0 +1,47 @@
+.expertice-acts-messanger {
+    &__message {
+        padding: 12px;
+        border: 1px solid #e1e1e1;
+        border-radius: 5px;
+    }
+    &__chat {
+        padding: 3%;
+        background-color: #f8f9fb;
+        border: 1px solid #e1e1e1;
+    }
+    &__chat-title {
+        color: #195cb2;
+        font-size: 18px;
+    }
+    &__chat-message.form-control {
+        height: 150px;
+        resize: none;
+    }
+
+    &__messages-list-item {
+        box-shadow: 0.908px 1.782px 3.5px rgba(194,203,220,0.48);
+    }
+
+    &__message-header {
+        display: flex;
+        align-items: center;
+    }
+
+    &__message-btn {
+        font-size: 14px;
+        color: #008000;
+        padding: 0;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    &__message-date {
+        font-size: 14px;
+        color: #000000;
+    }
+    &__message-topic {
+        font-size: 14px;
+        color: #81869e;
+    }
+}

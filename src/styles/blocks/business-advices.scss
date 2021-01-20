@@ -1,0 +1,52 @@
+.business-advices {
+	
+	&__title {
+		color:#134689;
+		font-size: 30px;
+		margin-bottom: 30px;
+	}
+
+	&__search {
+		display: flex;
+		align-items: center;
+		margin-bottom: 60px;
+	}
+	&__search-icon-pic {
+		width: 35px;
+		height: 35px;
+		fill: #044ea4;
+		margin-right: 15px;
+	}
+	&__search-text {
+		font-size: 30px;
+		font-family: 'Roboto Condensed';
+		font-weight: bold;
+		color: #044ea4;
+		margin-right: 15px;
+	}
+	&__search-stroke {
+		flex: 1;
+		margin-right: 15px;
+	}
+	&__search-input {
+		flex: 1;
+		border: 1px solid $gray;
+		padding: 10px 15px;
+		color: $black;
+		font-size: 18px;
+		width: 100%;
+
+		&:focus {
+			border-color: #044ea4;
+		}
+	}
+
+	&__map {
+		height: 665px;
+		margin-bottom: 60px;
+
+		#yandex-map {
+			height: 100%;
+		}
+	}
+}

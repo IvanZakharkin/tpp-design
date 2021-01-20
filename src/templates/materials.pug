@@ -1,0 +1,62 @@
+section.materials.py-5.bg-light
+	.container
+		.row.mb-4
+			.col-12.col-sm-6.mb-4.mb-sm-0
+				h2.title Материалы
+			.col-12.col-sm-6.text-left.text-sm-right
+				a.btn.btn-outline-blue.text-uppercase(href="#") Подробнее
+		.materials__category.mb-4
+			ul.category-list.category-list_bg_white.nav
+				each item in [["Все", "all"], ["Правила арбитража", "arb"], ["Практика", "practice"], ["Документы", "doc"], ["Публикации","publications"], ["Типовые проформы коносаментов", "proform"]]
+					li.category-list__item.nav-item
+						a.category-list__link.nav-link(data-toggle="tab" href=`#${item[1]}` role="tab")= item[0]
+		- 
+				var materialsList = [
+					[
+						'Закон РФ от 07.07.1993 N 5338-1 (ред. от 29.12.2015) "О международном коммерческом арбитраже"',
+						'20 декабря',
+						['word', 'word']
+					],
+					[
+						'Обучение медиаторов',
+						'20 декабря',
+						['no-type']
+					],
+					[
+						'Положение о МКАС при ТПП РФ (Приложение I к Закону Российской Федерации "О международном коммерческом арбитраже")',
+						'20 декабря',
+						['pdf']
+					],
+					[
+						'Положение о МКАС при ТПП РФ (Приложение I к Закону Российской Федерации "О международном коммерческом арбитраже")',
+						'19 декабря',
+						['pdf', 'word']
+					],
+					[
+						'Обучение медиаторов',
+						'20 декабря',
+						['no-type']
+					],
+					[
+						'Положение о МКАС при ТПП РФ (Приложение I к Закону Российской Федерации "О международном коммерческом арбитраже")',
+						'20 декабря',
+						['pdf', 'pdf', 'pdf', 'pdf', 'pdf', 'pdf', 'pdf', 'pdf', 'pdf', 'pdf', 'pdf']
+					],
+					
+				]
+		.tab-content
+			each item in [["Все", "all"], ["Правила арбитража", "arb"], ["Практика", "practice"], ["Документы", "doc"], ["Публикации","publications"], ["Типовые проформы коносаментов", "proform"]]
+				.tab-pane.fade(id=`${item[1]}` role="tabpanel")
+					.row
+						each materilsItem in materialsList
+							.col-12.col-md-6.col-lg-4.mb-4
+								.card.material
+									.card-body.material__content
+										a.material__title(href="#")= materilsItem[0]
+										.material__date= materilsItem[1]
+										.material__docs-container
+											ul.material__docs.material__docs_hidden
+												each link in materilsItem[2]
+													li(class=`material__doc material__doc_${link}`)
+														a.material__doc-link(href="#") cкачать
+													

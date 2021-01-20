@@ -1,0 +1,36 @@
+.form-filter {
+	// max-width: 100% !important; 
+	// max-height: 0px;
+	// visibility: hidden;
+	// opacity: 0;
+	
+	// transition: 1s ease-out;
+
+	// &_visible {
+	// 	max-height: 10000px;
+	// 	visibility: visible;
+	// 	opacity: 1;
+	// 	transition: 1s ease-out;
+	// }
+
+	&__block {
+		margin-bottom: 50px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__block-title {
+		font-size: 16px;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: $blue;
+		border-bottom: 1px solid #e4e4e4;
+		padding-bottom: 5px;
+		margin-bottom: 15px;
+	}
+
+	&__subscription {
+		margin-bottom: 5px;
+	}
+}

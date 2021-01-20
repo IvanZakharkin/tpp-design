@@ -1,0 +1,46 @@
+.responsive-table {
+		font-size: 15px;
+		color: #4f5762;
+		margin-bottom: 55px;
+
+		tr {
+			&:hover {
+				cursor: pointer;
+				background: $lightgray;
+			}
+		}
+	@include media-breakpoint-down(sm) { 
+		border: none;
+		thead {
+			display: none;
+		}
+		tr{
+			border-top: 1px solid #dee2e6;
+
+			display: block;
+			padding: 10px 0;
+			&:last-child {
+				border-bottom: 1px solid #dee2e6;
+			}
+		}
+		td{
+			border: none;
+			display: block;
+			padding: 3px;
+
+			&:before {
+				content: attr(data-title);
+				display: inline-block;
+				position: relative;
+				font-weight: bold;
+				margin-right: 5px;
+			}
+
+			// &:nth-child(1), &:nth-child(2) {
+			// 	&:before {
+			// 		display: none;
+			// 	}
+			// }
+		}
+	}
+}

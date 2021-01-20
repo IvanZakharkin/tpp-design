@@ -1,0 +1,148 @@
+.file-icon {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 35px;
+    height: 40px;
+    background-size: contain;
+    background-image: url(../images/icons-files/default.svg);
+    background-repeat: no-repeat;
+
+    &_sm {
+        width: 20px;
+        height: 25px;
+    }
+    &_lg {
+        width: 55px;
+        height: 65px;
+    }
+
+    &_after-effects {
+        background-image: url(../images/icons-files/after-effects.svg);
+    }
+    &_ai {
+        background-image: url(../images/icons-files/ai.svg);
+    }
+    &_audition {
+        background-image: url(../images/icons-files/audition.svg);
+    }
+    &_avi {
+        background-image: url(../images/icons-files/avi.svg);
+    }
+    &_bridge {
+        background-image: url(../images/icons-files/bridge.svg);
+    }
+    &_css {
+        background-image: url(../images/icons-files/css.svg);
+    }
+    &_csv {
+        background-image: url(../images/icons-files/csv.svg);
+    }
+    &_dbf {
+        background-image: url(../images/icons-files/dbf.svg);
+    }
+    &_doc {
+        background-image: url(../images/icons-files/doc.svg);
+    }
+    &_docx {
+        background-image: url(../images/icons-files/docx.svg);
+    }
+    &_dreamwaver {
+        background-image: url(../images/icons-files/dreamwaever.svg);
+    }
+    &_dwg {
+        background-image: url(../images/icons-files/dwg.svg);
+    }
+    &_exe {
+        background-image: url(../images/icons-files/exe.svg);
+    }
+    &_file {
+        background-image: url(../images/icons-files/file.svg);
+    }
+    &_fireworks {
+        background-image: url(../images/icons-files/fireworks.svg);
+    }
+    &_fla {
+        background-image: url(../images/icons-files/fla.svg);
+    }
+    &_flash {
+        background-image: url(../images/icons-files/flash.svg);
+    }
+    &_html {
+        background-image: url(../images/icons-files/html.svg);
+    }
+    &_illustrator {
+        background-image: url(../images/icons-files/illustrator.svg);
+    }
+    &_indesign {
+        background-image: url(../images/icons-files/indesign.svg);
+    }
+    &_iso {
+        background-image: url(../images/icons-files/iso.svg);
+    }
+    &_js {
+        background-image: url(../images/icons-files/javascript.svg);
+    }
+    &_jpg {
+        background-image: url(../images/icons-files/jpg.svg);
+    }
+    &_jpeg {
+        background-image: url(../images/icons-files/jpg.svg);
+    }
+    &_json {
+        background-image: url(../images/icons-files/json-file.svg);
+    }
+    &_mp3 {
+        background-image: url(../images/icons-files/mp3.svg);
+    }
+    &_mp4 {
+        background-image: url(../images/icons-files/mp4.svg);
+    }
+    &_pdf {
+        background-image: url(../images/icons-files/pdf.svg);
+    }
+    &_photoshop {
+        background-image: url(../images/icons-files/photoshop.svg);
+    }
+    &_png {
+        background-image: url(../images/icons-files/png.svg);
+    }
+    &_ppt {
+        background-image: url(../images/icons-files/ppt.svg);
+    }
+    &_pptx {
+        background-image: url(../images/icons-files/pptx.svg);
+    }
+    &_prelude {
+        background-image: url(../images/icons-files/prelude.svg);
+    }
+    &_premier {
+        background-image: url(../images/icons-files/premier.svg);
+    }
+    &_psd {
+        background-image: url(../images/icons-files/psd.svg);
+    }
+    &_rtf {
+        background-image: url(../images/icons-files/rtf.svg);
+    }
+    &_search {
+        background-image: url(../images/icons-files/search.svg);
+    }
+    &_svg {
+        background-image: url(../images/icons-files/svg.svg);
+    }
+    &_txt {
+        background-image: url(../images/icons-files/txt.svg);
+    }
+    &_xls {
+        background-image: url(../images/icons-files/xls.svg);
+    }
+    &_xml {
+        background-image: url(../images/icons-files/xml.svg);
+    }
+    &_zip {
+        background-image: url(../images/icons-files/zip.svg);
+    }
+    &_zip-1 {
+        background-image: url(../images/icons-files/zip-1.svg);
+    }
+}

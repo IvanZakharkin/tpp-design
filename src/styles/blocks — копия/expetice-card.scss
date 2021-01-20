@@ -1,0 +1,48 @@
+.expetice-card {
+    &:hover {
+        box-shadow: 0 0 16px rgba(61,75,137,0.32);
+        cursor: pointer;
+    }
+
+
+    &_ordered {
+        background: url('images/expertices/order.png')  95% 90% no-repeat;
+    }
+    &_issued {
+        background: url('images/expertices/issued.png')  95% 90% no-repeat;
+    }
+    &_refusing {
+        background: url('images/expertices/issued.png')  95% 90% no-repeat;
+    }
+    &__body {
+        display: flex;
+    }
+    &__pic {
+        width: 20%;
+    }
+
+    &__img {
+        object-fit: contain;
+        height: auto;
+    }
+
+    &__info {
+        flex: 1;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 15px;
+        color: #4d4d4d;
+    }
+    &__text {
+        font-size: 14px;
+        color: #81869e;
+
+        p {
+            margin-bottom: 8px;
+        }
+    }
+
+
+}

@@ -1,0 +1,112 @@
+section.persons-page.py-5
+	.container
+		nav.mt-2.mb-4(aria-label='breadcrumb')
+			ol.breadcrumb(itemprop='http://schema.org/breadcrumb', itemscope='', itemtype='http://schema.org/BreadcrumbList')
+				li#bx_breadcrumb_0.breadcrumb-item(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+					a(href='/', title='Главная', itemprop='url')
+						span(itemprop='name') Главная
+				li.breadcrumb-item.active(aria-current='page', itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+					span(itemprop='name') Личный кабинет
+		.row.mb-4
+			.col-12.col-md-10
+				ul.news-page__category.nav
+					each item in ["Все", "Россия", "Регионы", "Палаты", "Комитеты", "Гильдии"]
+						li.news-page__category-item.nav-item
+							a.news-page__category-link.nav-link(href="#")= item
+			.col-12.col-md-2.text-right.d-flex.align-items-center.justify-content-start.justify-content-md-end
+				ul.news-page__btns
+					li.news-page__btn
+						a.filter(href='#')
+							+icon('filter', 'filter__icon')
+		- 
+			var persons = [
+				[
+					"avatar1.jpg", 
+					"Аитов Тимур", 
+					"Заместитель председателя Комиссии по цифровым финансовым технологиям Совета ТПП РФ по финансово- промышленной и инвестиционной политике, директор по международному развитию ", 
+					['Большущий такой тэг', 'Тег 1', 'Тег побольше',  'Просто офигеть какой большой тэг']
+				],
+				[
+					"avatar2.jpg", 
+					"Сергей Алексеев", 
+					"Председатель Комитета ТПП РФ по природопользованию и экологи",
+					['Тег 1', 'Тег побольше', 'Большущий такой тэг', 'Просто офигеть какой большой тэг']
+				],
+				[
+					"avatar3.jpg", 
+					"Владимир Аленцин", 
+					"Член Комитета ТПП РФ по природопользованию и экологии, заместитель председателя Комитета Московской ТПП по проблемам экологии и природопользования Член Комитета ТПП РФ по природопользованию и экологии, заместитель Московской ТПП",
+					['Тег 1', 'Тег побольше', 'Большущий такой тэг', 'Просто офигеть какой большой тэг']
+				],
+				[
+					"avatar4.jpg", 
+					"Сергей Андрюшин", 
+					"Председатель комиссии по монетарной политике Совета ТПП РФ по финансово-промышленной и инвестиционной политике, заведующий сектором денежно-кредитной и валютной",
+					[]
+				],
+				[
+					"avatar2.jpg", 
+					"Сергей Алексеев", 
+					"Председатель Комитета ТПП РФ по природопользованию и экологи",
+					[]
+				],
+				[
+					"avatar3.jpg", 
+					"Владимир Аленцин", 
+					"Член Комитета ТПП РФ по природопользованию и экологии, заместитель председателя Комитета Московской ТПП по проблемам экологии и природопользования Член Комитета ТПП РФ по природопользованию и экологии, заместитель Московской ТПП",
+					[]
+				],
+				[
+					"avatar4.jpg", 
+					"Сергей Андрюшин", 
+					"Председатель комиссии по монетарной политике Совета ТПП РФ по финансово-промышленной и инвестиционной политике, заведующий сектором денежно-кредитной и валютной",
+					[]
+				],
+				[
+					"avatar2.jpg", 
+					"Сергей Алексеев", 
+					"Председатель Комитета ТПП РФ по природопользованию и экологи",
+					[]
+				],
+				[
+					"avatar3.jpg", 
+					"Владимир Аленцин", 
+					"Член Комитета ТПП РФ по природопользованию и экологии, заместитель председателя Комитета Московской ТПП по проблемам экологии и природопользования Член Комитета ТПП РФ по природопользованию и экологии, заместитель Московской ТПП",
+					[]
+				],
+				[
+					"avatar4.jpg", 
+					"Сергей Андрюшин", 
+					"Председатель комиссии по монетарной политике Совета ТПП РФ по финансово-промышленной и инвестиционной политике, заведующий сектором денежно-кредитной и валютной",
+					[]
+				],
+				
+			];
+		.form-row.persons-page__list
+			each personsItem in persons
+				.col-12.col-sm-6.col-lg-4.col-xl-3.mb-4
+					.person.card
+						.card-body.person__content
+							.person__pic
+								+image(`persons/${personsItem[0]}`, "person__img")
+							a.person__name(href="#")=personsItem[1]
+							.person__desk=personsItem[2]
+							.person__tags.mt-3
+								ul.tags.justify-content-center
+									li.tags__item
+										a.tags__link.tags__link_all(href="#") Все
+										.tags__item-hover
+											ul.tags
+												each tag2 in personsItem[3]
+													li.tags__item
+														a.tags__link(href="#")=tag2
+
+									each tag in personsItem[3]
+										li.tags__item
+											a.tags__link=tag
+									
+		.person-detail__pagination
+			include ./pagination.pug
+		
+							
+

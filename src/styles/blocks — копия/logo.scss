@@ -1,0 +1,33 @@
+.logo {
+
+	&__link {
+		display: flex;
+		align-items: center;
+		color: $white;
+	}
+	
+
+	&__text {
+		padding: 10px 0;
+	}
+	&__title {
+		font-size: 15px;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 3px;
+		color: rgba($color: $white, $alpha: .9);
+	}
+	&__subtitle {
+		font-size: 14px;
+		font-style: italic;
+		color: rgba($color: $white, $alpha: .9);
+	}
+	&__subtitle_repr {
+		font-size: 14px;
+		text-transform: uppercase;
+		color: #e89d06;
+		font-style: normal;
+	}
+
+	
+}

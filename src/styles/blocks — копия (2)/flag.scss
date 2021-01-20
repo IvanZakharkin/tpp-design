@@ -1,0 +1,32 @@
+.flag {
+    // width: 90px;
+    // height: 60px;
+    &__pic {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    &__title {
+        font-size: 15px;
+        color: #4d596a;
+        text-align: center;
+    }
+    &__abbreviation {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #545454;
+        text-transform: uppercase;
+        padding: 1px 8px;
+        border-radius: 9px;
+        background: #fff;
+        box-shadow: 0 0 3.5px rgba(0,0,0,0.3);
+    }
+    &__shadow-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}

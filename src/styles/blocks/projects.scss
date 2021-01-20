@@ -1,0 +1,16 @@
+
+.projects {
+	position: relative;
+	// animation-name: appearance-below;
+	// animation-duration: 1s;
+	// animation-delay: 0.2s;
+	&__filter {
+		text-align: center;
+		color: $blue;
+	}
+
+	&__title {
+		padding-left:0;
+		margin-bottom: 0;
+	}
+}
